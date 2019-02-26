@@ -55,23 +55,23 @@ return [
     |
     */
 
-<<<<<<< HEAD
-    'from' => [
-<<<<<<< HEAD
-        'address' => env('MAIL_FROM', 'nikulp57@gmail.com'),
-        'name'    => env('MAIL_FROM_NAME', 'nikul'),
-=======
-        'address' => env('MAIL_FROM', 'pattniviranchi1004@gmail.com'),
-        'name'    => env('MAIL_FROM_NAME', 'Viranchi'),
-=======
+// <<<<<<< HEAD
+//     'from' => [
+// <<<<<<< HEAD
+//         'address' => env('MAIL_FROM', 'nikulp57@gmail.com'),
+//         'name'    => env('MAIL_FROM_NAME', 'nikul'),
+// =======
+//         'address' => env('MAIL_FROM', 'pattniviranchi1004@gmail.com'),
+//         'name'    => env('MAIL_FROM_NAME', 'Viranchi'),
+// =======
     /*'from' => [
         'address' => env('MAIL_FROM', 'viral.solani@gmail.com'),
         'name'    => env('MAIL_FROM_NAME', 'Admin'),*/
         'from' => [
         'address' => env('MAIL_FROM', 'neerajpurohit@gmail.com'),
         'name'    => env('MAIL_FROM_NAME', 'neeraj'),
->>>>>>> 8cd4b742516c8cfb6f03e57ace896b00058ea623
->>>>>>> 4fcae20fc8884b47fce081e0a998977c7bf4d779
+// >>>>>>> 8cd4b742516c8cfb6f03e57ace896b00058ea623
+// >>>>>>> 4fcae20fc8884b47fce081e0a998977c7bf4d779
     ],
 
     /*
