@@ -40,6 +40,7 @@ class PermissionRoleSeeder extends Seeder
         */
         Role::find(3)->permissions()->sync([2]);
 
+
         $this->enableForeignKeys();
     }
 }

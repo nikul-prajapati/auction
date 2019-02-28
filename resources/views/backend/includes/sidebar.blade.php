@@ -31,6 +31,8 @@
                         </a>
                     </li>
                     @endauth
+
+
                     @permission('view-role-management')
                     <li class="{{ active_class(Active::checkUriPattern('admin/access/role*')) }}">
                         <a href="{{ route('admin.access.role.index') }}">
@@ -38,10 +40,19 @@
                         </a>
                     </li>
                     @endauth
+
                     @permission('view-permission-management')
                     <li class="{{ active_class(Active::checkUriPattern('admin/access/permission*')) }}">
                         <a href="{{ route('admin.access.permission.index') }}">
                             <span>{{ trans('labels.backend.access.permissions.management') }}</span>
+                        </a>
+                    </li>
+                    @endauth
+
+                     @permission('view-team-management')
+                    <li class="{{ active_class(Active::checkUriPattern('admin/access/Team*')) }}">
+                        <a href="{{ route('admin.access.Team.index') }}">
+                            <span>{{ trans('labels.backend.access.Team.management') }}</span>
                         </a>
                     </li>
                     @endauth

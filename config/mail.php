@@ -55,19 +55,20 @@ return [
     |
     */
 
-<<<<<<< HEAD
+//<<<<<< HEAD
     'from' => [
-        'address' => env('MAIL_FROM', 'pattniviranchi1004@gmail.com'),
-        'name'    => env('MAIL_FROM_NAME', 'Viranchi'),
-=======
+        'address' => env('MAIL_FROM', 'neerajpurohit@gmail.com'),
+        'name'    => env('MAIL_FROM_NAME', 'neeraj'),
+    ],
+// =======
     /*'from' => [
         'address' => env('MAIL_FROM', 'viral.solani@gmail.com'),
         'name'    => env('MAIL_FROM_NAME', 'Admin'),*/
-        'from' => [
-        'address' => env('MAIL_FROM', 'neerajpurohit@gmail.com'),
-        'name'    => env('MAIL_FROM_NAME', 'neeraj'),
->>>>>>> 8cd4b742516c8cfb6f03e57ace896b00058ea623
-    ],
+//         'from' => [
+//         'address' => env('MAIL_FROM', 'neerajpurohit@gmail.com'),
+//         'name'    => env('MAIL_FROM_NAME', 'neeraj'),
+// >>>>>>> 8cd4b742516c8cfb6f03e57ace896b00058ea623
+//     ],
 
     /*
     |--------------------------------------------------------------------------

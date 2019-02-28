@@ -44,6 +44,7 @@ class ModulesTableSeeder extends Seeder
                 'created_by'            => 1,
                 'created_at'            => Carbon::now(),
             ],
+            
             [
                 'name'                  => trans('labels.backend.menus.title'),
                 'url'                   => 'admin.menus.index',
@@ -107,6 +108,7 @@ class ModulesTableSeeder extends Seeder
                 'created_by'            => 1,
                 'created_at'            => Carbon::now(),
             ],
+            
         ];
 
         DB::table('modules')->insert($modules);
