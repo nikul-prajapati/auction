@@ -34,3 +34,5 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'admin.', '
      */
     includeRouteFiles(__DIR__.'/Backend/');
 });
+//Route::get('register/sub', function () { return view('register'); })->name('sub');
+   Route::get('register/details', 'frontend\auth\loginController@showLoginF');

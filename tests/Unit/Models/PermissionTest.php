@@ -10,7 +10,7 @@ class PermissionTest extends TestCase
     /** @test */
     public function a_permission_has_roles()
     {
-        $permission = Permission::find(1);
+        $permission = Permission::find(2);
         $this->assertInstanceOf(
             'Illuminate\Database\Eloquent\Collection', $permission->roles
         );
