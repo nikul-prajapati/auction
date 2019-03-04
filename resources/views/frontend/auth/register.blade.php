@@ -67,7 +67,7 @@
 
                     <div class="form-group">
                         <div class="col-md-6 col-md-offset-4">
-                            {{ Form::submit(trans('labels.frontend.auth.register_button'), ['class' => 'btn btn-primary']) }}
+                            {{ Form::submit(trans('labels.frontend.auth.register_button'), ['class' => 'btn btn-primary'] ) }}
                         </div><!--col-md-6-->
                     </div><!--form-group-->
 

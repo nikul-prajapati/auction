@@ -122,6 +122,13 @@ return [
 	"management" => "Neeraj Management",
 	"main" => "Neerajs",
 	],
+	"details" => [
+	"all" => "All Details",
+	"create" => "Create Detail",
+	"edit" => "Edit Detail",
+	"management" => "Detail Management",
+	"main" => "Details",
+	],
 	],
 	"language-picker" => [
 	"language" => "Language",
