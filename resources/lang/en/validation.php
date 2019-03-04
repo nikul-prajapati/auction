@@ -157,7 +157,7 @@ return [
                 ],
 
 
-                'Team' => [
+                'teams' => [
                     'Team_Name'               => 'Team Name',
                 ],
             ],

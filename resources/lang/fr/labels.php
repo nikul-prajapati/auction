@@ -237,6 +237,23 @@ return [
             ],
         ],
 
+        'teams' => [
+            'create'     => 'Créer une catégorie de blog',
+            'edit'       => 'Modifier une catégorie de blog',
+            'management' => 'Gérer une catégorie de blog',
+            'title'      => 'Catégorie de blog',
+
+            'table' => [
+                'title'     => 'Catégorie de blog',
+                'Team_name' => 'Team name',
+                'status'    => 'Statut',
+                'createdat' => 'Créée le',
+                'createdby' => 'Créée par',
+                'all'       => 'Tout',
+            ],
+        ],
+
+
         'modules' => [
             'create'     => 'Créer un oodule',
             'management' => 'Gérer un module',

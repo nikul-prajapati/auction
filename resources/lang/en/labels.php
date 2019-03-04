@@ -243,7 +243,9 @@ return [
 	"title" => "Teams",
 	"table" => [
 	"id" => "Id",
+	"Team_name" => "Team name",
 	"createdat" => "Created At",
+
 	],
 	],
 	"neerajs" => [
