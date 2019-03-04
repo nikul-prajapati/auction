@@ -157,10 +157,12 @@ return [
                 ],
 
 
-                'teams' => [
+                
+            ],
+
+            'teams' => [
                     'Team_Name'               => 'Team Name',
                 ],
-            ],
             'pages' => [
                 'title'           => 'Title',
                 'description'     => 'Description',

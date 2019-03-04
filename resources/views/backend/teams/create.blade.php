@@ -25,10 +25,10 @@
 
                 {{-- Team Name --}}
                 <div class="form-group">
-                    {{ Form::label('Team_Name', trans('validation.attributes.backend.access.users.Team_Name'), ['class' => 'col-lg-2 control-label required']) }}
+                    {{ Form::label('Team_Name', trans('validation.attributes.backend.teams.Team_Name'), ['class' => 'col-lg-2 control-label required']) }}
 
                     <div class="col-lg-10">
-                        {{ Form::text('Team_name', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.access.users.Team_Name'), 'required' => 'required']) }}
+                        {{ Form::text('Team_name', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.teams.Team_Name'), 'required' => 'required']) }}
                     </div><!--col-lg-10-->
                 </div><!--form control-->
 
