@@ -20,6 +20,11 @@
                 <li></li>
             </ul> --}}
             <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="{{trans('contactus')}}" role="button" class="btn-a">Contact us</a></li>
+                <li><a href="{{trans('aboutus')}}" role="button" class="btn-a">About us</a></li>
+
+
                 @if (config('locale.status') && count(config('locale.languages')) > 1)
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

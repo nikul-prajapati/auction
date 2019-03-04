@@ -68,8 +68,10 @@ class RegisterController extends Controller
 
             return redirect($this->redirectPath())->withFlashSuccess(
                 config('access.users.requires_approval') ?
-                    trans('exceptions.frontend.auth.confirmation.created_pending') :
-                    trans('exceptions.frontend.auth.confirmation.created_confirm')
+                trans('hello') :
+                trans('hw are u?')
+                    // trans('exceptions.frontend.auth.confirmation.created_pending') :
+                    // trans('exceptions.frontend.auth.confirmation.created_confirm')
             );
         } else {
             access()->login($this->user->create($request->only('first_name', 'last_name', 'email', 'password', 'is_term_accept')));

@@ -9,6 +9,16 @@
 Route::get('lang/{lang}', 'LanguageController@swap');
 
 /* ----------------------------------------------------------------------- */
+Route::get('/contactus',function()
+{
+	return view('frontend.contactus');
+});
+
+
+Route::get('/aboutus',function()
+{
+	return view('frontend.aboutus');
+});
 
 /*
  * Frontend Routes

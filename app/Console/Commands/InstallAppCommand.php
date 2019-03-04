@@ -84,7 +84,7 @@ class InstallAppCommand extends Command
     public function handle()
     {
         $this->line('------------------');
-        $this->line('Welcome to Laravel Admin Panel.');
+        // $this->line('Welcome to Laravel Admin Panel.');
         $this->line('------------------');
         exec('composer install'); // composer install
 
