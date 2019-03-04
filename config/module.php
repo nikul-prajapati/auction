@@ -26,4 +26,7 @@ return [
 	"neerajs" => [
 	"table" => "neeraj",
 	],
+	"details" => [
+	"table" => "details",
+	],
 ];

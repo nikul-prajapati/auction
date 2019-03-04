@@ -64,5 +64,10 @@ return [
 	"deleted" => "The Neeraj was successfully deleted.",
 	"updated" => "The Neeraj was successfully updated.",
 	],
+	"details" => [
+	"created" => "The Detail was successfully created.",
+	"deleted" => "The Detail was successfully deleted.",
+	"updated" => "The Detail was successfully updated.",
+	],
 	],
 ];

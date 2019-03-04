@@ -258,6 +258,16 @@ return [
 	"createdat" => "Created At",
 	],
 	],
+	"details" => [
+	"create" => "Create Detail",
+	"edit" => "Edit Detail",
+	"management" => "Detail Management",
+	"title" => "Details",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
 	],
 	"frontend" => [
 	"auth" => [

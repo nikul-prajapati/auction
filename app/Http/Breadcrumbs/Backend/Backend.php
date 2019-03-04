@@ -19,3 +19,4 @@ require __DIR__.'/LogViewer.php';
 
 require __DIR__.'/Team.php';
 require __DIR__.'/Neeraj.php';
+require __DIR__.'/Detail.php';
