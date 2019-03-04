@@ -66,12 +66,9 @@
                         <div class="col-md-4">
                           
                           <select type="text" value="" name=""> 
-                <option value="Bounser">Bounser</option>
-                <option value="Leg cutter">Leg cutter</option>
-                <option value="Off cutter">off cutter</option>
-                <option value="Slow ball">Slow ball</option>
-                <option value="Yorker">Yorker</option>
-                <option value="Bouncer">bouncer</option>
+                <option value="pace bowler">Pace bowler</option>
+                <option value="spin bowler">Spin bowler</option>
+               
 
                 </select>
                         
