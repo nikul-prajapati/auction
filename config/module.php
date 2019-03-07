@@ -21,7 +21,7 @@ return [
 	"table" => "faqs",
 	],
 	"teams" => [
-	"table" => "teams",
+	"table" => "teamsteams",
 	],
 	"neerajs" => [
 	"table" => "neeraj",
