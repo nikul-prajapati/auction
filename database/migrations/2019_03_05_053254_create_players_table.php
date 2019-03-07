@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePlayerTypeTable extends Migration
+class CreatePlayersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreatePlayerTypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('player_type', function (Blueprint $table) {
+        Schema::create('players', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('P_name',55);
-            $table->integer('u_id')->unsigned()->index('player_type_u_id_foreign');
-            //$table->integer('u_id');
-                   });
+            $table->timestamps();
+            $table->integer('PR_id')->unsigned()->index('players_PR_id_foreign');
+            $table->integer('PD_id')->unsigned()->index('players_PD_id_foreign');
+        });
     }
 
     /**
@@ -28,6 +28,6 @@ class CreatePlayerTypeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('player_type');
+        Schema::dropIfExists('players');
     }
 }

@@ -40,12 +40,22 @@
 
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4>Sidebar Item</h4>
+                                    <h4>Teams Name</h4>
                                 </div><!--panel-heading-->
 
-                                <div class="panel-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.
+                                <div class="form-group">
+                        <div class="col-md-6 col-md-offset-4">
+                         <a href="{{trans('/teams')}}" class ="btn btn-primary" role="button">Submit</a>
+                        </div> <!--col-md-6-->
+                     </div> <!--form-group-->
+
+                                <!-- {{ link_to_route('frontend.user.account', trans('teams'), [], ['class' => 'btn btn-info btn-xs']) }} -->
+
+
+                                    <!-- View All <input type="submitt" name="View_All" value="View_All"> -->
                                 </div><!--panel-body-->
+
+                                <div class="panel-body">
                             </div><!--panel-->
 
                             <div class="panel panel-default">

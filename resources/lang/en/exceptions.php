@@ -99,6 +99,13 @@ return [
 	"not_found" => "That Detail does not exist.",
 	"update_error" => "There was a problem updating this Detail. Please try again.",
 	],
+	"players" => [
+	"already_exists" => "That Player already exists. Please choose a different name.",
+	"create_error" => "There was a problem creating this Player. Please try again.",
+	"delete_error" => "There was a problem deleting this Player. Please try again.",
+	"not_found" => "That Player does not exist.",
+	"update_error" => "There was a problem updating this Player. Please try again.",
+	],
 	],
 	"frontend" => [
 	"auth" => [

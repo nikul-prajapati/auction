@@ -69,5 +69,10 @@ return [
 	"deleted" => "The Detail was successfully deleted.",
 	"updated" => "The Detail was successfully updated.",
 	],
+	"players" => [
+	"created" => "The Player was successfully created.",
+	"deleted" => "The Player was successfully deleted.",
+	"updated" => "The Player was successfully updated.",
+	],
 	],
 ];

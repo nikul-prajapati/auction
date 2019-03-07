@@ -245,7 +245,6 @@ return [
 	"id" => "Id",
 	"Team_name" => "Team name",
 	"createdat" => "Created At",
-
 	],
 	],
 	"neerajs" => [
@@ -263,6 +262,16 @@ return [
 	"edit" => "Edit Detail",
 	"management" => "Detail Management",
 	"title" => "Details",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
+	"players" => [
+	"create" => "Create Player",
+	"edit" => "Edit Player",
+	"management" => "Player Management",
+	"title" => "Players",
 	"table" => [
 	"id" => "Id",
 	"createdat" => "Created At",

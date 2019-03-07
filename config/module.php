@@ -29,4 +29,7 @@ return [
 	"details" => [
 	"table" => "details",
 	],
+	"players" => [
+	"table" => "players",
+	],
 ];

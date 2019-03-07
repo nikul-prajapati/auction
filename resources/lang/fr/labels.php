@@ -359,5 +359,8 @@ return [
             ],
         ],
 
+        'teams' =>[
+            'Team_name' => 'Team Name'
+        ],
     ],
 ];

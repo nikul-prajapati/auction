@@ -129,6 +129,13 @@ return [
 	"management" => "Detail Management",
 	"main" => "Details",
 	],
+	"players" => [
+	"all" => "All Players",
+	"create" => "Create Player",
+	"edit" => "Edit Player",
+	"management" => "Player Management",
+	"main" => "Players",
+	],
 	],
 	"language-picker" => [
 	"language" => "Language",

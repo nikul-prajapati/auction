@@ -11,7 +11,7 @@
            {{--   @if(settings()->logo)
             <a href="{{ route('frontend.index') }}" class="logo"><img height="48" width="226" class="navbar-brand" src="{{route('frontend.index')}}/img/site_logo/{{settings()->logo}}"></a>
             @else --}}
-             {{ link_to_route('frontend.index',app_name(), [], ['class' => 'navbar-brand']) }}
+             {{ link_to_route('frontend.index',"Auction Data", [], ['class' => 'navbar-brand']) }}
            {{--  @endif --}}
         </div><!--navbar-header-->
 
@@ -20,6 +20,11 @@
                 <li></li>
             </ul> --}}
             <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="{{trans('contactus')}}" role="button" class="btn-a">Contact us</a></li>
+                <li><a href="{{trans('aboutus')}}" role="button" class="btn-a">About us</a></li>
+
+
                 @if (config('locale.status') && count(config('locale.languages')) > 1)
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
