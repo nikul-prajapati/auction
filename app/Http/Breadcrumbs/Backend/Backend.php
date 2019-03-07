@@ -16,3 +16,7 @@ require __DIR__.'/Blog_Management.php';
 require __DIR__.'/Faqs.php';
 require __DIR__.'/Menu.php';
 require __DIR__.'/LogViewer.php';
+
+require __DIR__.'/Team.php';
+require __DIR__.'/Neeraj.php';
+require __DIR__.'/Detail.php';

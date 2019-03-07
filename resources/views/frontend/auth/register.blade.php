@@ -13,9 +13,9 @@
                     {{ Form::open(['route' => 'frontend.auth.register', 'class' => 'form-horizontal']) }}
 
                     <div class="form-group">
-                        {{ Form::label('first_name' .'*', ['class' => 'col-md-4 control-label']) }}
+                         {{ Form::label('first_name', trans('validation.attributes.frontend.register-user.firstName').'*', ['class' => 'col-md-4 control-label']) }}
                         <div class="col-md-6">
-                            {{ Form::input('name', '', null, ['class' => 'form-control', 'placeholder' => trans('validation.attributes.frontend.register-user.firstName')]) }}
+                            {{ Form::input('name', 'first_name', null, ['class' => 'form-control', 'placeholder' => trans('validation.attributes.frontend.register-user.firstName')]) }}
                         </div><!--col-md-6-->
                     </div><!--form-group-->
 
@@ -67,7 +67,7 @@
 
                     <div class="form-group">
                         <div class="col-md-6 col-md-offset-4">
-                            {{ Form::submit(trans('labels.frontend.auth.register_button'), ['class' => 'btn btn-primary']) }}
+                            {{ Form::submit(trans('labels.frontend.auth.register_button'), ['class' => 'btn btn-primary'] ) }}
                         </div><!--col-md-6-->
                     </div><!--form-group-->
 

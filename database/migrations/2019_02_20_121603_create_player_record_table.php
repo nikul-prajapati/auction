@@ -14,7 +14,7 @@ class CreatePlayerRecordTable extends Migration
     public function up()
     {
         Schema::create('player_record', function (Blueprint $table) {
-            $table->increments('PR_id');
+            $table->increments('id');
             $table->integer('p_match');
             $table->integer('p_run');
             $table->integer('p_wickets');

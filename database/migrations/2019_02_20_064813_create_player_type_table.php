@@ -14,7 +14,7 @@ class CreatePlayerTypeTable extends Migration
     public function up()
     {
         Schema::create('player_type', function (Blueprint $table) {
-            $table->increments('P_id');
+            $table->increments('id');
             $table->string('P_name',55);
             $table->integer('u_id')->unsigned()->index('player_type_u_id_foreign');
             //$table->integer('u_id');

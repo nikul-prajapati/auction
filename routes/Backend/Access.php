@@ -81,5 +81,8 @@ Route::group([
             //For DataTables
             Route::post('permission/get', 'PermissionTableController')->name('permission.get');
         });
+
+         
+
     });
 });

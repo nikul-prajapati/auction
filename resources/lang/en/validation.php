@@ -155,6 +155,11 @@ return [
                     'password_confirmation'   => 'New Password Confirmation',
                     'send_confirmation_email' => 'Send Confirmation E-mail',
                 ],
+
+
+                'Team' => [
+                    'Team_Name'               => 'Team Name',
+                ],
             ],
             'pages' => [
                 'title'           => 'Title',
