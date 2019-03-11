@@ -43,19 +43,17 @@
                                     <h4>Teams Name</h4>
                                 </div><!--panel-heading-->
 
-                                <div class="form-group">
-                        <div class="col-md-6 col-md-offset-4">
-                         <a href="{{trans('/teams')}}" class ="btn btn-primary" role="button">Submit</a>
-                        </div> <!--col-md-6-->
-                     </div> <!--form-group-->
-
-                                <!-- {{ link_to_route('frontend.user.account', trans('teams'), [], ['class' => 'btn btn-info btn-xs']) }} -->
-
-
-                                    <!-- View All <input type="submitt" name="View_All" value="View_All"> -->
-                                </div><!--panel-body-->
-
                                 <div class="panel-body">
+                                    <div>
+                                       There are total 8 teams available. All team have 11 members and 4 extra players in each time. 
+                                    </div>
+                                    <div class="form-group">
+                                    <div class="col-md-6 col-md-offset-4">
+                                    <a href="{{trans('/teams')}}" class ="btn btn-primary" role="button">View teams Name</a>
+                                    </div> <!--col-md-6-->
+                                </div> <!--form-group-->
+ 
+                                </div><!--panel-body-->
                             </div><!--panel-->
 
                             <div class="panel panel-default">
@@ -88,11 +86,17 @@
                                 <div class="col-md-6">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
-                                            <h4>Item</h4>
+                                            <h4>Player Records</h4>
                                         </div><!--panel-heading-->
 
                                         <div class="panel-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.</p>
+                                            <div class="form-group">
+                                            
+                                            <p>It will display the detail information about the player records i.e what is the speciality and the past history about the profile</p>
+
+                                            <div class="col-md-6 col-md-offset-4">
+                                            <a href="{{trans('/player_record')}}" class ="btn btn-primary" role="button">View</a>
+                                            </div> <!--col-md-6-->
                                         </div><!--panel-body-->
                                     </div><!--panel-->
                                 </div><!--col-md-6-->
@@ -104,7 +108,7 @@
                                         </div><!--panel-heading-->
 
                                         <div class="panel-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime hiovwhdiohv heoid ihvn WKHVB    .</p>
                                         </div><!--panel-body-->
                                     </div><!--panel-->
                                 </div><!--col-md-6-->

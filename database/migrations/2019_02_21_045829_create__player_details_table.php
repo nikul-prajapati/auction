@@ -15,12 +15,11 @@ class CreatePlayerDetailsTable extends Migration
     {
         Schema::create('player_details', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('P_age');
-            $table->string('Is_captain',55);
-            $table->integer('u_id')->unsigned()->index('player_details_u_id_foreign');
+           
+            $table->integer('users_id')->unsigned()->index('player_details_user_id_foreign');
             $table->integer('Team_id')->unsigned()->index('player_details_Team_id_foreign');
-            $table->integer('PT_id')->unsigned()->index('player_details_PT_id_foreign');
-            $table->integer('PR_id')->unsigned()->index('player_details_PR_id_foreign');
+            
+            $table->integer('player_records_id')->unsigned()->index('player_details_player_records_id_foreign');
         });
     }
 

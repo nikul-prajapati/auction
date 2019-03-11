@@ -41,6 +41,9 @@ class PlayersTableController extends Controller
             ->addColumn('created_at', function ($player) {
                 return Carbon::parse($player->created_at)->toDateString();
             })
+              ->addColumn('age', function ($players) {
+                return $players->age;
+            })
             ->addColumn('actions', function ($player) {
                 return $player->action_buttons;
             })

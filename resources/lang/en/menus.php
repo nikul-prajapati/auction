@@ -136,6 +136,27 @@ return [
 	"management" => "Player Management",
 	"main" => "Players",
 	],
+	"playerrecords" => [
+	"all" => "All Playerrecords",
+	"create" => "Create Playerrecord",
+	"edit" => "Edit Playerrecord",
+	"management" => "Playerrecord Management",
+	"main" => "Playerrecords",
+	],
+	"playerrecordsusers" => [
+	"all" => "All Playerrecordsusers",
+	"create" => "Create Playerrecordsuser",
+	"edit" => "Edit Playerrecordsuser",
+	"management" => "Playerrecordsuser Management",
+	"main" => "Playerrecordsusers",
+	],
+	"playerinformations" => [
+	"all" => "All Playerinformations",
+	"create" => "Create Playerinformation",
+	"edit" => "Edit Playerinformation",
+	"management" => "Playerinformation Management",
+	"main" => "Playerinformations",
+	],
 	],
 	"language-picker" => [
 	"language" => "Language",

@@ -20,6 +20,14 @@ trait UserRelationship
         return $this->belongsToMany(config('access.role'), config('access.role_user_table'), 'user_id', 'role_id');
     }
 
+
+    public function player_records()
+    {
+        return $this->hasOne(playerrecords::class, 'id', 'player_records_id');
+    }
+
+    
+
     /**
      * Many-to-Many relations with Permission.
      * ONLY GETS PERMISSIONS ARE NOT ASSOCIATED WITH A ROLE.

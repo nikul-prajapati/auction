@@ -277,6 +277,37 @@ return [
 	"createdat" => "Created At",
 	],
 	],
+	"playerrecords" => [
+	"create" => "Create Playerrecord",
+	"edit" => "Edit Playerrecord",
+	"management" => "Playerrecord Management",
+	"title" => "Playerrecords",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
+	"playerrecordsusers" => [
+	"create" => "Create Playerrecordsuser",
+	"edit" => "Edit Playerrecordsuser",
+	"management" => "Playerrecordsuser Management",
+	"title" => "Playerrecordsusers",
+	"table" => [
+	"id" => "Id",
+	"played_match" => "played match",
+	"createdat" => "Created At",
+	],
+	],
+	"playerinformations" => [
+	"create" => "Create Playerinformation",
+	"edit" => "Edit Playerinformation",
+	"management" => "Playerinformation Management",
+	"title" => "Playerinformations",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
 	],
 	"frontend" => [
 	"auth" => [

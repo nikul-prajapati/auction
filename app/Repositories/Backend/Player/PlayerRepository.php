@@ -28,15 +28,23 @@ class PlayerRepository extends BaseRepository
     public function getForDataTable()
     {
         return $this->query()
+            // ->leftJoin('users', 'users.id', '=', 'players.users_id')
+            
+            // ->leftJoin('playerrecords_user', 'playerrecords_user.users_id', '=', 'player.id')
+            // ->leftJoin('player_records', 'playerrecords_user.player_records_id', '=', 'player_records.id')
+
             ->select([
                 config('module.players.table').'.id',
-                config('module.players.table').'.p_match',
-                config('module.players.table').'.p_runs',
-                config('module.players.table').'.p_wickets',
+                
                 config('module.players.table').'.created_at',
                 config('module.players.table').'.updated_at',
+                DB::raw('GROUP_CONCAT(users.first_name) as names'),
+                DB::raw('GROUP_CONCAT(project_records.age) as age'),
             ]);
     }
+
+
+      
 
     /**
      * For updating the respective Model in storage

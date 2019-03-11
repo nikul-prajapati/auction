@@ -253,6 +253,21 @@ return [
             ],
         ],
 
+        'player_information' => [
+            'create'     => 'Créer une catégorie de blog',
+            'edit'       => 'Modifier une catégorie de blog',
+            'management' => 'Gérer une catégorie de blog',
+            'title'      => 'Catégorie de blog',
+
+            'table' => [
+                'title'     => 'Catégorie de blog',
+                'played_match' => 'played match',
+                'status'    => 'Statut',
+                'createdat' => 'Créée le',
+                'createdby' => 'Créée par',
+                'all'       => 'Tout',
+            ],
+        ],
 
         'modules' => [
             'create'     => 'Créer un oodule',

@@ -21,3 +21,6 @@ require __DIR__.'/Team.php';
 require __DIR__.'/Neeraj.php';
 require __DIR__.'/Detail.php';
 require __DIR__.'/Player.php';
+require __DIR__.'/Playerrecord.php';
+require __DIR__.'/Playerrecordsuser.php';
+require __DIR__.'/Playerinformation.php';

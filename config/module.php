@@ -32,4 +32,13 @@ return [
 	"players" => [
 	"table" => "players",
 	],
+	"playerrecords" => [
+	"table" => "player_records",
+	],
+	"playerrecordsusers" => [
+	"table" => "playerrecords_user",
+	],
+	"playerinformations" => [
+	"table" => "player_information",
+	],
 ];

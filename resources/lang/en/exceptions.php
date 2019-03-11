@@ -106,6 +106,27 @@ return [
 	"not_found" => "That Player does not exist.",
 	"update_error" => "There was a problem updating this Player. Please try again.",
 	],
+	"playerrecords" => [
+	"already_exists" => "That Playerrecord already exists. Please choose a different name.",
+	"create_error" => "There was a problem creating this Playerrecord. Please try again.",
+	"delete_error" => "There was a problem deleting this Playerrecord. Please try again.",
+	"not_found" => "That Playerrecord does not exist.",
+	"update_error" => "There was a problem updating this Playerrecord. Please try again.",
+	],
+	"playerrecordsusers" => [
+	"already_exists" => "That Playerrecordsuser already exists. Please choose a different name.",
+	"create_error" => "There was a problem creating this Playerrecordsuser. Please try again.",
+	"delete_error" => "There was a problem deleting this Playerrecordsuser. Please try again.",
+	"not_found" => "That Playerrecordsuser does not exist.",
+	"update_error" => "There was a problem updating this Playerrecordsuser. Please try again.",
+	],
+	"playerinformations" => [
+	"already_exists" => "That Playerinformation already exists. Please choose a different name.",
+	"create_error" => "There was a problem creating this Playerinformation. Please try again.",
+	"delete_error" => "There was a problem deleting this Playerinformation. Please try again.",
+	"not_found" => "That Playerinformation does not exist.",
+	"update_error" => "There was a problem updating this Playerinformation. Please try again.",
+	],
 	],
 	"frontend" => [
 	"auth" => [

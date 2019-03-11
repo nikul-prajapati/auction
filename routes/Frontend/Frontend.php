@@ -49,6 +49,13 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('teams', 'Teams\TeamsController@index');
 
 
+        /*
+         * Player Records Specific
+         */
+        Route::get('player_record', 'PlayerRecord\PlayerRecordController@index');
+
+
+
 
 /*
 * Show pages

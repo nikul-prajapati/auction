@@ -54,7 +54,10 @@ class PlayersController extends Controller
      */
     public function edit(Player $player, EditPlayerRequest $request)
     {
-        return new EditResponse($player);
+        $player_records = $this->player_records->getAll();
+        $users = users::getSelectData('first_name');
+
+        return new EditResponse($player,$player_records,$users);
     }
     /**
      * Update the specified resource in storage.

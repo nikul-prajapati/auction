@@ -16,7 +16,7 @@ class CreateBidTable extends Migration
         Schema::create('bid', function (Blueprint $table) {
             $table->increments('bid_id');
             $table->integer('price');
-            $table->integer('P_id')->unsigned()->index('bid_P_id_foreign');
+            $table->integer('users_id')->unsigned()->index('bid_users_id_foreign');
             $table->integer('Team_id')->unsigned()->index('bid_Team_id_foreign');
         });
     }
