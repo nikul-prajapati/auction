@@ -13,10 +13,16 @@ class CreateDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('details', function (Blueprint $table) {
+       Schema::create('details', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('num');
+            $table->integer('p_match');
+            $table->integer('p_run');
+            $table->integer('p_wickets');
+            $table->string('type',55);
+            $table->string('batsman',55);
+            $table->string('bowler',55);
             $table->timestamps();
+            // $table->integer('u_id')->unsigned()->index('player_record_u_id_foreign');
         });
     }
 

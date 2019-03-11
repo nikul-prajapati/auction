@@ -4,7 +4,7 @@
 
 
 <div class="container">
-  <h1 style="box-shadow: 2px 7px 12px;">About Cygnet Group</h1><br>
+  <h1 style="box-shadow: 2px 7px 12px;padding: 8px;">About Cygnet Group</h1><br>
 
     <div class="col-md-7"><h3><u>Cygnet Infotech is a Global Technology Solution Provider</u></h3></div>
     <br><br>

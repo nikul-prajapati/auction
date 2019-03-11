@@ -1,4 +1,5 @@
 @extends('frontend.layouts.app')
+.
 
 @section('content')
     <div class="row">
@@ -6,104 +7,102 @@
         <div class="col-md-8 col-md-offset-2">
 
             <div class="panel panel-default">
-                <div class="panel-heading">{{ trans('labels.frontend.auth.register_box_title') }}</div>
+                <div class="panel-heading">{{ trans('labels.frontend.auth.register_box_title') }}
+                </div>
 
                 <div class="panel-body">
 
-                   
-                    <div class="form-group">
-                        {{ Form::label('match', trans('Match').'*', ['class' => 'col-md-4 control-label']) }}
-                        <div class="col-md-6">
-                            {{ Form::input('match', 'match', null, ['class' => 'form-control', 'placeholder' => trans('Match')]) }}
-                        </div><!--col-md-6-->
-                    </div><!--form-group--><br><br>
+                    <div class="card uper">
 
-                    <div class="form-group">
-                        {{ Form::label('runs', trans('Runs').'*', ['class' => 'col-md-4 control-label']) }}
-                        <div class="col-md-6">
-                            {{ Form::input('runs', 'runs', null, ['class' => 'form-control', 'placeholder' => trans('Runs')]) }}
-                        </div><!--col-md-6-->
-                    </div><!--form-group--><br><br>
+                    <div class="card-header"> add share</div>
+                    <div class="card-body"> 
 
-                     <div class="form-group">
-                        {{ Form::label('runs', trans('Wickets').'*', ['class' => 'col-md-4 control-label']) }}
-                        <div class="col-md-6">
-                            {{ Form::input('wickets', 'wickets', null, ['class' => 'form-control', 'placeholder' => trans('wickets')]) }}
-                        </div><!--col-md-6-->
-                    </div><!--form-group--><br><br>
-                
-                   <div class="form-group">
-                        {{ Form::label('type', trans('Type').'*', ['class' => 'col-md-4 control-label']) }}
-                       
-                        <div class="col-md-4">
-                          
-                          <select name=""> 
-                            <option value="Batsman">Batsman</option>
-                            <option value="Bowler">Bowler</option>
-                            <option value="All Rounder">All Rounder</option>
-                          </select>                 
-                        </div><!--col-md-6-->
-                    </div><!--form-group--><br><br>
-                
+                    @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
 
-               <div class="form-group">
-                        {{ Form::label('batsman', trans('Batsman').'*', ['class' => 'col-md-4 control-label']) }}
-                       
-                        <div class="col-md-4">
-                          
-                          <select name=""> 
-                <option value="LeftHanded">Left Handed</option>
-                <option value="RightHanded">Right Handed</option>
-                </select>
-                     
-                        
-                        </div><!--col-md-6-->
-                    </div><!--form-group--><br><br>
+                            @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
 
-                      <div class="form-group">
-                        {{ Form::label('batsman', trans('Bowler').'*', ['class' => 'col-md-4 control-label']) }}
-                       
-                        <div class="col-md-4">
-                          
-                          <select type="text" value="" name=""> 
-                <option value="pace bowler">Pace bowler</option>
-                <option value="spin bowler">Spin bowler</option>
-               
+                        </ul>
 
-                </select>
-                        
-                        </div><!--col-md-6-->
-                    </div><!--form-group--><br><br>
-
-
-                
-
-                    <div class="form-group">
-                            <div class="col-xs-7">
-                               <label class="col-md-12 control-label">
-                                 {!! Form::checkbox('is_term_accept',1,false) !!}
-                                 I accept {!! link_to_route('frontend.pages.show', trans('validation.attributes.frontend.register-user.terms_and_conditions').'*', ['page_slug'=>'terms-and-conditions']) !!} </label>
-
-                         </div><!--form-group-->
-                    </div><!--col-md-6-->
-
-                    @if (config('access.captcha.registration'))
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                {!! Form::captcha() !!}
-                                {{ Form::hidden('captcha_status', 'true') }}
-                            </div><!--col-md-6-->
-                        </div><!--form-group-->
+                    </div>
                     @endif
 
-                     <div class="form-group">
-                        <div class="col-md-6 col-md-offset-4">
-                         <a href="{{trans('/register/details')}}" class ="btn btn-primary" role="button">Submit</a>
-                        </div> <!--col-md-6-->
-                     </div> <!--form-group-->
+<form method="POST" action="{{route('details.store')}}"  class="form-horizontal"> 
+
+        <div class="form-group">
+             @csrf
+              <label for="match">match</label>
+              <input type="text" class="form-control" name="match"  />
+        </div>
+        
+        <div class="form-group">
+        
+              <label for="run">run:</label>
+              <input type="text" class="form-control" name="runs"/>
+
+          </div>
+        
+        <div class="form-group">
+        
+              <label for="wicket">wickets:</label>
+              <input type="text" class="form-control" name="wickets"/>
+        
+          </div>
+
+        <div class="form-group">
+
+            <label for="type">Type</label>
+            <select name="type" class="form-group"> 
+                    
+                    <option value="Batsman">Batsman</option>
+                    <option value="Bowler">Bowler</option>
+                    <option value="All Rounder">All Rounder</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+        
+             <label for="Batsman">batsman</label>
+             <select name="batsman" class="form-group">select  
+
+                    <option value="LeftHanded">Left Handed</option>
+                    <option value="RightHanded">Right Handed</option>
+
+             </select>
 
 
-                    {{ Form::close() }}
+        </div>
+
+        <div class="form-group">
+
+            <label for="bowler">bowler </label>
+            <select name="bowler"> 
+
+                <option value="pace bowler">Pace bowler</option>
+                <option value="spin bowler">Spin bowler</option>
+
+             </select>
+                        
+
+        </div>
+              
+        <button type="submit" class="btn btn-primary">submit data</button>  
+          
+</form>            
+ 
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+
+         
+         
 
                 </div><!-- panel body -->
 

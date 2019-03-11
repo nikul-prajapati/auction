@@ -6,7 +6,7 @@
         <div class="col-xs-16">
 
             <div class="panel panel-default">
-                <div class="panel-heading">{{ trans('WELCOME TO CYGNET CRICKET LEAGUE') }}</div>
+                <div class="panel-heading">WELCOME TO CYGNET CRICKET LEAGUE</div>
 
                 <div class="panel-body">
 
@@ -37,8 +37,10 @@
                                     </div><!--media-body-->
                                 </li><!--media-->
                             </ul><!--media-list-->
-
-                            
+                            <form>
+                                <a href="route{{('details')}}">form</a>
+                            </form>
+                                                  
                             </div><!--row-->
 
                         </div><!--col-md-8-->

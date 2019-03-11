@@ -66,13 +66,10 @@ class RegisterController extends Controller
         {
             $user = $this->user->create($request->only('first_name', 'last_name', 'email', 'password', 'is_term_accept'));
             event(new UserRegistered($user));
-
-
-          
                     // trans('exceptions.frontend.auth.confirmation.created_pending') :
                     // trans('exceptions.frontend.auth.confirmation.created_confirm')
 
-            return view('frontend.auth.details')->withFlashSuccess(
+            return view('frontend.auth.login')->withFlashSuccess(
              trans('hii')
             );
         } 
