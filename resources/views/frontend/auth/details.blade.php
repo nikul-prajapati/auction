@@ -14,7 +14,7 @@
 
                     <div class="card uper">
 
-                    <div class="card-header"> add share</div>
+                    <div class="card-header"></div>
                     <div class="card-body"> 
 
                     @if ($errors->any())
@@ -34,28 +34,28 @@
 
         <div class="form-group">
              @csrf
-              <label for="match">match</label>
-              <input type="text" class="form-control" name="match"  />
+              <label for="match" class="col-md-4 control-label">match</label>
+              <input type="text" class="col-md-6" name="match"  />
         </div>
         
         <div class="form-group">
         
-              <label for="run">run:</label>
-              <input type="text" class="form-control" name="runs"/>
+              <label for="run" class="col-md-4 control-label">run:</label>
+              <input type="text" class="col-md-6" name="runs"/>
 
-          </div>
+        </div>
         
         <div class="form-group">
         
-              <label for="wicket">wickets:</label>
-              <input type="text" class="form-control" name="wickets"/>
+              <label for="wicket" class="col-md-4 control-label">wickets:</label>
+              <input type="text" class="col-md-6" name="wickets"/>
         
-          </div>
+        </div>
 
         <div class="form-group">
 
-            <label for="type">Type</label>
-            <select name="type" class="form-group"> 
+            <label for="type" class="col-md-4 control-label">Type</label>
+            <select name="type" class="col-md-6"> 
                     
                     <option value="Batsman">Batsman</option>
                     <option value="Bowler">Bowler</option>
@@ -67,8 +67,8 @@
 
         <div class="form-group">
         
-             <label for="Batsman">batsman</label>
-             <select name="batsman" class="form-group">select  
+             <label for="Batsman" class="col-md-4 control-label">batsman</label>
+             <select name="batsman" class="col-md-6">select  
 
                     <option value="LeftHanded">Left Handed</option>
                     <option value="RightHanded">Right Handed</option>
@@ -80,19 +80,20 @@
 
         <div class="form-group">
 
-            <label for="bowler">bowler </label>
-            <select name="bowler"> 
+            <label for="bowler" class="col-md-4 control-label">bowler </label>
+            <select name="bowler" class="col-md-6"> 
 
-                <option value="pace bowler">Pace bowler</option>
-                <option value="spin bowler">Spin bowler</option>
+                    <option value="pace bowler">Pace bowler</option>
+                    <option value="spin bowler">Spin bowler</option>
 
              </select>
                         
 
         </div>
               
+    <div class="col-md-6 col-md-offset-4">
         <button type="submit" class="btn btn-primary">submit data</button>  
-          
+    </div>
 </form>            
  
       </div>
