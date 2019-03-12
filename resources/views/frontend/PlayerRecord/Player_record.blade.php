@@ -13,7 +13,7 @@
         <th>{{ trans('Wickets Taken') }}</th>
       </tr> 
 
-    
+      
 
 
     
