@@ -6,8 +6,9 @@ use App\Models\ModelTrait;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Team\Traits\TeamAttribute;
 use App\Models\Team\Traits\TeamRelationship;
+use App\Models\BaseModel;
 
-class Team extends Model
+class Team extends BaseModel
 {
     use ModelTrait,
         TeamAttribute,

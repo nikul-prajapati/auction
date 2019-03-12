@@ -45,6 +45,8 @@ class TeamsController extends Controller
      */
     public function index(ManageTeamRequest $request)
     {
+        // $repository = $this->repository->getAll();
+        // dd($repository);
         return new ViewResponse('backend.teams.index');
     }
     /**
@@ -55,6 +57,7 @@ class TeamsController extends Controller
      */
     public function create(CreateTeamRequest $request)
     {
+        
         return new CreateResponse('backend.teams.create');
     }
     /**

@@ -55,6 +55,7 @@ class PlayerinformationsController extends Controller
      */
     public function create(CreatePlayerinformationRequest $request)
     {
+        
         return new CreateResponse('backend.playerinformations.create');
     }
     /**
