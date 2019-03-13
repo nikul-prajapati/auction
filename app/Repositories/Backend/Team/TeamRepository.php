@@ -30,6 +30,7 @@ class TeamRepository extends BaseRepository
         return $this->query()
             ->select([
                 config('module.teams.table').'.id',
+                config('module.teams.table').'.Team_name',
                 config('module.teams.table').'.created_at',
                 config('module.teams.table').'.updated_at',
             ]);

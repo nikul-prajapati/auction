@@ -29,10 +29,10 @@ class AddForiegnKeyPlayerDetails extends Migration
     public function down()
     {
          Schema::table('player_details', function (Blueprint $table) {
-            $table->dropForeign('player_details_u_id_foreign');
-            $table->dropForeign('player_details_PR_id_foreign');
+            $table->dropForeign('player_details_users_id_foreign');
+            $table->dropForeign('player_details_player_records_id_foreign');
             $table->dropForeign('player_details_Team_id_foreign');
-            $table->dropForeign('player_details_P_id_foreign');
+            
         }); 
     }
 }

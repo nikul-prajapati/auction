@@ -24,14 +24,14 @@ class Team extends Model
      * The database table used by the model.
      * @var string
      */
-    protected $table = 'teamsteams';
+    protected $table = 'teams';
 
     /**
      * Mass Assignable fields of model
      * @var array
      */
     protected $fillable = [
-
+            'Team_name', 'created_by', 'updated_by'
     ];
 
     /**

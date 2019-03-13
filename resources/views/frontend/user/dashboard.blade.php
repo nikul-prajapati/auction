@@ -38,7 +38,7 @@
                                 </li><!--media-->
                             </ul><!--media-list-->
                             <form>
-                                <a href="route{{('details')}}">form</a>
+                                <a class="btn btn-info" href="route{{('details')}}">form</a>
                             </form>
                                                   
                             </div><!--row-->

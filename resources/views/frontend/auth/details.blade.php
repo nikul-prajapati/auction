@@ -12,13 +12,8 @@
 
                 <div class="panel-body">
 
-                    <div class="card uper">
-
-                    <div class="card-header"></div>
-                    <div class="card-body"> 
-
                     @if ($errors->any())
-                    <div class="alert alert-danger">
+                  <!--   <div class="alert alert-danger"> -->
                         <ul>
 
                             @foreach ($errors->all() as $error)
@@ -27,35 +22,35 @@
 
                         </ul>
 
-                    </div>
+                 <!--    </div> -->
                     @endif
 
 <form method="POST" action="{{route('details.store')}}"  class="form-horizontal"> 
 
         <div class="form-group">
              @csrf
-              <label for="match" class="col-md-4 control-label">match</label>
+              <label for="match" class="col-md-4 control-label">Match:</label>
               <input type="text" class="col-md-6" name="match"  />
         </div>
         
         <div class="form-group">
         
-              <label for="run" class="col-md-4 control-label">run:</label>
+              <label for="run" class="col-md-4 control-label">Run:</label>
               <input type="text" class="col-md-6" name="runs"/>
 
         </div>
         
         <div class="form-group">
         
-              <label for="wicket" class="col-md-4 control-label">wickets:</label>
+              <label for="wicket" class="col-md-4 control-label">Wickets:</label>
               <input type="text" class="col-md-6" name="wickets"/>
         
         </div>
 
         <div class="form-group">
 
-            <label for="type" class="col-md-4 control-label">Type</label>
-            <select name="type" class="col-md-6"> 
+            <label for="type" class="col-md-4 control-label">Type:</label>
+            <select name="type" class="col-md-6" style="padding: 5px;"> 
                     
                     <option value="Batsman">Batsman</option>
                     <option value="Bowler">Bowler</option>
@@ -67,8 +62,8 @@
 
         <div class="form-group">
         
-             <label for="Batsman" class="col-md-4 control-label">batsman</label>
-             <select name="batsman" class="col-md-6">select  
+             <label for="Batsman" class="col-md-4 control-label">Batsman:</label>
+             <select name="batsman" class="col-md-6" style="padding: 5px;">
 
                     <option value="LeftHanded">Left Handed</option>
                     <option value="RightHanded">Right Handed</option>
@@ -80,8 +75,8 @@
 
         <div class="form-group">
 
-            <label for="bowler" class="col-md-4 control-label">bowler </label>
-            <select name="bowler" class="col-md-6"> 
+            <label for="bowler" class="col-md-4 control-label">Bowler: </label>
+            <select name="bowler" class="col-md-6" style="padding: 5px;"> 
 
                     <option value="pace bowler">Pace bowler</option>
                     <option value="spin bowler">Spin bowler</option>
@@ -90,17 +85,25 @@
                         
 
         </div>
-              
+
+        <div class="form-group">
+        
+              <label for="run" class="col-md-4 control-label">Age:</label>
+              <input type="text" class="col-md-6" name="age"/>
+
+        </div>
+
     <div class="col-md-6 col-md-offset-4">
-        <button type="submit" class="btn btn-primary">submit data</button>  
+       
+        <button type="submit" class="btn btn-primary">Submit</button>  
     </div>
+
 </form>            
  
       </div>
       </div>
       </div>
-      </div>
-      </div>
+
 
          
          

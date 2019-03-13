@@ -69,5 +69,30 @@ return [
 	"deleted" => "The Detail was successfully deleted.",
 	"updated" => "The Detail was successfully updated.",
 	],
+	"players" => [
+	"created" => "The Player was successfully created.",
+	"deleted" => "The Player was successfully deleted.",
+	"updated" => "The Player was successfully updated.",
+	],
+	"playerrecords" => [
+	"created" => "The Playerrecord was successfully created.",
+	"deleted" => "The Playerrecord was successfully deleted.",
+	"updated" => "The Playerrecord was successfully updated.",
+	],
+	"playerrecordsusers" => [
+	"created" => "The Playerrecordsuser was successfully created.",
+	"deleted" => "The Playerrecordsuser was successfully deleted.",
+	"updated" => "The Playerrecordsuser was successfully updated.",
+	],
+	"playerinformations" => [
+	"created" => "The Playerinformation was successfully created.",
+	"deleted" => "The Playerinformation was successfully deleted.",
+	"updated" => "The Playerinformation was successfully updated.",
+	],
+	"selectcaptains" => [
+	"created" => "The Selectcaptain was successfully created.",
+	"deleted" => "The Selectcaptain was successfully deleted.",
+	"updated" => "The Selectcaptain was successfully updated.",
+	],
 	],
 ];

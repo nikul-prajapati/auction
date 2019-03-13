@@ -48,7 +48,7 @@ class detailsRepository extends BaseRepository
     {
         $details = self::MODEL;
         $details = new $details();
-        $details->p_match = $data['p_match'];
+        $details->p_match = $data['match'];
         $details->p_run = $data['p_run'];
         $details->p_wickets = $data['p_wickets'];
         $details->type = $data['type'];

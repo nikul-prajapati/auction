@@ -21,12 +21,27 @@ return [
 	"table" => "faqs",
 	],
 	"teams" => [
-	"table" => "teamsteams",
+	"table" => "teams",
 	],
 	"neerajs" => [
 	"table" => "neeraj",
 	],
 	"details" => [
 	"table" => "details",
+	],
+	"players" => [
+	"table" => "players",
+	],
+	"playerrecords" => [
+	"table" => "player_records",
+	],
+	"playerrecordsusers" => [
+	"table" => "playerrecords_user",
+	],
+	"playerinformations" => [
+	"table" => "player_information",
+	],
+	"selectcaptains" => [
+	"table" => "select_captains",
 	],
 ];

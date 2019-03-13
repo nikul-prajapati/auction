@@ -10,7 +10,7 @@
 @endsection
 
 @section('content')
-    {{ Form::model($team, ['route' => ['admin.teams.update', $team], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-team']) }}
+    {{ Form::model($teams, ['route' => ['admin.teams.update', $teams], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-team']) }}
 
         <div class="box box-info">
             <div class="box-header with-border">
@@ -22,6 +22,16 @@
             </div><!--box-header with-border-->
 
             <div class="box-body">
+
+                {{-- Team Name --}}
+                <div class="form-group">
+                    {{ Form::label('Team_name', trans('validation.attributes.backend.teams.Team_Name'), ['class' => 'col-lg-2 control-label required']) }}
+
+                    <div class="col-lg-10">
+                        {{ Form::text('Team_name', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.teams.Team_Name'), 'required' => 'required']) }}
+                    </div><!--col-lg-10-->
+                </div><!--form control-->
+
                 <div class="form-group">
                     {{-- Including Form blade file --}}
                     @include("backend.teams.form")
