@@ -31,7 +31,7 @@ class Team extends Model
      * @var array
      */
     protected $fillable = [
-
+            'Team_name', 'created_by', 'updated_by'
     ];
 
     /**

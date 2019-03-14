@@ -5,7 +5,7 @@
 
         <example></example>
 
-        <div class="col-xs-12">
+        <!-- <div class="col-xs-12">
 
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -13,16 +13,16 @@
                 </div>
 
                 <div class="panel-body">
-                    {{ trans('strings.frontend.welcome_to', ['place' => app_name()]) }}
+                    {{ trans('strings.frontend.hii', ['place' => app_name()]) }}
                 </div>
-            </div><!-- panel -->
+            </div> --><!-- panel -->
 
-        </div><!-- col-md-10 -->
+        <!-- </div> --><!-- col-md-10 -->
 
         @role('Administrator')
             {{-- You can also send through the Role ID --}}
 
-            <div class="col-xs-12">
+            <!-- <div class="col-xs-12">
 
                 <div class="panel panel-default">
                     <div class="panel-heading"><i class="fa fa-home"></i> {{ trans('strings.frontend.tests.based_on.role') . trans('strings.frontend.tests.using_blade_extensions') }}</div>
@@ -32,7 +32,7 @@
                     </div>
                 </div><!-- panel -->
 
-            </div><!-- col-md-10 -->
+            </div> --><!-- col-md-10 -->
         @endauth
 
         @if (access()->hasRole('Administrator'))

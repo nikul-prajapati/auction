@@ -24,6 +24,9 @@ Route::group(['middleware' => 'auth'], function () {
          */
         Route::get('account', 'AccountController@index')->name('account');
 
+
+        
+
         /*
          * User Profile Specific
          */
@@ -34,7 +37,25 @@ Route::group(['middleware' => 'auth'], function () {
          */
         Route::patch('profile-picture/update', 'ProfileController@updateProfilePicture')->name('profile-picture.update');
     });
+
+
+
 });
+
+
+        /*
+         * Teams Name Specific
+         */
+        Route::get('teams', 'Teams\TeamsController@index');
+
+
+        /*
+         * Player Records Specific
+         */
+        Route::get('player_record', 'PlayerRecord\PlayerRecordController@index');
+
+
+
 
 /*
 * Show pages

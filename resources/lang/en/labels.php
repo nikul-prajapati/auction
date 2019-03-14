@@ -243,6 +243,7 @@ return [
 	"title" => "Teams",
 	"table" => [
 	"id" => "Id",
+	"Team_name" => "Team name",
 	"createdat" => "Created At",
 	],
 	],
@@ -261,6 +262,57 @@ return [
 	"edit" => "Edit Detail",
 	"management" => "Detail Management",
 	"title" => "Details",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
+	"players" => [
+	"create" => "Create Player",
+	"edit" => "Edit Player",
+	"management" => "Player Management",
+	"title" => "Players",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
+	"playerrecords" => [
+	"create" => "Create Playerrecord",
+	"edit" => "Edit Playerrecord",
+	"management" => "Playerrecord Management",
+	"title" => "Playerrecords",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
+	"playerrecordsusers" => [
+	"create" => "Create Playerrecordsuser",
+	"edit" => "Edit Playerrecordsuser",
+	"management" => "Playerrecordsuser Management",
+	"title" => "Playerrecordsusers",
+	"table" => [
+	"id" => "Id",
+	"played_match" => "played match",
+	"createdat" => "Created At",
+	],
+	],
+	"playerinformations" => [
+	"create" => "Create Playerinformation",
+	"edit" => "Edit Playerinformation",
+	"management" => "Playerinformation Management",
+	"title" => "Playerinformations",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
+	"selectcaptains" => [
+	"create" => "Create Selectcaptain",
+	"edit" => "Edit Selectcaptain",
+	"management" => "Selectcaptain Management",
+	"title" => "Selectcaptains",
 	"table" => [
 	"id" => "Id",
 	"createdat" => "Created At",
