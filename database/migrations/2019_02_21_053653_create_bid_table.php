@@ -14,10 +14,11 @@ class CreateBidTable extends Migration
     public function up()
     {
         Schema::create('bid', function (Blueprint $table) {
-            $table->increments('bid_id');
+            $table->increments('id');
             $table->integer('price');
             $table->integer('users_id')->unsigned()->index('bid_users_id_foreign');
-            $table->integer('Team_id')->unsigned()->index('bid_Team_id_foreign');
+            $table->integer('teams_id')->unsigned()->index('bid_teams_id_foreign');
+            $table->timestamps();
         });
     }
 

@@ -33,7 +33,7 @@ class detailscontroller extends Controller
      */
     public function index()
     {
-        //
+        return view('frontend.auth.details');
     }
 
     /**
@@ -43,7 +43,7 @@ class detailscontroller extends Controller
      */
     public function create()
     {
-         return view('frontend.auth.details');
+         // return view('frontend.auth.details');
     }
 
     /**

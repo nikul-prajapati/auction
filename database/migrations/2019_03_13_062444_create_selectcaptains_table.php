@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSelectCaptainsTable extends Migration
+class CreateSelectcaptainsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateSelectCaptainsTable extends Migration
      */
     public function up()
     {
-        Schema::create('select_captains', function (Blueprint $table) {
+        Schema::create('selectcaptains', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+             $table->integer('teams_id')->unsigned()->index('selectcaptains_teams_id_foreign');
+             $table->integer('users_id')->unsigned()->index('selectcaptains_user_id_foreign');
+             $table->timestamps();
         });
     }
 
@@ -26,6 +28,6 @@ class CreateSelectCaptainsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('select_captains');
+        Schema::dropIfExists('selectcaptains');
     }
 }

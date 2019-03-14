@@ -14,8 +14,9 @@ class AddForeignKeyPlayers extends Migration
     public function up()
     {
             Schema::table('players', function (Blueprint $table) {
-            $table->foreign('PR_id')->references('id')->on('player_record')->onUpdate('RESTRICT')->onDelete('CASCADE');
-            $table->foreign('PD_id')->references('id')->on('player_details')->onUpdate('RESTRICT')->onDelete('CASCADE');
+            $table->foreign('player_information_id')->references('id')->on('player_information')->onUpdate('RESTRICT')->onDelete('CASCADE');
+            $table->foreign('users_id')->references('id')->on('users')->onUpdate('RESTRICT')->onDelete('CASCADE');
+            $table->foreign('player_details_id')->references('id')->on('player_details')->onUpdate('RESTRICT')->onDelete('CASCADE');
         
         });
     }
@@ -28,8 +29,9 @@ class AddForeignKeyPlayers extends Migration
     public function down()
     {
          Schema::table('players', function (Blueprint $table) {
-            $table->dropForeign('players_PR_id_foreign');
-            $table->dropForeign('players_PD_id_foreign');
+            $table->dropForeign('players_player_information_id_foreign');
+            $table->dropForeign('players_users_id_foreign');
+            $table->dropForeign('players_player_details_id_foreign');
             
         });    }
 }

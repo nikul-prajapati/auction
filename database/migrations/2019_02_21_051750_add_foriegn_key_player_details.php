@@ -14,10 +14,10 @@ class AddForiegnKeyPlayerDetails extends Migration
     public function up()
     {
         Schema::table('player_details', function (Blueprint $table) {
-            $table->foreign('u_id')->references('id')->on('users')->onUpdate('RESTRICT')->onDelete('CASCADE');
-            $table->foreign('PR_id')->references('id')->on('player_record')->onUpdate('RESTRICT')->onDelete('CASCADE');
+            $table->foreign('users_id')->references('id')->on('users')->onUpdate('RESTRICT')->onDelete('CASCADE');
+            $table->foreign('player_records_id')->references('id')->on('player_records')->onUpdate('RESTRICT')->onDelete('CASCADE');
             $table->foreign('Team_id')->references('id')->on('teams')->onUpdate('RESTRICT')->onDelete('CASCADE');
-            $table->foreign('PT_id')->references('id')->on('player_type')->onUpdate('RESTRICT')->onDelete('CASCADE');
+            
         });
     }
 

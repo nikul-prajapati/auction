@@ -16,8 +16,9 @@ class CreatePlayersTable extends Migration
         Schema::create('players', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->integer('PR_id')->unsigned()->index('players_PR_id_foreign');
-            $table->integer('PD_id')->unsigned()->index('players_PD_id_foreign');
+            $table->integer('player_information_id')->unsigned()->index('players_player_information_id_foreign');
+            $table->integer('users_id')->unsigned()->index('players_users_id_foreign');
+            $table->integer('player_details_id')->unsigned()->index('players_player_details_id_foreign');
         });
     }
 

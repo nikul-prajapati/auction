@@ -58,3 +58,5 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'admin.', '
 * Routes From Module Generator
 */
 includeRouteFiles(__DIR__.'/Generator/');
+
+//Route::get('/form,');
