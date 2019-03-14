@@ -47,6 +47,8 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'admin.', '
 //Route::get('register/sub', function () { return view('register'); })->name('sub');
    Route::get('register/details', 'frontend\auth\loginController@showLoginForm');
 
+   Route::get('details/create', 'detailsController@create');
+
 /*
 * Routes From Module Generator
 */

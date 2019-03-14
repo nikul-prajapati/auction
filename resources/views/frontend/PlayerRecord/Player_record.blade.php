@@ -26,6 +26,7 @@
         
         @foreach($data as $value)
         <tr>
+          
         	<th><td>{{ trans('Match Played') }}</td></th>
             <td>{{$value->played_match}}</td></tr>
            <tr>	<th><td>{{ trans('Total Runs') }}</td></th>
