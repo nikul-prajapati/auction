@@ -59,8 +59,8 @@
                 },
                 columns: [
                     {data: 'id', name: '{{config('module.selectcaptains.table')}}.id'},
-                    {data: 'captain_name', name: '{{config('module.selectcaptains.table')}}.captain_name'},
-                    {data: 'team_name', name: '{{config('module.selectcaptains.table')}}.team_name'},
+                    {data: 'first_name', name: '{{config('module.users.table')}}.first_name'},
+                    {data: 'Team_name', name: '{{config('module.teams.table')}}.Team_name'},
                     {data: 'created_at', name: '{{config('module.selectcaptains.table')}}.created_at'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
                 ],

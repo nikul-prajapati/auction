@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Backend\Selectcaptain;
-
+use DB;
 use App\Models\Selectcaptain\Selectcaptain;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -55,7 +55,11 @@ class SelectcaptainsController extends Controller
      */
     public function create(CreateSelectcaptainRequest $request)
     {
-        return new CreateResponse('backend.selectcaptains.create');
+        $data ['data']=DB::table('teams')->get();
+        $data ['name']=DB::table('users')->where('id', '>', 3)->get();
+
+        return view('backend.selectcaptains.create',$data);
+
     }
     /**
      * Store a newly created resource in storage.

@@ -19,4 +19,10 @@ trait TeamRelationship
         $this->belongsTo(User::class);
     }
      */
+
+
+    public function selectcaptains()
+    {
+        return $this->hasOne(selectcaptains::class, 'id', 'selectcaptains_id');
+    }
 }
