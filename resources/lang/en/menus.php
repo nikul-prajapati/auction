@@ -164,6 +164,13 @@ return [
 	"management" => "Selectcaptain Management",
 	"main" => "Selectcaptains",
 	],
+	"bids" => [
+	"all" => "All Bids",
+	"create" => "Create Bid",
+	"edit" => "Edit Bid",
+	"management" => "Bid Management",
+	"main" => "Bids",
+	],
 	],
 	"language-picker" => [
 	"language" => "Language",

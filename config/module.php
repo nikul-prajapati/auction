@@ -44,4 +44,7 @@ return [
 	"selectcaptains" => [
 	"table" => "select_captains",
 	],
+	"bids" => [
+	"table" => "bids",
+	],
 ];

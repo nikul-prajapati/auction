@@ -318,6 +318,16 @@ return [
 	"createdat" => "Created At",
 	],
 	],
+	"bids" => [
+	"create" => "Create Bid",
+	"edit" => "Edit Bid",
+	"management" => "Bid Management",
+	"title" => "Bids",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
 	],
 	"frontend" => [
 	"auth" => [
