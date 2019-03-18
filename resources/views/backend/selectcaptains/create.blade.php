@@ -36,7 +36,7 @@
         <select class="btn btn-primary"  data-toggle="dropdown" name="users_id">
         <option>select</option>
         @foreach($name as $rol)
-           <option value="<?php echo $role->id ?>">
+           <option value="<?php echo $rol->id ?>">
            {{$rol->first_name}}</option>
           @endForeach
         </select>

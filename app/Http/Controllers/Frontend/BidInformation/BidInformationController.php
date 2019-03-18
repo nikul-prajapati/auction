@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Frontend\Team_details;
+namespace App\Http\Controllers\Frontend\BidInformation;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -11,7 +11,7 @@ use App\Http\Requests\Frontend\User\DashboardViewRequest;
 /**
  * Class AccountController.
  */
-class Team_detailsController extends Controller
+class BidInformationController extends Controller
 {
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
@@ -23,9 +23,7 @@ class Team_detailsController extends Controller
         
             $data['data'] = DB::table('bid')
                 ->leftjoin('users', 'users.id', '=', 'bid.users_id')
-                ->leftjoin('teams', 'teams.id', '=', 'bid.teams_id')
-                ->select('users.first_name','teams.Team_name')
-               
+                ->select('users.first_name','bid.price')
                 ->get();
 
 
@@ -33,7 +31,7 @@ class Team_detailsController extends Controller
 
 
             if(count ($data)>0){
-                return view('frontend.Team_details.Teamdetails',$data);
+                return view('frontend.BidInformation.Bid_Info',$data);
             }
             else
             {

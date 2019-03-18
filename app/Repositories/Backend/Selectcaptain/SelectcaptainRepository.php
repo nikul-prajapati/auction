@@ -28,9 +28,6 @@ class SelectcaptainRepository extends BaseRepository
     public function getForDataTable()
     {
         return $this->query()
-        
-
-
         ->leftJoin('users', 'users.id', '=', 'selectcaptains.users_id')
         ->leftJoin('teams', 'teams.id', '=', 'selectcaptains.teams_id')
             ->select([

@@ -1,3 +1,6 @@
+
+
+
 @extends ('backend.layouts.app')
 
 @section ('title', trans('labels.backend.selectcaptains.management'))
@@ -21,7 +24,7 @@
                 <table id="selectcaptains-table" class="table table-condensed table-hover table-bordered">
                     <thead>
                         <tr>
-                            <th>{{ trans('labels.backend.selectcaptains.table.id') }}</th>
+                            <th>{{ trans('id') }}</th>
                             <th>{{ trans('Captain_Name')}}</th>
                                 <th>{{('Team_Name')}}</th>
                             <th>{{ trans('labels.backend.selectcaptains.table.createdat') }}</th>
