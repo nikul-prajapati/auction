@@ -76,7 +76,8 @@
                                         </div><!--panel-heading-->
 
                                         <div class="panel-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.
+                                            </p>
                                         </div><!--panel-body-->
                                     </div><!--panel-->
                                 </div><!--col-xs-12-->
@@ -95,7 +96,7 @@
                                             <p>It will display the detail information about the player records i.e what is the speciality and the past history about the profile</p>
 
                                             <div class="col-md-6 col-md-offset-4">
-                                            <a href="{{trans('/player_record')}}" class ="btn btn-primary" role="button">View</a>
+                                            <a href="{{trans('/player_record')}}" class ="btn btn-primary" role="button">View Player information</a>
                                             </div> <!--col-md-6-->
                                         </div><!--panel-body-->
                                     </div><!--panel-->
@@ -104,39 +105,21 @@
                                 <div class="col-md-6">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
-                                            <h4>Item</h4>
+                                            <h4>Teams Details after bid</h4>
                                         </div><!--panel-heading-->
 
                                         <div class="panel-body">
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime hiovwhdiohv heoid ihvn WKHVB    .</p>
+
+
+                                            <div class="col-md-6 col-md-offset-4">
+                                            <a href="{{trans('/Teamdetails')}}" class ="btn btn-primary" role="button">View Player information</a>
+                                            </div> <!--col-md-6-->
                                         </div><!--panel-body-->
                                     </div><!--panel-->
                                 </div><!--col-md-6-->
 
-                                <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4>Item</h4>
-                                        </div><!--panel-heading-->
-
-                                        <div class="panel-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.</p>
-                                        </div><!--panel-body-->
-                                    </div><!--panel-->
-                                </div><!--col-md-6-->
-
-                                <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4>Item</h4>
-                                        </div><!--panel-heading-->
-
-                                        <div class="panel-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.</p>
-                                        </div><!--panel-body-->
-                                    </div><!--panel-->
-                                </div><!--col-md-6-->
-
+                                
                             </div><!--row-->
 
                         </div><!--col-md-8-->
