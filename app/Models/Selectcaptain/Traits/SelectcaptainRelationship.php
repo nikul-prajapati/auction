@@ -19,4 +19,16 @@ trait SelectcaptainRelationship
         $this->belongsTo(User::class);
     }
      */
+
+
+    public function users()
+    {
+        return $this->hasOne(users::class, 'id', 'users_id');
+    }
+
+     public function teams()
+    {
+        return $this->hasOne(teams::class, 'id', 'teams_id');
+    }
+
 }

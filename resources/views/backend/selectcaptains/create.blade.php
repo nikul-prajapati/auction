@@ -19,7 +19,27 @@
                 <div class="box-tools pull-right">
                     @include('backend.selectcaptains.partials.selectcaptains-header-buttons')
                 </div><!--box-tools pull-right-->
-            </div><!--box-header with-border-->
+            </div><!--box-header with-border--><br>
+            
+
+            <h4 class="col-md-2">Select Team Name</h4>
+        <select class="btn btn-primary dropdown-toggle" data-toggle="dropdown" name="teams_id">
+          <option>select</option>
+           @foreach($data as $role)
+           <option  value="<?php echo $role->id ?>">
+           {{$role->Team_name}}</option>
+          @endForeach
+        </select><br><br>
+       
+
+       <h4 class="col-md-2">Select Captain Name</h4>
+        <select class="btn btn-primary"  data-toggle="dropdown" name="users_id">
+        <option>select</option>
+        @foreach($name as $rol)
+           <option value="<?php echo $role->id ?>">
+           {{$rol->first_name}}</option>
+          @endForeach
+        </select>
 
             <div class="box-body">
                 <div class="form-group">

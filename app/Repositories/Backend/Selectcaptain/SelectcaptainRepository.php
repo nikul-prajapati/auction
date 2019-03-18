@@ -28,8 +28,15 @@ class SelectcaptainRepository extends BaseRepository
     public function getForDataTable()
     {
         return $this->query()
+        
+
+
+        ->leftJoin('users', 'users.id', '=', 'selectcaptains.users_id')
+        ->leftJoin('teams', 'teams.id', '=', 'selectcaptains.teams_id')
             ->select([
                 config('module.selectcaptains.table').'.id',
+                config('module.users.table').'.first_name',
+                config('module.teams.table').'.Team_name',
                 config('module.selectcaptains.table').'.created_at',
                 config('module.selectcaptains.table').'.updated_at',
             ]);

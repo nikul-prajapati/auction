@@ -10,7 +10,7 @@
 @endsection
 
 @section('content')
-    {{ Form::model($selectcaptain, ['route' => ['admin.selectcaptains.update', $selectcaptain], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-selectcaptain']) }}
+    {{ Form::model($selectcaptains, ['route' => ['admin.selectcaptain.update', $selectcaptains], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-selectcaptain']) }}
 
         <div class="box box-info">
             <div class="box-header with-border">

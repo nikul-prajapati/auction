@@ -26,6 +26,13 @@ trait UserRelationship
         return $this->hasOne(playerrecords::class, 'id', 'player_records_id');
     }
 
+
+    public function selectcaptains()
+    {
+        return $this->hasOne(selectcaptains::class, 'id', 'selectcaptains_id');
+    }
+
+    
     
 
     /**
