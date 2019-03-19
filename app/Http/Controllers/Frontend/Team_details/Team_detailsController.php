@@ -24,7 +24,7 @@ class Team_detailsController extends Controller
             $data['data'] = DB::table('bid')
                 ->leftjoin('users', 'users.id', '=', 'bid.users_id')
                 ->leftjoin('teams', 'teams.id', '=', 'bid.teams_id')
-                ->select('users.first_name','teams.Team_name')
+                ->select('users.first_name','teams.Team_name','bid.price')
                
                 ->get();
 

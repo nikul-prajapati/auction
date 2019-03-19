@@ -74,20 +74,14 @@
                                 <div class="col-xs-12">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
-                                            <h4>Player's price after bidding</h4>
+                                            <h4>aa</h4>
                                         </div><!--panel-heading-->
 
                                         <div class="panel-body">
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non qui facilis deleniti expedita fuga ipsum numquam aperiam itaque cum maxime.
                                             </p>
 
-                                             <div class="col-md-6 col-md-offset-4">
-                                            <a href="{{trans('/BidInformation')}}" class ="btn btn-primary" role="button">View Bid information</a>
-                                            </div> <!--col-md-6-->
-                                        </div><!--panel-body-->
-                                    </div><!--panel-->
-                                </div><!--col-md-6-->
-
+                                            
 
                                         </div><!--panel-body-->
                                     </div><!--panel-->
