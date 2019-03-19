@@ -42,7 +42,7 @@ return [
 	"table" => "player_information",
 	],
 	"selectcaptains" => [
-	"table" => "select_captains",
+	"table" => "selectcaptains",
 	],
 	"bids" => [
 	"table" => "bids",

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Models\Team\Traits;
+namespace App\Models\Selectcaptain\Traits;
 
 /**
- * Class TeamRelationship
+ * Class SelectcaptainRelationship
  */
-trait TeamRelationship
+trait SelectcaptainRelationship
 {
     /*
     * put you model relationships here
@@ -21,8 +21,14 @@ trait TeamRelationship
      */
 
 
-    public function selectcaptains()
+    public function users()
     {
-        return $this->hasOne(selectcaptains::class, 'id', 'selectcaptains_id');
+        return $this->hasOne(users::class, 'id', 'users_id');
     }
+
+     public function teams()
+    {
+        return $this->hasOne(teams::class, 'id', 'teams_id');
+    }
+
 }

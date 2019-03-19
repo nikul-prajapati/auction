@@ -40,7 +40,7 @@
             }
         ?>
     </head>
-    <body id="app-layout">
+    <body id="app-layout" style="background-image: url("bgimage.jpg");" >
         <div id="app">
             @include('includes.partials.logged-in-as')
             @include('frontend.includes.nav')

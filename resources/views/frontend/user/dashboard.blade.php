@@ -38,6 +38,11 @@
                                 </li><!--media-->
                             </ul><!--media-list-->
                             <form>
+
+                                <a href="{{trans('/teams')}}" class ="btn btn-primary">teams Name</a>
+
+                                <a href="{{trans('/Teamdetails')}}" class ="btn btn-primary" role="button">Teams information</a>
+
                                 <a class="btn btn-info" href="{{trans('/details')}}">form</a>
                             </form>
                                                   

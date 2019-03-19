@@ -1,3 +1,4 @@
+
 @extends('frontend.layouts.app')
 
 @section('content')
@@ -24,7 +25,6 @@
   <script>
 var myIndex = 0;
 carousel();
-
 function carousel() {
   var i;
   var x = document.getElementsByClassName("mySlides");
@@ -39,5 +39,4 @@ function carousel() {
 </script>
 
   @endsection
-
 
