@@ -13,7 +13,7 @@
                     {{ Form::open(['route' => 'frontend.auth.register', 'class' => 'form-horizontal']) }}
 
                     <div class="form-group">
-                        {{ Form::label('first_name', trans('validation.attributes.frontend.register-user.firstName').'*', ['class' => 'col-md-4 control-label']) }}
+                         {{ Form::label('first_name', trans('validation.attributes.frontend.register-user.firstName').'*', ['class' => 'col-md-4 control-label']) }}
                         <div class="col-md-6">
                             {{ Form::input('name', 'first_name', null, ['class' => 'form-control', 'placeholder' => trans('validation.attributes.frontend.register-user.firstName')]) }}
                         </div><!--col-md-6-->

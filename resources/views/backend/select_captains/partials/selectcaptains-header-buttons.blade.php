@@ -22,13 +22,21 @@
     </button>
     <ul class="dropdown-menu" role="menu">
         <li>
+<<<<<<< HEAD
             <a href="{{ route( 'admin.select_captains.index' ) }}">
+=======
+            <a href="{{ route( 'admin.selectcaptains.index' ) }}">
+>>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
                 <i class="fa fa-list-ul"></i> {{ trans( 'menus.backend.selectcaptains.all' ) }}
             </a>
         </li>
         @permission( 'create-selectcaptain' )
             <li>
+<<<<<<< HEAD
                 <a href="{{ route( 'admin.select_captains.create' ) }}">
+=======
+                <a href="{{ route( 'admin.selectcaptains.create' ) }}">
+>>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
                     <i class="fa fa-plus"></i> {{ trans( 'menus.backend.selectcaptains.create' ) }}
                 </a>
             </li>

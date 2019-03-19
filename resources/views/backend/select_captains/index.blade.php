@@ -12,7 +12,11 @@
             <h3 class="box-title">{{ trans('labels.backend.selectcaptains.management') }}</h3>
 
             <div class="box-tools pull-right">
+<<<<<<< HEAD
                 @include('backend.select_captains.partials.selectcaptains-header-buttons')
+=======
+                @include('backend.selectcaptains.partials.selectcaptains-header-buttons')
+>>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
             </div>
         </div><!--box-header with-border-->
 
@@ -46,11 +50,19 @@
     <script>
         //Below written line is short form of writing $(document).ready(function() { })
         $(function() {
+<<<<<<< HEAD
             var dataTable = $('#select_captains-table').dataTable({
                 processing: true,
                 serverSide: true,
                 ajax: {
                     url: '{{ route("admin.select_captains.get") }}',
+=======
+            var dataTable = $('#selectcaptains-table').dataTable({
+                processing: true,
+                serverSide: true,
+                ajax: {
+                    url: '{{ route("admin.selectcaptains.get") }}',
+>>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
                     type: 'post'
                 },
                 columns: [
@@ -63,7 +75,11 @@
                 dom: 'lBfrtip',
                 buttons: {
                     buttons: [
+<<<<<<< HEAD
                         { extend: 'copy', className: 'copyButton',  exportOptions: {columnsF: [ 0, 1 ]  }},
+=======
+                        { extend: 'copy', className: 'copyButton',  exportOptions: {columns: [ 0, 1 ]  }},
+>>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
                         { extend: 'csv', className: 'csvButton',  exportOptions: {columns: [ 0, 1 ]  }},
                         { extend: 'excel', className: 'excelButton',  exportOptions: {columns: [ 0, 1 ]  }},
                         { extend: 'pdf', className: 'pdfButton',  exportOptions: {columns: [ 0, 1 ]  }},

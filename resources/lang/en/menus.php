@@ -157,6 +157,20 @@ return [
 	"management" => "Playerinformation Management",
 	"main" => "Playerinformations",
 	],
+	"selectcaptains" => [
+	"all" => "All Selectcaptains",
+	"create" => "Create Selectcaptain",
+	"edit" => "Edit Selectcaptain",
+	"management" => "Selectcaptain Management",
+	"main" => "Selectcaptains",
+	],
+	"bids" => [
+	"all" => "All Bids",
+	"create" => "Create Bid",
+	"edit" => "Edit Bid",
+	"management" => "Bid Management",
+	"main" => "Bids",
+	],
 	],
 	"language-picker" => [
 	"language" => "Language",

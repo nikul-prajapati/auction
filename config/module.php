@@ -41,4 +41,10 @@ return [
 	"playerinformations" => [
 	"table" => "player_information",
 	],
+	"selectcaptains" => [
+	"table" => "select_captains",
+	],
+	"bids" => [
+	"table" => "bids",
+	],
 ];

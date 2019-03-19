@@ -308,6 +308,26 @@ return [
 	"createdat" => "Created At",
 	],
 	],
+	"selectcaptains" => [
+	"create" => "Create Selectcaptain",
+	"edit" => "Edit Selectcaptain",
+	"management" => "Selectcaptain Management",
+	"title" => "Selectcaptains",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
+	"bids" => [
+	"create" => "Create Bid",
+	"edit" => "Edit Bid",
+	"management" => "Bid Management",
+	"title" => "Bids",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
 	],
 	"frontend" => [
 	"auth" => [

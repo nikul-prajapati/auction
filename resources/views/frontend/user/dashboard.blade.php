@@ -3,16 +3,16 @@
 @section('content')
     <div class="row">
 
-        <div class="col-xs-12">
+        <div class="col-xs-16">
 
             <div class="panel panel-default">
-                <div class="panel-heading">{{ trans('navs.frontend.dashboard') }}</div>
+                <div class="panel-heading">WELCOME TO CYGNET CRICKET LEAGUE</div>
 
                 <div class="panel-body">
 
                     <div class="row">
 
-                        <div class="col-md-4 col-md-push-8">
+                        <div class="col-md-4 col-md-push-8" style="padding-left: 130px;">
 
                             <ul class="media-list">
                                 <li class="media">
@@ -37,6 +37,7 @@
                                     </div><!--media-body-->
                                 </li><!--media-->
                             </ul><!--media-list-->
+<<<<<<< HEAD
 
                             <div class="panel panel-default">
                                 <div class="panel-heading">
@@ -125,6 +126,12 @@
                                 </div><!--col-md-6-->
 
                                 
+=======
+                            <form>
+                                <a class="btn btn-info" href="{{trans('/details')}}">form</a>
+                            </form>
+                                                  
+>>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
                             </div><!--row-->
 
                         </div><!--col-md-8-->

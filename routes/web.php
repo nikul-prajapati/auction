@@ -45,11 +45,25 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'admin.', '
     includeRouteFiles(__DIR__.'/Backend/');
 });
 //Route::get('register/sub', function () { return view('register'); })->name('sub');
+<<<<<<< HEAD
    Route::get('register/details', 'frontend\auth\loginController@showLoginForm');
 
    Route::get('details/create', 'detailsController@create');
 
+=======
+//    Route::get('register/details', function()
+// {
+//     return view('frontend.user.dashboard');
+// });
+//    Route::get('/details', function(){
+//     return view('frontend.auth.details');
+//    });
+   
+   Route::resource('details', 'detailscontroller');
+>>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
 /*
 * Routes From Module Generator
 */
 includeRouteFiles(__DIR__.'/Generator/');
+
+//Route::get('/form,');
