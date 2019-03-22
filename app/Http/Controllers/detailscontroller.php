@@ -81,11 +81,7 @@ class detailscontroller extends Controller
 
       $details = new playerinformation([
         'played_match' => $request->get('match'),
-<<<<<<< HEAD
         'total_run'=> $request->get('runs'),
-=======
-        'total_runs'=> $request->get('runs'),
->>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
         'total_wickets'=> $request->get('wickets'),  
         'speciality'=> $request->get('type'),
         'batsman_type'=> $request->get('batsman'),

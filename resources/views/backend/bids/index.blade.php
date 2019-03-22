@@ -14,9 +14,14 @@
             <form method="POST" action=""  class="form-horizontal"> 
 
                 <div class="form-group">
+                
 
+                  @foreach($users as $value) 
                     <label for="name" class="col-md-4 control-label">Player Name:</label>
-                    <input type="text" class="col-md-6" name="name"  /> </div>
+                    <label for="name" class="col-md-4 control-label">{{$value->first_name}}</label>
+                   <!--  <input type="text" class="col-md-6" name="name"  /> --> </div>
+                   @endforeach
+
 
                 <div class="form-group">
                     <label for="bprice" class="col-md-4 control-label">Base Price:</label>
@@ -41,17 +46,20 @@
 
                     </select>
                 </div>   
-
+                
                 <div class="col-md-6 col-md-offset-4">
                     <button type="submit" class="btn btn-primary">Submit</button>  
                 </div>
+                {{ $users->links() }}
+
+               
 
 
-                
-
-            </form>
 
 
+
+
+             
         <div class="box-body">
             <div class="table-responsive data-table-wrapper">
                

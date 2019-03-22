@@ -23,7 +23,6 @@
                         <tr>
                             <th>{{ trans('labels.backend.playerinformations.table.id') }}</th>
                             <th>{{ trans('First name') }}</th>
-<<<<<<< HEAD
                             <th>{{ trans('Played match') }}</th>
                             <th>{{ trans('Total runs') }}</th>
                             <th>{{ trans('Total wickets') }}</th>
@@ -35,18 +34,6 @@
                             <th>{{ trans('Is_captain') }}</th>
                             <th>{{ trans('labels.backend.playerinformations.table.createdat') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
-=======
-                            <th>{{ trans('played match') }}</th>
-                            <th>{{ trans('total_runs') }}</th>
-                            <th>{{ trans('total_wickets') }}</th>
-                            <th>{{ trans('speciality') }}</th>
-                            <th>{{ trans('batsman_type') }}</th>
-                            <th>{{ trans('bowler_type') }}</th>
-                            <th>{{ trans('age') }}</th>
-                            <th>{{ trans('Is_captain') }}</th>
-                            <th>{{ trans('createdate') }}</th>
-                            <th>{{ trans('actions') }}</th>
->>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
                         </tr>
                     </thead>
                     <thead class="transparent-bg">

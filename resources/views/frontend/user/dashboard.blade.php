@@ -37,7 +37,6 @@
                                     </div><!--media-body-->
                                 </li><!--media-->
                             </ul><!--media-list-->
-<<<<<<< HEAD
 
                             <div class="panel panel-default">
                                 <div class="panel-heading">
@@ -126,12 +125,6 @@
                                 </div><!--col-md-6-->
 
                                 
-=======
-                            <form>
-                                <a class="btn btn-info" href="{{trans('/details')}}">form</a>
-                            </form>
-                                                  
->>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
                             </div><!--row-->
 
                         </div><!--col-md-8-->

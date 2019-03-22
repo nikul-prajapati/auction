@@ -39,11 +39,7 @@ class TeamsTableController extends Controller
         return Datatables::of($this->team->getForDataTable())
             ->escapeColumns(['id'])
             ->addColumn('Team_name', function ($team) {
-<<<<<<< HEAD
                 return $team->Team_name;
-=======
-                return ($team->Team_name);
->>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
             })
             ->addColumn('created_at', function ($team) {
                 return Carbon::parse($team->created_at)->toDateString();

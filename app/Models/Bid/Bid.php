@@ -42,6 +42,13 @@ class Bid extends Model
 
     ];
 
+
+
+    // public static function findNext($id)
+    // {
+    //     return static::where('id', '>', $id)->first();
+    // }
+
     /**
      * Dates
      * @var array
