@@ -35,10 +35,11 @@
        <h4 class="col-md-2">Select Captain Name</h4>
         <select class="btn btn-primary"  data-toggle="dropdown" name="users_id">
         <option>select</option>
-        @foreach($name as $rol)
-           <option value="<?php echo $role->id ?>">
+        @foreach($dat as $rol)
+           <option value="<?php echo $rol->id ?>">
            {{$rol->first_name}}</option>
           @endForeach
+          
         </select>
 
             <div class="box-body">

@@ -72,6 +72,29 @@ class PlayerinformationsController extends Controller
         //return with successfull message
         return new RedirectResponse(route('admin.playerinformations.index'), ['flash_success' => trans('alerts.backend.playerinformations.created')]);
     }
+
+//     public function frontstore(Request $request)
+
+//     {
+//         $request->validate([
+//         'match'=> 'required|integer',
+//         'runs' => 'required|integer',
+//         'wickets' => 'required|integer'
+//         'age' => 'required|integer'
+//       ]);
+
+//       $details = new playerinformation([
+//         'played_match' => $request->get('match'),
+//         'total_run'=> $request->get('runs'),
+//         'total_wickets'=> $request->get('wickets'),  
+//         'speciality'=> $request->get('type'),
+//         'batsman_type'=> $request->get('batsman'),
+//         'bowler_type'=> $request->get('bowler'),
+//         'age'=>$request->get('age')
+//       ]);
+//       $details->save();
+//       return redirect('/login');
+// }
     /**
      * Show the form for editing the specified resource.
      *

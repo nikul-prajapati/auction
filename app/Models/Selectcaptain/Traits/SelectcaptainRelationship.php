@@ -23,12 +23,12 @@ trait SelectcaptainRelationship
 
     public function users()
     {
-        return $this->hasOne(users::class, 'id', 'users_id');
+        return $this->hasMany(users::class, 'id', 'users_id');
     }
 
      public function teams()
     {
-        return $this->hasOne(teams::class, 'id', 'teams_id');
+        return $this->hasMany(teams::class, 'id', 'teams_id');
     }
 
 }

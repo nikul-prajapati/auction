@@ -10,7 +10,7 @@
 @endsection
 
 @section('content')
-    {{ Form::model($selectcaptains, ['route' => ['admin.selectcaptain.update', $selectcaptains], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-selectcaptain']) }}
+    {{ Form::model($selectcaptains, ['route' => ['admin.selectcaptains.update', $selectcaptains], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-selectcaptain']) }}
 
         <div class="box box-info">
             <div class="box-header with-border">
@@ -20,7 +20,26 @@
                     @include('backend.selectcaptains.partials.selectcaptains-header-buttons')
                 </div><!--box-tools pull-right-->
             </div><!--box-header with-border-->
+             <h4 class="col-md-2">Select Team Name</h4>
+        <select class="btn btn-primary dropdown-toggle" data-toggle="dropdown" name="teams_id">
+          <option>select</option>
+           @foreach($team as $role)
+           <option  value="<?php echo $role->id ?>">
+           {{$role->Team_name}}</option>
+          @endForeach
+        </select><br><br>
+       
 
+       <h4 class="col-md-2">Select Captain Name</h4>
+        <select class="btn btn-primary"  data-toggle="dropdown" name="users_id">
+        <option>select</option>
+        @foreach($user as $rol)
+           <option value="<?php echo $rol->id ?>">
+           {{$rol->first_name}}</option>
+          @endForeach
+        </select>
+
+ 
             <div class="box-body">
                 <div class="form-group">
                     {{-- Including Form blade file --}}
