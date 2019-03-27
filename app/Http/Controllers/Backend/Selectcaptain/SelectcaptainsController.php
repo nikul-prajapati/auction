@@ -56,7 +56,7 @@ class SelectcaptainsController extends Controller
     public function create(CreateSelectcaptainRequest $request)
     {
         $data ['data']=DB::table('teams')->get();
-        $data ['name']=DB::table('users')->where('id', '>', 3)->get();
+        $data ['name']=DB::table('users')->whereRaw('id','selectcaptains.users_id')->get();
 
         return view('backend.selectcaptains.create',$data);
 

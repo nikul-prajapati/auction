@@ -68,7 +68,8 @@ class BidsController extends Controller
 
 
          $users['users'] = DB::table('users')->paginate(1);
-
+         
+   
         
         //return $this->art('id');
 
@@ -76,7 +77,9 @@ class BidsController extends Controller
          // $nextUser = users::findNext($id);
           
          // return $this->single('slug');
-         return view('backend.bids.index',$data,$users);
+         return view('backend.bids.index',$data,$users)->with('i', ($request->input('page', 1) - 1) * 5);
+   
+         //return view('backend.bids.index',$data,$users);
 
     }
 
@@ -121,22 +124,43 @@ class BidsController extends Controller
     {
         //Input received from the request
         // $input = $request->except(['_token']);
-        //Create the model using repository create method
+        // //Create the model using repository create method
         // $this->repository->create($input);
-        //return with successfull message
+        // //return with successfull message
         // return new RedirectResponse(route('admin.bids.index'), ['flash_success' => trans('alerts.backend.bids.created')]);
 
+        // $request->validate(['pprice'=>'required|integer']);
+
+        // $Bids = new Bids([
+        //     'price'=>$request->get('pprice'),
+        //     'teams_id'=> $request->get('team_id'),
+        //     'id'=>$request->get('id')
+        //     // ''=>$request->get(''),
+        //     // ''=>$request->get('')
+        // ]);
+
+     
+        // $Bids->save();
+        // return redirect('');
+    }
+
+    public function bids(Request $request)
+    {
         $request->validate(['pprice'=>'required|integer']);
 
-        $bids = new newbids([
-            'pprice'=>$request->get('price')
+        $Bids = new Bids([
+            'price'=>$request->get('pprice'),
+            'teams_id'=> $request->get('team_id'),
+            'id'=>$request->get('id')
             // ''=>$request->get(''),
             // ''=>$request->get('')
         ]);
 
-        $bids->save();
-        return redirect('');
+     
+        $Bids->save();
+        return redirect('/bids');
     }
+
     /**
      * Show the form for editing the specified resource.
      *

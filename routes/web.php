@@ -56,6 +56,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'admin.', '
 //    });
    
    Route::resource('details', 'detailscontroller');
+   Route::resource('bids', 'BidsController@store');
 /*
 * Routes From Module Generator
 */
