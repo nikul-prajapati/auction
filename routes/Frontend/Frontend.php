@@ -55,6 +55,20 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('player_record', 'PlayerRecord\PlayerRecordController@index');
 
 
+         /*
+         * Teams Name and player name Specific
+         */
+        Route::get('Teamdetails', 'Team_details\Team_detailsController@index');
+
+        
+         /*
+         * Player Name and price after bid
+         */
+        Route::get('BidInformation', 'BidInformation\BidInformationController@index');
+        
+
+
+
 
 
 /*

@@ -34,7 +34,8 @@ class ViewResponse implements Responsable
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function toResponse($request)
-    {
+    {   
+        
         if (!empty($this->with)) {
             return view($this->view)->with($this->with);
         }
