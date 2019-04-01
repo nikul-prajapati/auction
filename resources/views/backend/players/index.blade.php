@@ -22,10 +22,6 @@
                     <thead>
                         <tr>
                             <th>{{ trans('labels.backend.players.table.id') }}</th>
-                            <th>{{ trans('labels.backend.users.table.first_name') }}</th>
-                            <th>{{ trans('labels.backend.users.table.first_name') }}</th>
-                            <!-- <th>{{ trans('labels.backend.players.table.p_runs') }}</th>
-                            <th>{{ trans('labels.backend.players.table.p_wickets') }}</th> -->
                             <th>{{ trans('labels.backend.players.table.createdat') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
@@ -59,10 +55,6 @@
                 },
                 columns: [
                     {data: 'id', name: '{{config('module.players.table')}}.id'},
-                    {data: 'names', name: '{{config('module.users.table')}}.first_name'},
-                     {data: 'age', name: '{{config('module.project_records.table')}}.age'},
-                    // {data: 'p_runs', name: '{{config('module.players.table')}}.p_runs'},
-                    // {data: 'p_wickets', name: '{{config('module.players.table')}}.p_wickets'},
                     {data: 'created_at', name: '{{config('module.players.table')}}.created_at'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
                 ],

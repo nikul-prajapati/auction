@@ -28,7 +28,15 @@
         </li>
         @permission( 'create-selectcaptain' )
             <li>
+<<<<<<< HEAD
                 <a href="{{ route( 'admin.selectcaptains.create' ) }}">
+=======
+<<<<<<< HEAD
+                <a href="{{ route( 'admin.select_captains.create' ) }}">
+=======
+                <a href="{{ route( 'admin.selectcaptains.create' ) }}">
+>>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
+>>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
                     <i class="fa fa-plus"></i> {{ trans( 'menus.backend.selectcaptains.create' ) }}
                 </a>
             </li>
