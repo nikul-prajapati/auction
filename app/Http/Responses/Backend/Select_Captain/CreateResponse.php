@@ -15,6 +15,14 @@ class CreateResponse implements Responsable
      */
     public function toResponse($request)
     {
+<<<<<<< HEAD
         return view('backend.select_captains.create');
+=======
+<<<<<<< HEAD
+        return view('backend.select_captains.create');
+=======
+        return view('backend.selectcaptains.create');
+>>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
+>>>>>>> c9875c7e617d975787fdba417acf59bdba1bab18
     }
 }

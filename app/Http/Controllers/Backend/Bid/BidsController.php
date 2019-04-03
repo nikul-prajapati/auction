@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend\Bid;
 
 use DB;
 use App\Models\Bid\Bid;
+use App\Models\Access\User\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Responses\RedirectResponse;
@@ -18,6 +19,9 @@ use App\Http\Requests\Backend\Bid\StoreBidRequest;
 use App\Http\Requests\Backend\Bid\EditBidRequest;
 use App\Http\Requests\Backend\Bid\UpdateBidRequest;
 use App\Http\Requests\Backend\Bid\DeleteBidRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
+
 
 /**
  * BidsController
@@ -29,6 +33,7 @@ class BidsController extends Controller
      * @var BidRepository
      */
     protected $repository;
+    protected $slug;
 
     /**
      * contructor to initialize repository object
@@ -37,6 +42,7 @@ class BidsController extends Controller
     public function __construct(BidRepository $repository)
     {
         $this->repository = $repository;
+
     }
 
     /**
@@ -48,8 +54,37 @@ class BidsController extends Controller
     public function index(ManageBidRequest $request)
     {
         $data['data']=DB::table('teams')->get();
-        return view('backend.bids.index',$data);
+
+
+         //$id = Auth::user()->id;
+       
+        // $next = DB::table('users')->where('id', '>', $id)->limit(1);
+
+        // $res['res'] = DB::table('users')
+        // ->where('id', '=', $id)
+       
+        // ->unionAll($next)
+        // ->get();
+
+
+         $users['users'] = DB::table('users')->paginate(1);
+         
+   
+        
+        //return $this->art('id');
+
+        //dd($res);
+         // $nextUser = users::findNext($id);
+          
+         // return $this->single('slug');
+         return view('backend.bids.index',$data,$users)->with('i', ($request->input('page', 1) - 1) * 5);
+   
+         //return view('backend.bids.index',$data,$users);
+
     }
+
+
+   
     /**
      * Show the form for creating a new resource.
      *
@@ -70,22 +105,43 @@ class BidsController extends Controller
     {
         //Input received from the request
         // $input = $request->except(['_token']);
-        //Create the model using repository create method
+        // //Create the model using repository create method
         // $this->repository->create($input);
-        //return with successfull message
+        // //return with successfull message
         // return new RedirectResponse(route('admin.bids.index'), ['flash_success' => trans('alerts.backend.bids.created')]);
 
         $request->validate(['pprice'=>'required|integer']);
 
-        $bids = new newbids([
-            'pprice'=>$request->get('price')
-            // ''=>$request->get(''),
+        $Bids = new Bid([
+            'price'=>$request->get('pprice'),
+            'teams_id'=> $request->get('teams_id'),
+            // 'users_id'=>$request->get('users_id')
+            // // ''=>$request->get(''),
             // ''=>$request->get('')
         ]);
 
-        $bids->save();
-        return redirect('');
+     
+        $Bids->save();
+        return redirect('/admin/bids');
     }
+
+    // public function bids(Request $request)
+    // {
+    //     $request->validate(['pprice'=>'required|integer']);
+
+    //     $Bids = new Bids([
+    //         'price'=>$request->get('pprice'),
+    //         'teams_id'=> $request->get('team_id'),
+    //         'id'=>$request->get('id')
+    //         // ''=>$request->get(''),
+    //         // ''=>$request->get('')
+    //     ]);
+
+     
+    //     $Bids->save();
+    //     return redirect('/bids');
+    // }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -127,5 +183,5 @@ class BidsController extends Controller
         //returning with successfull message
         return new RedirectResponse(route('admin.bids.index'), ['flash_success' => trans('alerts.backend.bids.deleted')]);
     }
-    
+   // $nextUser = User::findNext($id);
 }

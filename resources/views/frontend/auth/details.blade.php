@@ -90,7 +90,7 @@
               <label for="run" class="col-md-4 control-label">Age:</label>
               <input type="text" class="col-md-6" name="age"/>
 
-        </div>
+        
 
     <div class="col-md-6 col-md-offset-4">
        
@@ -123,7 +123,16 @@
 
     <script type="text/javascript">
 
-        $(document).ready(function() {
+    $(document).ready(function() {
+
+      $(".btn-success").click(function(){ 
+          var html = $(".clone").html();
+          $(".increment").after(html);
+      });
+
+      $("body").on("click",".btn-danger",function(){ 
+          $(this).parents(".control-group").remove();
+      });
             // To Use Select2
             Backend.Select2.init();
         });

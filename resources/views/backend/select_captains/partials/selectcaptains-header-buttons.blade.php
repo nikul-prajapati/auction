@@ -22,7 +22,15 @@
     </button>
     <ul class="dropdown-menu" role="menu">
         <li>
+<<<<<<< HEAD
             <a href="{{ route( 'admin.select_captains.index' ) }}">
+=======
+<<<<<<< HEAD
+            <a href="{{ route( 'admin.select_captains.index' ) }}">
+=======
+            <a href="{{ route( 'admin.selectcaptains.index' ) }}">
+>>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
+>>>>>>> c9875c7e617d975787fdba417acf59bdba1bab18
                 <i class="fa fa-list-ul"></i> {{ trans( 'menus.backend.selectcaptains.all' ) }}
             </a>
         </li>

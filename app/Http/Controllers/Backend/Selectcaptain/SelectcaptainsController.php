@@ -60,13 +60,9 @@ class SelectcaptainsController extends Controller
      */
     public function create(CreateSelectcaptainRequest $request)
     {
-        //$user=$this->user->getAll();
-        //$team=$this->team->getAll();
-         $data ['data']=DB::table('teams')->get();
-        // $results=DB::select('select * from users where id = :id', ['id' => 1];
-         $data ['dat']=users::whereRaw('id', '!=', Auth::selectcaptains()->users_id)->get();
-        
-        //return view('backend.selectcaptains.create',array('user'=>$user,'team'=>$team));
+        $data ['dat']=DB::select('SELECT * FROM users where (id<4) not in (select users_id from selectcaptains)');
+
+         $data ['data']= DB::select('SELECT * FROM teams where id not in (select teamsiii954_id from selectcaptains)');
           return view('backend.selectcaptains.create',$data);
 
         

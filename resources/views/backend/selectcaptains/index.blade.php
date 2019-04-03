@@ -22,6 +22,8 @@
                     <thead>
                         <tr>
                             <th>{{ trans('labels.backend.selectcaptains.table.id') }}</th>
+
+            
                             <th>{{ trans('Captain_Name')}}</th>
                                 <th>{{('Team_Name')}}</th>
                             <th>{{ trans('labels.backend.selectcaptains.table.createdat') }}</th>

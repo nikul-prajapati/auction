@@ -9,7 +9,6 @@ use App\Repositories\frontend\access\user\detailsRepository;
 
 
 
-
 use App\Models\Player_Information\Playerinformation;
 use App\Http\Controllers\Controller;
 use App\Http\Responses\RedirectResponse;
@@ -55,29 +54,16 @@ class detailscontroller extends Controller
     public function store(Request $request)
 
     {
-      //   $request->validate([
-      //   'match'=> 'required|integer',
-      //   'runs' => 'required|integer',
-      //   'wickets' => 'required|integer'
-      // ]);
-      // $details = new details([
-      //   'p_match' => $request->get('match'),
-      //   'p_run'=> $request->get('runs'),
-      //   'p_wickets'=> $request->get('wickets'),  
-      //    'type'=> $request->get('type'),
-      //     'batsman'=> $request->get('batsman'),
-      //      'bowler'=> $request->get('bowler'),
-      // ]);
-      // $details->save();
-      // return redirect('/login');
-
-
+      
          $request->validate([
         'match'=> 'required|integer',
         'runs' => 'required|integer',
         'wickets' => 'required|integer',
-        'age' => 'required|integer'
+        'age' => 'required|integer',
+        
       ]);
+
+         
 
       $details = new playerinformation([
         'played_match' => $request->get('match'),
@@ -89,23 +75,12 @@ class detailscontroller extends Controller
         'age'=>$request->get('age')
       ]);
       $details->save();
-      return redirect('/dashboard');
+      return redirect('/dashboard')->with('success', 'successfully details udm_check_stored(agent, link, doc_id)');
 
-         //$details = self::MODEL;
-        // $details = new $details();
-        // $details->p_match = $request['match'];
-        // $details->p_runs = $request['runs'];
-        // $details->p_wickets = $request['wickets'];
-        // $details->type = $request['type'];
-        // $details->batsman = $request['batsman'];
-        // $details->bowler = $request['bowler'];
-        // $details->save();
-        // return redirect('/aboutus');
-
-        // $details = $this->details->create($request->only('match', 'runs', 'wickets', 'type', 'batsman','bowler'));
-
-        
+       
     }
+
+   
 
     /**
      * Display the specified resource.

@@ -10,13 +10,18 @@
     <div class="box box-info">
         <div class="box-header with-border">
             <h3 class="box-title">{{ trans('Bidding') }}</h3>
-
-            <form method="POST" action=""  class="form-horizontal"> 
-
+            <form method="POST"  class="form-horizontal" action="{{route('admin.bids.store')}}"> 
                 <div class="form-group">
+                @csrf
 
+                  @foreach($users as $value) 
                     <label for="name" class="col-md-4 control-label">Player Name:</label>
-                    <input type="text" class="col-md-6" name="name"  /> </div>
+                    id={{$value->id}};
+                    <label for="name" class="col-md-4 control-label" name="users_id">{{$value->first_name}}</label>
+                   <!--  <input type="text" class="col-md-6" name="name"  /> --> </div>
+                   @endforeach
+
+
 
                 <div class="form-group">
                     <label for="bprice" class="col-md-4 control-label">Base Price:</label>
@@ -26,32 +31,31 @@
                     <label for="Name" class="col-md-4 control-label">Purchase Price:</label>
                     <input type="text" class="col-md-6" name="pprice"  /></div>
 
-                <div class="form-group">
+               
+                 <h4 class="col-md-2">Select Team Name</h4>
+        <select class="btn btn-primary dropdown-toggle" data-toggle="dropdown" name="teams_id">
+          <option>select</option>
+           @foreach($data as $role)
+           <option  value="<?php echo $role->id ?>">
+           {{$role->Team_name}}</option>
+          @endForeach
+        </select><br><br>
 
-                    <label for="Team" class="col-md-4 control-label">Team: </label>
-                    <select name="team_id" class="col-md-6" style="padding: 4px;"> 
-                            <option>select</option>
-
-                            @foreach($data as $role)
-
-                                <option value="<?php echo $role->id ?>">
-                                {{$role->Team_name}}</option>
-
-                            @endforeach
-
-                    </select>
-                </div>   
-
-                <div class="col-md-6 col-md-offset-4">
-                    <button type="submit" class="btn btn-primary">Submit</button>  
-                </div>
-
-
+  
                 
+                <div class="col-md-6 col-md-offset-4">
+                    <!-- <a href="{{('/bids')}}" class ="btn btn-primary" role="button">Submit</a> -->
+                    <button type="submit" class="btn btn-primary"  >Submit</button>  
+                </div>
+                
+                  {{ $users->links('backend.bids.pagination') }}
+               
 
-            </form>
+                 
 
 
+
+             
         <div class="box-body">
             <div class="table-responsive data-table-wrapper">
                
@@ -77,6 +81,8 @@
                 columns: [
                     {data: 'id', name: '{{config('module.bids.table')}}.id'},
                     {data: 'created_at', name: '{{config('module.bids.table')}}.created_at'},
+                    {data: 'users_id', name: '{{config('module.bids.table')}}.users_id'},
+                    {data: 'teams_id', name: '{{config('module.teaams,.table')}}.teams_id'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
                 ],
                 order: [[0, "asc"]],

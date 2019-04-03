@@ -1,3 +1,5 @@
+
+
 <?php
 
 /**
@@ -11,13 +13,13 @@ Route::get('lang/{lang}', 'LanguageController@swap');
 /* ----------------------------------------------------------------------- */
 Route::get('/contactus',function()
 {
-	return view('frontend.contactus');
+  return view('frontend.contactus');
 });
 
 
 Route::get('/aboutus',function()
 {
-	return view('frontend.aboutus');
+  return view('frontend.aboutus');
 });
 
 /*
@@ -52,8 +54,9 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'admin.', '
 //    Route::get('/details', function(){
 //     return view('frontend.auth.details');
 //    });
-   
+    Route::resource('/bids', 'BidsController');
    Route::resource('details', 'detailscontroller');
+   Route::resource('bids', 'BidsController@store');
 /*
 * Routes From Module Generator
 */
