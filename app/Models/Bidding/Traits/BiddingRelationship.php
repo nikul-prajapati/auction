@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Models\Selectcaptain\Traits;
+namespace App\Models\Bidding\Traits;
 
 /**
- * Class SelectcaptainRelationship
+ * Class BiddingRelationship
  */
-trait SelectcaptainRelationship
+trait BiddingRelationship
 {
     /*
     * put you model relationships here
@@ -19,16 +19,4 @@ trait SelectcaptainRelationship
         $this->belongsTo(User::class);
     }
      */
-
-
-    public function users()
-    {
-        return $this->hasMany(users::class, 'id', 'users_id');
-    }
-
-     public function teams()
-    {
-        return $this->hasMany(teams::class, 'id', 'teams_id');
-    }
-
 }

@@ -1,5 +1,5 @@
 <!--Action Button-->
-@if( Active::checkUriPattern( 'admin/selectcaptains' ) )
+@if( Active::checkUriPattern( 'admin/biddings' ) )
     <div class="btn-group">
         <button type="button" class="btn btn-warning btn-flat dropdown-toggle" data-toggle="dropdown">Export
             <span class="caret"></span>
@@ -22,26 +22,14 @@
     </button>
     <ul class="dropdown-menu" role="menu">
         <li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <a href="{{ route( 'admin.select_captains.index' ) }}">
-=======
-            <a href="{{ route( 'admin.selectcaptains.index' ) }}">
->>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
-=======
-            <a href="{{ route( 'admin.select_captains.index' ) }}">
->>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
-                <i class="fa fa-list-ul"></i> {{ trans( 'menus.backend.selectcaptains.all' ) }}
+            <a href="{{ route( 'admin.biddings.index' ) }}">
+                <i class="fa fa-list-ul"></i> {{ trans( 'menus.backend.biddings.all' ) }}
             </a>
         </li>
-        @permission( 'create-selectcaptain' )
+        @permission( 'create-bidding' )
             <li>
-<<<<<<< HEAD
-                <a href="{{ route( 'admin.select_captains.create' ) }}">
-=======
-                <a href="{{ route( 'admin.selectcaptains.create' ) }}">
->>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
-                    <i class="fa fa-plus"></i> {{ trans( 'menus.backend.selectcaptains.create' ) }}
+                <a href="{{ route( 'admin.biddings.create' ) }}">
+                    <i class="fa fa-plus"></i> {{ trans( 'menus.backend.biddings.create' ) }}
                 </a>
             </li>
         @endauth

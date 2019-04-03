@@ -171,6 +171,13 @@ return [
 	"management" => "Bid Management",
 	"main" => "Bids",
 	],
+	"biddings" => [
+	"all" => "All Biddings",
+	"create" => "Create Bidding",
+	"edit" => "Edit Bidding",
+	"management" => "Bidding Management",
+	"main" => "Biddings",
+	],
 	],
 	"language-picker" => [
 	"language" => "Language",

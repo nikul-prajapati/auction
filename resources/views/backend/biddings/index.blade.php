@@ -1,36 +1,31 @@
 @extends ('backend.layouts.app')
 
-@section ('title', trans('labels.backend.selectcaptains.management'))
+@section ('title', trans('labels.backend.biddings.management'))
 
 @section('page-header')
-    <h1>{{ trans('labels.backend.selectcaptains.management') }}</h1>
+    <h1>{{ trans('labels.backend.biddings.management') }}</h1>
 @endsection
 
 @section('content')
     <div class="box box-info">
         <div class="box-header with-border">
-            <h3 class="box-title">{{ trans('labels.backend.selectcaptains.management') }}</h3>
+            <h3 class="box-title">{{ trans('labels.backend.biddings.management') }}</h3>
 
             <div class="box-tools pull-right">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                @include('backend.select_captains.partials.selectcaptains-header-buttons')
-=======
-                @include('backend.selectcaptains.partials.selectcaptains-header-buttons')
->>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
-=======
-                @include('backend.select_captains.partials.selectcaptains-header-buttons')
->>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
+                @include('backend.biddings.partials.biddings-header-buttons')
             </div>
         </div><!--box-header with-border-->
 
         <div class="box-body">
             <div class="table-responsive data-table-wrapper">
-                <table id="selectcaptains-table" class="table table-condensed table-hover table-bordered">
+                <table id="biddings-table" class="table table-condensed table-hover table-bordered">
                     <thead>
                         <tr>
-                            <th>{{ trans('labels.backend.selectcaptains.table.id') }}</th>
-                            <th>{{ trans('labels.backend.selectcaptains.table.createdat') }}</th>
+                            <th>{{ trans('labels.backend.biddings.table.id') }}</th>
+                            <th>{{ trans('Name') }}</th>
+                            <th>{{ trans('Team Name') }}</th>
+                            <th>{{ trans('Price') }}</th>
+                            <th>{{ trans('labels.backend.biddings.table.createdat') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
                     </thead>
@@ -54,32 +49,19 @@
     <script>
         //Below written line is short form of writing $(document).ready(function() { })
         $(function() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            var dataTable = $('#select_captains-table').dataTable({
+            var dataTable = $('#biddings-table').dataTable({
                 processing: true,
                 serverSide: true,
                 ajax: {
-                    url: '{{ route("admin.select_captains.get") }}',
-=======
-            var dataTable = $('#selectcaptains-table').dataTable({
-                processing: true,
-                serverSide: true,
-                ajax: {
-                    url: '{{ route("admin.selectcaptains.get") }}',
->>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
-=======
-            var dataTable = $('#select_captains-table').dataTable({
-                processing: true,
-                serverSide: true,
-                ajax: {
-                    url: '{{ route("admin.select_captains.get") }}',
->>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
+                    url: '{{ route("admin.biddings.get") }}',
                     type: 'post'
                 },
                 columns: [
-                    {data: 'id', name: '{{config('module.selectcaptains.table')}}.id'},
-                    {data: 'created_at', name: '{{config('module.selectcaptains.table')}}.created_at'},
+                    {data: 'id', name: '{{config('module.biddings.table')}}.id'},
+                     {data: 'first_name', name: '{{config('module.users.table')}}.first_name'},
+                    {data: 'Team_name', name: '{{config('module.teams.table')}}.Team_name'},
+                    {data: 'price', name: '{{config('module.biddings.table')}}.price'},
+                    {data: 'created_at', name: '{{config('module.biddings.table')}}.created_at'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
                 ],
                 order: [[0, "asc"]],
@@ -87,15 +69,7 @@
                 dom: 'lBfrtip',
                 buttons: {
                     buttons: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        { extend: 'copy', className: 'copyButton',  exportOptions: {columnsF: [ 0, 1 ]  }},
-=======
                         { extend: 'copy', className: 'copyButton',  exportOptions: {columns: [ 0, 1 ]  }},
->>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
-=======
-                        { extend: 'copy', className: 'copyButton',  exportOptions: {columnsF: [ 0, 1 ]  }},
->>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
                         { extend: 'csv', className: 'csvButton',  exportOptions: {columns: [ 0, 1 ]  }},
                         { extend: 'excel', className: 'excelButton',  exportOptions: {columns: [ 0, 1 ]  }},
                         { extend: 'pdf', className: 'pdfButton',  exportOptions: {columns: [ 0, 1 ]  }},

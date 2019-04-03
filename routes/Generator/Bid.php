@@ -10,7 +10,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'admin.', '
         // Route::get('bids/{id?}','BidsController@art');
         //For Datatable
         Route::post('bids/get', 'BidsTableController')->name('bids.get');
-        Route::post('bids', 'BidsController@store');
+        //Route::post('bids', 'BidsController@store');
 
     });
     

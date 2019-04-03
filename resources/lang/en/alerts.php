@@ -99,5 +99,10 @@ return [
 	"deleted" => "The Bid was successfully deleted.",
 	"updated" => "The Bid was successfully updated.",
 	],
+	"biddings" => [
+	"created" => "The Bidding was successfully created.",
+	"deleted" => "The Bidding was successfully deleted.",
+	"updated" => "The Bidding was successfully updated.",
+	],
 	],
 ];

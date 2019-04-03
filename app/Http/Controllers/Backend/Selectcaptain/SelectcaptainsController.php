@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend\Selectcaptain;
 use DB;
 use App\Models\Selectcaptain\Selectcaptain;
+use App\Models\Team\team;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Responses\RedirectResponse;
@@ -10,6 +11,8 @@ use App\Http\Responses\ViewResponse;
 use App\Http\Responses\Backend\Selectcaptain\CreateResponse;
 use App\Http\Responses\Backend\Selectcaptain\EditResponse;
 use App\Repositories\Backend\Selectcaptain\SelectcaptainRepository;
+use App\Repositories\Backend\Team\TeamRepository;
+use App\Repositories\Backend\Access\User\UserRepository;
 use App\Http\Requests\Backend\Selectcaptain\ManageSelectcaptainRequest;
 use App\Http\Requests\Backend\Selectcaptain\CreateSelectcaptainRequest;
 use App\Http\Requests\Backend\Selectcaptain\StoreSelectcaptainRequest;
@@ -32,9 +35,11 @@ class SelectcaptainsController extends Controller
      * contructor to initialize repository object
      * @param SelectcaptainRepository $repository;
      */
-    public function __construct(SelectcaptainRepository $repository)
+    public function __construct(SelectcaptainRepository $repository,TeamRepository $team, UserRepository $user)
     {
         $this->repository = $repository;
+        $this->team = $team;
+        $this->user = $user;
     }
 
     /**
@@ -56,9 +61,14 @@ class SelectcaptainsController extends Controller
     public function create(CreateSelectcaptainRequest $request)
     {
         $data ['data']=DB::table('teams')->get();
-        $data ['name']=DB::table('users')->whereRaw('id','selectcaptains.users_id')->get();
+        $name ['name']=DB::table('users')->whereRaw('id','selectcaptains.users_id')->get();
 
-        return view('backend.selectcaptains.create',$data);
+            return view('backend.selectcaptains.create',$data,$name);
+//$data['name']= DB::table('users')->where('users.id',notin( 'select users.id from users'))
+//         ->join('selectcaptains', function ($join) {
+//             $join->where('selectcaptains.users_id', '!=','users.id' );
+//         })
+//         ->get();
 
     }
     /**
@@ -85,7 +95,12 @@ class SelectcaptainsController extends Controller
      */
     public function edit(Selectcaptain $selectcaptain, EditSelectcaptainRequest $request)
     {
-        return new EditResponse($selectcaptain);
+         // $data ['data']=DB::table('teams')->first();
+         // $data ['name']=DB::table('users')->where('users.id','>',2)->first();
+        $user=$this->user->getAll();
+        $team=$this->team->getAll();
+
+        return new EditResponse($selectcaptain,$user,$team);
     }
     /**
      * Update the specified resource in storage.

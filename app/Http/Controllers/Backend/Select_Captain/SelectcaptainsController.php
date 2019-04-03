@@ -46,10 +46,14 @@ class SelectcaptainsController extends Controller
     public function index(ManageSelectcaptainRequest $request)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return new ViewResponse('backend.select_captains.index');
 =======
         return new ViewResponse('backend.selectcaptains.index');
 >>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
+=======
+        return new ViewResponse('backend.select_captains.index');
+>>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
     }
     /**
      * Show the form for creating a new resource.
@@ -60,10 +64,14 @@ class SelectcaptainsController extends Controller
     public function create(CreateSelectcaptainRequest $request)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return new CreateResponse('backend.select_captains.create');
 =======
         return new CreateResponse('backend.selectcaptains.create');
 >>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
+=======
+        return new CreateResponse('backend.select_captains.create');
+>>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
     }
     /**
      * Store a newly created resource in storage.
@@ -79,10 +87,14 @@ class SelectcaptainsController extends Controller
         $this->repository->create($input);
         //return with successfull message
 <<<<<<< HEAD
+<<<<<<< HEAD
         return new RedirectResponse(route('admin.select_captains.index'), ['flash_success' => trans('alerts.backend.selectcaptains.created')]);
 =======
         return new RedirectResponse(route('admin.selectcaptains.index'), ['flash_success' => trans('alerts.backend.selectcaptains.created')]);
 >>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
+=======
+        return new RedirectResponse(route('admin.select_captains.index'), ['flash_success' => trans('alerts.backend.selectcaptains.created')]);
+>>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
     }
     /**
      * Show the form for editing the specified resource.
@@ -110,10 +122,14 @@ class SelectcaptainsController extends Controller
         $this->repository->update( $selectcaptain, $input );
         //return with successfull message
 <<<<<<< HEAD
+<<<<<<< HEAD
         return new RedirectResponse(route('admin.select_captains.index'), ['flash_success' => trans('alerts.backend.selectcaptains.updated')]);
 =======
         return new RedirectResponse(route('admin.selectcaptains.index'), ['flash_success' => trans('alerts.backend.selectcaptains.updated')]);
 >>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
+=======
+        return new RedirectResponse(route('admin.select_captains.index'), ['flash_success' => trans('alerts.backend.selectcaptains.updated')]);
+>>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
     }
     /**
      * Remove the specified resource from storage.
@@ -128,10 +144,14 @@ class SelectcaptainsController extends Controller
         $this->repository->delete($selectcaptain);
         //returning with successfull message
 <<<<<<< HEAD
+<<<<<<< HEAD
         return new RedirectResponse(route('admin.select_captains.index'), ['flash_success' => trans('alerts.backend.selectcaptains.deleted')]);
 =======
         return new RedirectResponse(route('admin.selectcaptains.index'), ['flash_success' => trans('alerts.backend.selectcaptains.deleted')]);
 >>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
+=======
+        return new RedirectResponse(route('admin.select_captains.index'), ['flash_success' => trans('alerts.backend.selectcaptains.deleted')]);
+>>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
     }
     
 }

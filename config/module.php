@@ -35,16 +35,19 @@ return [
 	"playerrecords" => [
 	"table" => "player_records",
 	],
-	"playerrecordsusers" => [
-	"table" => "playerrecords_user",
+	"auctions" => [
+	"table" => "auctions",
 	],
 	"playerinformations" => [
 	"table" => "player_information",
 	],
 	"selectcaptains" => [
-	"table" => "select_captains",
+	"table" => "selectcaptains",
 	],
 	"bids" => [
 	"table" => "bids",
+	],
+	"biddings" => [
+	"table" => "biddings",
 	],
 ];

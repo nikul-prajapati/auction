@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddForeignKeyBid extends Migration
+class AddForeignKeyBiddings extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class AddForeignKeyBid extends Migration
      */
     public function up()
     {
-        Schema::table('bid', function (Blueprint $table) {
+        Schema::table('biddings', function (Blueprint $table) {
             $table->foreign('users_id')->references('id')->on('users')->onUpdate('RESTRICT')->onDelete('CASCADE');
             $table->foreign('teams_id')->references('id')->on('teams')->onUpdate('RESTRICT')->onDelete('CASCADE');
         });
     }
-
     /**
      * Reverse the migrations.
      *
@@ -26,9 +25,9 @@ class AddForeignKeyBid extends Migration
      */
     public function down()
     {
-        Schema::table('bid', function (Blueprint $table) {
-            $table->dropForeign('selectcaptains_users_id_foreign');
-            $table->dropForeign('selectcaptains_teams_id_foreign');
+        Schema::table('biddings', function (Blueprint $table) {
+            $table->dropForeign('biddings_users_id_foreign');
+            $table->dropForeign('biddings_teams_id_foreign');
         });
     }
 }
