@@ -31,7 +31,7 @@ class Bid extends Model
      * @var array
      */
     protected $fillable = [
-
+        'price','users_id','team_id','created_at','updated_at'
     ];
 
     /**
@@ -41,6 +41,13 @@ class Bid extends Model
     protected $attributes = [
 
     ];
+
+
+
+    // public static function findNext($id)
+    // {
+    //     return static::where('id', '>', $id)->first();
+    // }
 
     /**
      * Dates
