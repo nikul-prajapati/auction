@@ -54,7 +54,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'admin.', '
 //    Route::get('/details', function(){
 //     return view('frontend.auth.details');
 //    });
-   
+   Route::get('chartjs', 'HomeController@chartjs');
    Route::resource('details', 'detailscontroller');
    Route::resource('bids', 'BidsController@store');
 /*

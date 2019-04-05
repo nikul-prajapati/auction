@@ -20,7 +20,7 @@
                             <ul class="media-list">
                                 <li class="media">
                                     <div class="media-left">
-                                        <img style="border-radius: 7px;" class="media-object" src="img/frontend/profile-picture/profilepic.jpg" height="80px" width="90px" alt="Profile picture">
+                                        <img style="border-radius: 7px;" class="media-object" src="img/frontend/profile-picture/pic.png" height="80px" width="90px" alt="Profile picture">
                                     </div><!--media-left-->
 
                                     <div class="media-body" style="border:1px solid grey;padding: 2px;border-radius: 3px">

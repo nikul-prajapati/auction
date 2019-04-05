@@ -17,7 +17,7 @@ class RegisterController extends Controller
 
     /**
      * @var UserRepository
-     */
+    */
     protected $user;
 
     /**

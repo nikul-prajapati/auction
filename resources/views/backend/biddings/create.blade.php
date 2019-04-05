@@ -25,27 +25,19 @@
 
 
                 
-                
-                    <!-- <label for="name" class="col-md-4 control-label">Player Name:</label>
+                    <div class="form-group">
+                    <label for="name" class="col-md-4 control-label">Player Name:</label>
+                    <div class="col-lg-10">
                     @foreach($users as $value) 
-                    <input type="hidden" class="col-md-6" name="users_id"  value= "<?php echo $value->id ?>" disabled="disabled" /> </div>
+                    <input type="hidden" class="col-md-6" name="users_id"  value= "<?php echo $value->id ?>"  /> </div>
                     <label for="name" class="col-md-4 control-label" name="id">{{$value->first_name}}</label>
                    @endforeach
- -->
-
-
-
-                <div class="form-group">
-                    {{ Form::label('users_id', trans('name'), ['class' => 'col-lg-2 control-label']) }}
-
-                    <div class="col-lg-10">
-                        @foreach($users as $value)
-                        <label for="name" class="col-md-4 control-label" >{{$value->first_name}}</label>
-                        @endforeach
-                    </div><!--col-lg-10-->
+                   </div><!--col-lg-10-->
                 </div><!--form control-->
 
 
+
+                
                 {{-- Price --}}
                 <div class="form-group">
                     {{ Form::label('price', trans('price'), ['class' => 'col-lg-2 control-label required']) }}
@@ -67,9 +59,9 @@
                 </select><br><br>
        
 
+                
+
                 {{ $users->links('backend.bids.pagination') }}
-
-
 
                 <div class="form-group">
                     {{-- Including Form blade file --}}

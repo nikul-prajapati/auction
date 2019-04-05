@@ -39,6 +39,9 @@
 			<li role="presentation">
 				<a href="#tab6" aria-controls="5" role="tab" data-toggle="tab">{{ trans('labels.backend.settings.google') }}</a>
 			</li>
+			<li role="presentation">
+				<a href="#tab7" aria-controls="5" role="tab" data-toggle="tab">{{ trans('Base Points') }}</a>
+			</li>
 		</ul>
 
 		<!-- Tab panes -->
@@ -222,6 +225,32 @@
 				</div>
 				<!--form control-->
 			</div>
+
+
+			<div role="tabpanel" class="tab-pane" id="tab7">
+				<div class="form-group">
+					{{ Form::label('from_name', trans('validation.attributes.backend.settings.mail.fromname'), ['class' => 'col-lg-2 control-label'])
+					}}
+
+					<div class="col-lg-10">
+						{{ Form::text('from_name', null,['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.settings.mail.fromname'),
+						'rows' => 2]) }}
+					</div>
+				</div>
+				<div class="form-group">
+					{{ Form::label('from_email', trans('validation.attributes.backend.settings.mail.fromemail'), ['class' => 'col-lg-2 control-label'])
+					}}
+
+					<div class="col-lg-10">
+						{{ Form::text('from_email', null,['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.settings.mail.fromemail'),
+						'rows' => 2]) }}
+					</div>
+				</div>
+				<!--form control-->
+			</div>
+		
+
+
 		</div>
 	</div>
 	<!-- /.box-body -->

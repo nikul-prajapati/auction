@@ -17,6 +17,10 @@ use App\Http\Requests\Backend\Bidding\StoreBiddingRequest;
 use App\Http\Requests\Backend\Bidding\EditBiddingRequest;
 use App\Http\Requests\Backend\Bidding\UpdateBiddingRequest;
 use App\Http\Requests\Backend\Bidding\DeleteBiddingRequest;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Input;
+
 
 /**
  * BiddingsController
@@ -57,9 +61,47 @@ class BiddingsController extends Controller
     public function create(CreateBiddingRequest $request)
     {
         $data['data'] = DB::table('teams')->get();
-        $users['users'] = DB::table('users')->paginate(1)->onEachSide(2);
-        return view('backend.biddings.create',$data,$users);
+       // $users['users'] = DB::table('users')->paginate(1);
+       
+       $users['users'] = DB::select('SELECT * FROM users where id not in (select users_id from biddings) '); 
+   
+
+       $collection = new Collection($users);
+
+        // Paginate
+        $perPage = 1; // Item per page
+        $currentPage = Input::get('page') - 1; // url.com/test?page=2
+        $pagedData = $collection->slice($currentPage * $perPage, $perPage)->all();
+        $collection= Paginator::make($pagedData, count($collection), $perPage);
+
+
+
+
+       //   $results_per_page = 5;
+     //$pagination = Paginator::make($users,count($users),$results_per_page);
+     
+
+        // $users['users'] = DB::table('users')
+        //         ->join('biddings', 'users.id', '=', 'biddings.users_id')
+               
+        //         ->select('users.id where id not in (select users_id from biddings)')
+        //         ->paginate(1);
+
+
+     return view('backend.biddings.create',$data,$collection);
+
         //return new CreateResponse('backend.biddings.create',$data);
+    }
+
+
+    public function arrayPaginator($array, $request)
+    {
+        $page = Input::get('page', 1);
+        $perPage = 10;
+        $offset = ($page * $perPage) - $perPage;
+
+        return new LengthAwarePaginator(array_slice($array, $offset, $perPage, true), count($array), $perPage, $page,
+            ['path' => $request->url(), 'query' => $request->query()]);
     }
     /**
      * Store a newly created resource in storage.

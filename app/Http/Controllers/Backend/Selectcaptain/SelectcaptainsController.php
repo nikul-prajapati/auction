@@ -60,8 +60,8 @@ class SelectcaptainsController extends Controller
      */
     public function create(CreateSelectcaptainRequest $request)
     {
-        $data ['data']=DB::table('teams')->get();
-        $name ['name']=DB::table('users')->whereRaw('id','selectcaptains.users_id')->get();
+        $data ['data']=DB::select('SELECT * FROM teams where id not in (select teams_id from selectcaptains)');
+        $name ['name']=DB::select('SELECT * FROM users where id not in (select users_id from selectcaptains)');
 
             return view('backend.selectcaptains.create',$data,$name);
 //$data['name']= DB::table('users')->where('users.id',notin( 'select users.id from users'))
