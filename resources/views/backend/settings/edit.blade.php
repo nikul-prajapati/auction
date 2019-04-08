@@ -229,20 +229,20 @@
 
 			<div role="tabpanel" class="tab-pane" id="tab7">
 				<div class="form-group">
-					{{ Form::label('from_name', trans('validation.attributes.backend.settings.mail.fromname'), ['class' => 'col-lg-2 control-label'])
+					{{ Form::label('Base_points_player', trans('Base_points_player'), ['class' => 'col-lg-2 control-label'])
 					}}
 
 					<div class="col-lg-10">
-						{{ Form::text('from_name', null,['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.settings.mail.fromname'),
+						{{ Form::text('Base_points_player', null,['class' => 'form-control', 'placeholder' => trans('Base_points_player'),
 						'rows' => 2]) }}
 					</div>
 				</div>
 				<div class="form-group">
-					{{ Form::label('from_email', trans('validation.attributes.backend.settings.mail.fromemail'), ['class' => 'col-lg-2 control-label'])
+					{{ Form::label('Base_points_team', trans('Base_points_team'), ['class' => 'col-lg-2 control-label'])
 					}}
 
 					<div class="col-lg-10">
-						{{ Form::text('from_email', null,['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.settings.mail.fromemail'),
+						{{ Form::text('Base_points_team', null,['class' => 'form-control', 'placeholder' => trans('Base_points_team'),
 						'rows' => 2]) }}
 					</div>
 				</div>

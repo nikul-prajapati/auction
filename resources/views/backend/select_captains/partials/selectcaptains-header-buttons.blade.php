@@ -24,6 +24,7 @@
         <li>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <a href="{{ route( 'admin.select_captains.index' ) }}">
 =======
             <a href="{{ route( 'admin.selectcaptains.index' ) }}">
@@ -31,6 +32,16 @@
 =======
             <a href="{{ route( 'admin.select_captains.index' ) }}">
 >>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
+=======
+            <a href="{{ route( 'admin.select_captains.index' ) }}">
+=======
+<<<<<<< HEAD
+            <a href="{{ route( 'admin.select_captains.index' ) }}">
+=======
+            <a href="{{ route( 'admin.selectcaptains.index' ) }}">
+>>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
+>>>>>>> c9875c7e617d975787fdba417acf59bdba1bab18
+>>>>>>> bb6b7a3caca2fa16be769a8c4a37b829daa7d0ad
                 <i class="fa fa-list-ul"></i> {{ trans( 'menus.backend.selectcaptains.all' ) }}
             </a>
         </li>

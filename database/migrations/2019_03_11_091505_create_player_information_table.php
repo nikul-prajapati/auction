@@ -23,6 +23,7 @@ class CreatePlayerInformationTable extends Migration
             $table->string('bowler_type',55);
             $table->integer('age');
             $table->string('Is_captain',55);
+            $table->string('filename');
             $table->integer('users_id')->unsigned()->index('player_records_user_id_foreign');
             $table->timestamps();
         });

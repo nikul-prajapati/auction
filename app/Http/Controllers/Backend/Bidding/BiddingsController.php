@@ -60,19 +60,20 @@ class BiddingsController extends Controller
      */
     public function create(CreateBiddingRequest $request)
     {
-        $data['data'] = DB::table('teams')->get();
-       // $users['users'] = DB::table('users')->paginate(1);
+        $data = DB::table('teams')->get();
+        $pic = DB::table('player_information')->paginate(1);
+        $users = DB::table('users')->paginate(1);
        
-       $users['users'] = DB::select('SELECT * FROM users where id not in (select users_id from biddings) '); 
+       // $users['users'] = DB::select('SELECT * FROM users where id not in (select users_id from biddings) '); 
    
 
-       $collection = new Collection($users);
+       // $collection = new Collection($users);
 
-        // Paginate
-        $perPage = 1; // Item per page
-        $currentPage = Input::get('page') - 1; // url.com/test?page=2
-        $pagedData = $collection->slice($currentPage * $perPage, $perPage)->all();
-        $collection= Paginator::make($pagedData, count($collection), $perPage);
+       //  // Paginate
+       //  $perPage = 1; // Item per page
+       //  $currentPage = Input::get('page') - 1; // url.com/test?page=2
+       //  $pagedData = $collection->slice($currentPage * $perPage, $perPage)->all();
+       //  $collection= Paginator::make($pagedData, count($collection), $perPage);
 
 
 
@@ -88,7 +89,7 @@ class BiddingsController extends Controller
         //         ->paginate(1);
 
 
-     return view('backend.biddings.create',$data,$collection);
+     return view('backend.biddings.create',array('data'=>$data,'users'=>$users,'pic'=>$pic));
 
         //return new CreateResponse('backend.biddings.create',$data);
     }

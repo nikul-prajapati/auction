@@ -102,6 +102,9 @@ class BidsController extends Controller
         $next = Post::where('id', '>', $post->id)->orderBy('id')->first();
         return view('backend.bids.index',$data)->with(compact('post','next'));
     }
+
+
+   
     /**
      * Show the form for creating a new resource.
      *

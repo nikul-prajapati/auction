@@ -14,6 +14,7 @@
             <div class="box-tools pull-right">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 @include('backend.select_captains.partials.selectcaptains-header-buttons')
 =======
                 @include('backend.selectcaptains.partials.selectcaptains-header-buttons')
@@ -21,6 +22,16 @@
 =======
                 @include('backend.select_captains.partials.selectcaptains-header-buttons')
 >>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
+=======
+                @include('backend.select_captains.partials.selectcaptains-header-buttons')
+=======
+<<<<<<< HEAD
+                @include('backend.select_captains.partials.selectcaptains-header-buttons')
+=======
+                @include('backend.selectcaptains.partials.selectcaptains-header-buttons')
+>>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
+>>>>>>> c9875c7e617d975787fdba417acf59bdba1bab18
+>>>>>>> bb6b7a3caca2fa16be769a8c4a37b829daa7d0ad
             </div>
         </div><!--box-header with-border-->
 
@@ -56,12 +67,16 @@
         $(function() {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bb6b7a3caca2fa16be769a8c4a37b829daa7d0ad
             var dataTable = $('#select_captains-table').dataTable({
                 processing: true,
                 serverSide: true,
                 ajax: {
                     url: '{{ route("admin.select_captains.get") }}',
 =======
+<<<<<<< HEAD
             var dataTable = $('#selectcaptains-table').dataTable({
                 processing: true,
                 serverSide: true,
@@ -69,12 +84,26 @@
                     url: '{{ route("admin.selectcaptains.get") }}',
 >>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> bb6b7a3caca2fa16be769a8c4a37b829daa7d0ad
             var dataTable = $('#select_captains-table').dataTable({
                 processing: true,
                 serverSide: true,
                 ajax: {
                     url: '{{ route("admin.select_captains.get") }}',
+<<<<<<< HEAD
 >>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
+=======
+=======
+            var dataTable = $('#selectcaptains-table').dataTable({
+                processing: true,
+                serverSide: true,
+                ajax: {
+                    url: '{{ route("admin.selectcaptains.get") }}',
+>>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
+>>>>>>> c9875c7e617d975787fdba417acf59bdba1bab18
+>>>>>>> bb6b7a3caca2fa16be769a8c4a37b829daa7d0ad
                     type: 'post'
                 },
                 columns: [
@@ -89,6 +118,7 @@
                     buttons: [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         { extend: 'copy', className: 'copyButton',  exportOptions: {columnsF: [ 0, 1 ]  }},
 =======
                         { extend: 'copy', className: 'copyButton',  exportOptions: {columns: [ 0, 1 ]  }},
@@ -96,6 +126,16 @@
 =======
                         { extend: 'copy', className: 'copyButton',  exportOptions: {columnsF: [ 0, 1 ]  }},
 >>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
+=======
+                        { extend: 'copy', className: 'copyButton',  exportOptions: {columnsF: [ 0, 1 ]  }},
+=======
+<<<<<<< HEAD
+                        { extend: 'copy', className: 'copyButton',  exportOptions: {columnsF: [ 0, 1 ]  }},
+=======
+                        { extend: 'copy', className: 'copyButton',  exportOptions: {columns: [ 0, 1 ]  }},
+>>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
+>>>>>>> c9875c7e617d975787fdba417acf59bdba1bab18
+>>>>>>> bb6b7a3caca2fa16be769a8c4a37b829daa7d0ad
                         { extend: 'csv', className: 'csvButton',  exportOptions: {columns: [ 0, 1 ]  }},
                         { extend: 'excel', className: 'excelButton',  exportOptions: {columns: [ 0, 1 ]  }},
                         { extend: 'pdf', className: 'pdfButton',  exportOptions: {columns: [ 0, 1 ]  }},

@@ -39,7 +39,6 @@
            <option value="<?php echo $rol->id ?>">
            {{$rol->first_name}}</option>
           @endForeach
-          
         </select>
 
             <div class="box-body">

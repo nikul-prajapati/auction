@@ -38,6 +38,7 @@
                 </div>
                 @endforeach
 
+<<<<<<< HEAD
                 <div class="form-group">
 
                     <label for="Team" class="col-md-4 control-label">Team: </label>
@@ -53,6 +54,19 @@
 
                     </select>
                 </div>   
+=======
+               
+                 <h4 class="col-md-2">Select Team Name</h4>
+        <select class="btn btn-primary dropdown-toggle" data-toggle="dropdown" name="teams_id">
+          <option>select</option>
+           @foreach($data as $role)
+           <option  value="<?php echo $role->id ?>">
+           {{$role->Team_name}}</option>
+          @endForeach
+        </select><br><br>
+
+  
+>>>>>>> bb6b7a3caca2fa16be769a8c4a37b829daa7d0ad
                 
                 <div class="col-md-6 col-md-offset-4">
                     <!-- <a href="{{('/bids')}}" class ="btn btn-primary" role="button">Submit</a> -->
@@ -62,7 +76,11 @@
                   {{ $users->links('backend.bids.pagination') }}
                
 
+<<<<<<< HEAD
 
+=======
+                 
+>>>>>>> bb6b7a3caca2fa16be769a8c4a37b829daa7d0ad
 
 
 
@@ -92,6 +110,8 @@
                 columns: [
                     {data: 'id', name: '{{config('module.bids.table')}}.id'},
                     {data: 'created_at', name: '{{config('module.bids.table')}}.created_at'},
+                    {data: 'users_id', name: '{{config('module.bids.table')}}.users_id'},
+                    {data: 'teams_id', name: '{{config('module.teaams,.table')}}.teams_id'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
                 ],
                 order: [[0, "asc"]],

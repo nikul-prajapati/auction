@@ -64,7 +64,7 @@ class RegisterController extends Controller
 
 
 if (config('access.users.confirm_email') || config('access.users.requires_approval')) {
-            $user = $this->user->create($request->only('first_name', 'last_name', 'email', 'password', 'is_term_accept'));
+            $user = $this->user->create($request->only('first_name', 'last_name', 'email', 'password', 'filename', 'is_term_accept'));
             event(new UserRegistered($user));
                     // trans('exceptions.frontend.auth.confirmation.created_pending') :
                     // trans('exceptions.frontend.auth.confirmation.created_confirm')

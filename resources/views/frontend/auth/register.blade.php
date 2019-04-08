@@ -1,6 +1,23 @@
 @extends('frontend.layouts.app')
 
 @section('content')
+<div class="container">
+      @if (count($errors) > 0)
+      <div class="alert alert-danger">
+        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+        <ul>
+          @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
+      @endif
+
+        @if(session('success'))
+        <div class="alert alert-success">
+          {{ session('success') }}
+        </div> 
+        @endif
     <div class="row">
 
         <div class="col-md-8 col-md-offset-2">
@@ -46,6 +63,22 @@
                             {{ Form::input('password', 'password_confirmation', null, ['class' => 'form-control', 'placeholder' => trans('validation.attributes.frontend.register-user.password_confirmation')]) }}
                         </div><!--col-md-6-->
                     </div><!--form-group-->
+
+
+                    <div class="input-group control-group increment" >
+          <input type="file" name="filename[]" class="form-control">
+          <div class="input-group-btn"> 
+            <button class="btn btn-success" type="button"><i class="glyphicon glyphicon-plus"></i>Add</button>
+          </div>
+        </div>
+        <div class="clone hide">
+          <div class="control-group input-group" style="margin-top:10px">
+            <input type="file" name="filename[]" class="form-control">
+            <div class="input-group-btn"> 
+              <button class="btn btn-danger" type="button"><i class="glyphicon glyphicon-remove"></i> Remove</button>
+            </div>
+          </div>
+        </div>
 
                     <div class="form-group">
                             <div class="col-xs-7">

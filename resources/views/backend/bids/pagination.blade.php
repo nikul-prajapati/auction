@@ -1,3 +1,4 @@
+
 @if ($paginator->hasPages())
 <ul class="pagination" role="navigation">
     {{-- Previous Page Link --}}
@@ -58,4 +59,3 @@
     @endif
 </ul>
 @endif
-

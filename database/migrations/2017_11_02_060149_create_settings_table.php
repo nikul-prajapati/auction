@@ -32,6 +32,8 @@ class CreateSettingsTable extends Migration
             $table->text('terms', 65535)->nullable();
             $table->text('disclaimer', 65535)->nullable();
             $table->text('google_analytics', 65535)->nullable();
+            $table->integer('Base_points_player');
+            $table->integer('Base_points_team');
             $table->string('home_video1', 191)->nullable();
             $table->string('home_video2', 191)->nullable();
             $table->string('home_video3', 191)->nullable();

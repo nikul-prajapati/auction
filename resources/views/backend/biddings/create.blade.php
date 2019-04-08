@@ -37,7 +37,17 @@
 
 
 
-                
+                <div class="form-group">
+                <div class="col-lg-10">
+                @foreach($pic as $xyz)
+                <img src="{{ URL::asset('img/frontend/profile-picture/'.$xyz->filename) }} "height="80px" width="90px"alt="Any alt text"/>
+        
+                @endForeach
+                 </div><!--col-lg-10-->
+                </div><!--form control-->
+
+
+
                 {{-- Price --}}
                 <div class="form-group">
                     {{ Form::label('price', trans('price'), ['class' => 'col-lg-2 control-label required']) }}
@@ -59,9 +69,8 @@
                 </select><br><br>
        
 
-                
 
-                {{ $users->links('backend.bids.pagination') }}
+                  {{ $users->links('backend.bids.pagination') }}
 
                 <div class="form-group">
                     {{-- Including Form blade file --}}
