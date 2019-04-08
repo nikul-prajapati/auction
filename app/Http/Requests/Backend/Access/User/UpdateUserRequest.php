@@ -31,7 +31,7 @@ class UpdateUserRequest extends Request
             'first_name'      => 'required',
             'last_name'       => 'required',
             'permissions'     => 'required',
-            'assignees_roles' => 'required',
+            'assignees_roles' => 'required'
         ];
     }
 

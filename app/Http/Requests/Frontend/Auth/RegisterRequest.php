@@ -33,9 +33,7 @@ class RegisterRequest extends Request
             'email'                => ['required', 'email', 'max:255', Rule::unique('users')],
             'password'             => 'required|min:8|confirmed|regex:"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"',
             'is_term_accept'       => 'required',
-            'g-recaptcha-response' => 'required_if:captcha_status,true|captcha',
-            'filename' => 'required',
-            'filename.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'g-recaptcha-response' => 'required_if:captcha_status,true|captcha' 
         ];
     }
 

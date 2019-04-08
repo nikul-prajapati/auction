@@ -11,6 +11,14 @@
 
                 <div class="panel-body">
 
+                 
+
+        @if(session('success'))
+        <div class="alert alert-success">
+          {{ session('success') }}
+        </div> 
+        @endif
+
                     @if ($errors->any())
                   <!--   <div class="alert alert-danger"> -->
                         <ul>
@@ -24,7 +32,8 @@
                  <!--    </div> -->
                     @endif
 
-<form method="POST" action="{{route('details.store')}}"  class="form-horizontal"> 
+<form method="POST" action="{{route('details.store')}}"  class="form-horizontal" enctype="multipart/form-data"> 
+        {{csrf_field()}}
 
         <div class="form-group">
              @csrf
@@ -89,8 +98,22 @@
         
               <label for="run" class="col-md-4 control-label">Age:</label>
               <input type="text" class="col-md-6" name="age"/>
+        </div>
 
-        
+        <div class="input-group control-group increment" >
+          <input type="file" name="filename[]" class="form-control">
+          <div class="input-group-btn"> 
+            <button class="btn btn-success" type="button"><i class="glyphicon glyphicon-plus"></i>Add</button>
+          </div>
+        </div>
+        <div class="clone hide">
+          <div class="control-group input-group" style="margin-top:10px">
+            <input type="file" name="filename[]" class="form-control">
+            <div class="input-group-btn"> 
+              <button class="btn btn-danger" type="button"><i class="glyphicon glyphicon-remove"></i> Remove</button>
+            </div>
+          </div>
+        </div>
 
     <div class="col-md-6 col-md-offset-4">
        

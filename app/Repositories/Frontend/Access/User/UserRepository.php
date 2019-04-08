@@ -89,16 +89,7 @@ class UserRepository extends BaseRepository
      */
     public function create(array $data, $provider = false)
     {
-        if($data->hasfile('filename'))
-         {
-
-            foreach($request->file('filename') as $image)
-            {
-                $name=$image->getClientOriginalName();
-                $image->move(public_path().'/images/', $name);  
-                $dat[] = $name;  
-            }
-         }
+        
         $user = self::MODEL;
         $user = new $user();
         $user->first_name = $data['first_name'];
@@ -107,7 +98,6 @@ class UserRepository extends BaseRepository
         $user->confirmation_code = md5(uniqid(mt_rand(), true));
         $user->status = 1;
         $user->password = $provider ? null : bcrypt($data['password']);
-        $user->filename=json_encode($dat);
         $user->is_term_accept = $data['is_term_accept'];
 
         // If users require approval, confirmed is false regardless of account type
@@ -256,6 +246,7 @@ class UserRepository extends BaseRepository
         $user->last_name = $input['last_name'];
         $user->updated_by = access()->user()->id;
 
+        
         if ($user->canChangeEmail()) {
             //Address is not current address
             if ($user->email != $input['email']) {

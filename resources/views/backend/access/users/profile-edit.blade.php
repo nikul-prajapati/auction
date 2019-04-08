@@ -1,4 +1,4 @@
-@extends ('backend.layouts.app')
+s@extends ('backend.layouts.app')
 
 @section ('title', trans('labels.backend.access.users.management') . ' | ' . trans('labels.backend.access.users.edit'))
 
@@ -30,6 +30,9 @@
                 </div>
             </div>
 
+
+            
+           
             <div class="form-group">
                 <div class="col-lg-10 col-md-offset-4">
                     {{ Form::submit(trans('labels.general.buttons.update'), ['class' => 'btn btn-primary', 'id' => 'update-profile']) }}

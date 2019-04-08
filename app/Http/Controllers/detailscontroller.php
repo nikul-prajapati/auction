@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\details;
 use App\Repositories\frontend\access\user\detailsRepository;
-
+use App\Models\Access\User\User;
 
 
 
@@ -60,9 +60,23 @@ class detailscontroller extends Controller
         'runs' => 'required|integer',
         'wickets' => 'required|integer',
         'age' => 'required|integer',
+         'filename' => 'required',
+         'filename.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         
       ]);
 
+         if($request->hasfile('filename'))
+         {
+
+            foreach($request->file('filename') as $image)
+            {
+                $name=$image->getClientOriginalName();
+                $image->move(public_path().'/images/', $name);  
+                $data[] = $name;  
+            }
+         }
+
+         
          
 
       $details = new playerinformation([
@@ -73,7 +87,10 @@ class detailscontroller extends Controller
         'batsman_type'=> $request->get('batsman'),
         'bowler_type'=> $request->get('bowler'),
         'age'=>$request->get('age')
+         
       ]);
+      $details->filename=json_encode($data);
+       
       $details->save();
       return redirect('/dashboard')->with('success', 'successfully details udm_check_stored(agent, link, doc_id)');
 
