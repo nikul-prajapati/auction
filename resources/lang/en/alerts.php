@@ -94,5 +94,15 @@ return [
 	"deleted" => "The Selectcaptain was successfully deleted.",
 	"updated" => "The Selectcaptain was successfully updated.",
 	],
+	"bids" => [
+	"created" => "The Bid was successfully created.",
+	"deleted" => "The Bid was successfully deleted.",
+	"updated" => "The Bid was successfully updated.",
+	],
+	"biddings" => [
+	"created" => "The Bidding was successfully created.",
+	"deleted" => "The Bidding was successfully deleted.",
+	"updated" => "The Bidding was successfully updated.",
+	],
 	],
 ];

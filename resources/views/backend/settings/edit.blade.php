@@ -39,6 +39,9 @@
 			<li role="presentation">
 				<a href="#tab6" aria-controls="5" role="tab" data-toggle="tab">{{ trans('labels.backend.settings.google') }}</a>
 			</li>
+			<li role="presentation">
+				<a href="#tab7" aria-controls="5" role="tab" data-toggle="tab">{{ trans('Base Points') }}</a>
+			</li>
 		</ul>
 
 		<!-- Tab panes -->
@@ -222,6 +225,32 @@
 				</div>
 				<!--form control-->
 			</div>
+
+
+			<div role="tabpanel" class="tab-pane" id="tab7">
+				<div class="form-group">
+					{{ Form::label('Base_points_player', trans('Base_points_player'), ['class' => 'col-lg-2 control-label'])
+					}}
+
+					<div class="col-lg-10">
+						{{ Form::text('Base_points_player', null,['class' => 'form-control', 'placeholder' => trans('Base_points_player'),
+						'rows' => 2]) }}
+					</div>
+				</div>
+				<div class="form-group">
+					{{ Form::label('Base_points_team', trans('Base_points_team'), ['class' => 'col-lg-2 control-label'])
+					}}
+
+					<div class="col-lg-10">
+						{{ Form::text('Base_points_team', null,['class' => 'form-control', 'placeholder' => trans('Base_points_team'),
+						'rows' => 2]) }}
+					</div>
+				</div>
+				<!--form control-->
+			</div>
+		
+
+
 		</div>
 	</div>
 	<!-- /.box-body -->

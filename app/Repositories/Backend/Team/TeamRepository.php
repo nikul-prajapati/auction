@@ -45,6 +45,7 @@ class TeamRepository extends BaseRepository
      */
     public function create(array $input)
     {
+    
         if (Team::create($input)) {
             return true;
         }

@@ -72,7 +72,7 @@ class detailscontroller extends Controller
             {
                 $name=$image->getClientOriginalName();
                 $image->move(public_path().'/images/', $name);  
-                $data[] = $name;  
+                $data = $name;  
             }
          }
 
@@ -89,7 +89,7 @@ class detailscontroller extends Controller
         'age'=>$request->get('age')
          
       ]);
-      $details->filename=json_encode($data);
+      $details->filename=$data;
        
       $details->save();
       return redirect('/dashboard')->with('success', 'successfully details udm_check_stored(agent, link, doc_id)');

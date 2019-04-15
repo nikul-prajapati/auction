@@ -67,10 +67,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('BidInformation', 'BidInformation\BidInformationController@index');
         
 
-
-
-
-
+      
 /*
 * Show pages
 */

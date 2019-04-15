@@ -134,6 +134,20 @@ return [
 	"not_found" => "That Selectcaptain does not exist.",
 	"update_error" => "There was a problem updating this Selectcaptain. Please try again.",
 	],
+	"bids" => [
+	"already_exists" => "That Bid already exists. Please choose a different name.",
+	"create_error" => "There was a problem creating this Bid. Please try again.",
+	"delete_error" => "There was a problem deleting this Bid. Please try again.",
+	"not_found" => "That Bid does not exist.",
+	"update_error" => "There was a problem updating this Bid. Please try again.",
+	],
+	"biddings" => [
+	"already_exists" => "That Bidding already exists. Please choose a different name.",
+	"create_error" => "There was a problem creating this Bidding. Please try again.",
+	"delete_error" => "There was a problem deleting this Bidding. Please try again.",
+	"not_found" => "That Bidding does not exist.",
+	"update_error" => "There was a problem updating this Bidding. Please try again.",
+	],
 	],
 	"frontend" => [
 	"auth" => [

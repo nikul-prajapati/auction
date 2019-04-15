@@ -10,27 +10,51 @@
     <div class="box box-info">
         <div class="box-header with-border">
             <h3 class="box-title">{{ trans('Bidding') }}</h3>
-            <form method="POST"  class="form-horizontal" action="{{route('admin.bids.store')}}"> 
+            
+            <form method="POST"  class="form-horizontal"> 
                 <div class="form-group">
                 @csrf
 
                   @foreach($users as $value) 
                     <label for="name" class="col-md-4 control-label">Player Name:</label>
-                    id={{$value->id}};
-                    <label for="name" class="col-md-4 control-label" name="users_id">{{$value->first_name}}</label>
+                   
+                    <label for="name" class="col-md-4 control-label" name="id">{{$value->first_name}}</label>
                    <!--  <input type="text" class="col-md-6" name="name"  /> --> </div>
                    @endforeach
 
 
-
                 <div class="form-group">
+                    
                     <label for="bprice" class="col-md-4 control-label">Base Price:</label>
-                    <input type="text" class="col-md-6" value="200 points" disabled="disabled"  /></div>
-
-                <div class="form-group">    
+                    <input type="text" class="col-md-6" value="200 points" disabled="disabled"  />
+                    
+                </div>
+                
+                <div class="form-group">
+                    @foreach($bid as $val)
                     <label for="Name" class="col-md-4 control-label">Purchase Price:</label>
-                    <input type="text" class="col-md-6" name="pprice"  /></div>
+                    <label for="name" class="col-md-4 control-label" name="id">{{$val->price}}</label>
+                    <!-- <input type="text" class="col-md-6" name="pprice"  />  -->    
+                </div>
+                @endforeach
 
+<<<<<<< HEAD
+                <div class="form-group">
+
+                    <label for="Team" class="col-md-4 control-label">Team: </label>
+                    <select name="team_id" class="col-md-6" style="padding: 4px;"> 
+                            <option>select</option>
+
+                            @foreach($data as $role)
+
+                                <option value="<?php echo $role->id ?>">
+                                {{$role->Team_name}}</option>
+
+                            @endforeach
+
+                    </select>
+                </div>   
+=======
                
                  <h4 class="col-md-2">Select Team Name</h4>
         <select class="btn btn-primary dropdown-toggle" data-toggle="dropdown" name="teams_id">
@@ -42,6 +66,7 @@
         </select><br><br>
 
   
+>>>>>>> bb6b7a3caca2fa16be769a8c4a37b829daa7d0ad
                 
                 <div class="col-md-6 col-md-offset-4">
                     <!-- <a href="{{('/bids')}}" class ="btn btn-primary" role="button">Submit</a> -->
@@ -51,7 +76,11 @@
                   {{ $users->links('backend.bids.pagination') }}
                
 
+<<<<<<< HEAD
+
+=======
                  
+>>>>>>> bb6b7a3caca2fa16be769a8c4a37b829daa7d0ad
 
 
 

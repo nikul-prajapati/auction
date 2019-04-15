@@ -5,7 +5,6 @@
 
 <table class="table table-striped table-hover">
 
-<<<<<<< HEAD
 
     <tr>
         <th>{{ trans('Match Played') }}</th>
@@ -15,7 +14,6 @@
 
       
 
-=======
 	<h4>Name: {{ Auth::user()->first_name }}</h4>
    
         
@@ -41,7 +39,6 @@
 
  
      
->>>>>>> c9875c7e617d975787fdba417acf59bdba1bab18
 
     
              

@@ -38,10 +38,16 @@ return [
 	"auctions" => [
 	"table" => "auctions",
 	],
-		"playerinformations" => [
+	"playerinformations" => [
 	"table" => "player_information",
-		],
+	],
 	"selectcaptains" => [
-		"table" => "selectcaptains",
-		]
+	"table" => "selectcaptains",
+	],
+	"bids" => [
+	"table" => "bids",
+	],
+	"biddings" => [
+	"table" => "biddings",
+	],
 ];

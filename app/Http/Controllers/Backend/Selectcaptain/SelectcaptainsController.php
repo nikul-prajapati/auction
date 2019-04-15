@@ -60,7 +60,7 @@ class SelectcaptainsController extends Controller
      */
     public function create(CreateSelectcaptainRequest $request)
     {
-        $data ['dat']=DB::select('SELECT * FROM users where id>4 not in (select users_id from selectcaptains)');
+        $data ['dat']=DB::select('SELECT * FROM users where(select id from users where id>4) not in (select users_id from selectcaptains)');
 
          $data ['data']= DB::select('SELECT * FROM teams where id not in (select teams_id from selectcaptains)');
           return view('backend.selectcaptains.create',$data);
