@@ -34,13 +34,13 @@ class detailscontroller extends Controller
     public function index()
     {
          $users_id = Auth::user()->id;
-            $data['data'] = DB::table('users')
+        $data['data'] = DB::table('users')
                 ->join('player_information', 'users.id', '=', 'player_information.users_id')
                
-                ->select('users.id','player_information.*')
+                ->select('users.id','users.first_name')
                 ->where('users.id',$users_id) // else it will get all rows
                 ->get();
-        return view('frontend.auth.details',$data);
+        return view('frontend.auth.details', $data);
     }
 
     /**
@@ -69,6 +69,7 @@ class detailscontroller extends Controller
         'wickets' => 'required|integer',
         'age' => 'required|integer',
         
+        
       ]);
 
           if($request->hasfile('filename'))
@@ -77,29 +78,41 @@ class detailscontroller extends Controller
             foreach($request->file('filename') as $image)
             {
                 $name=$image->getClientOriginalName();
-                $image->move(public_path().'/images/', $name);  
-                $data[] = $name;  
+                $image->move(public_path().'/img/frontend/pics/', $name);  
+                $data = $name;  
             }
          }
 
-
-      $details = new playerinformation([
-        'played_match' => $request->get('match'),
-        'total_runs'=> $request->get('runs'),
-        'total_wickets'=> $request->get('wickets'),  
-        'speciality'=> $request->get('type'),
-        'batsman_type'=> $request->get('batsman'),
-        'bowler_type'=> $request->get('bowler'),
-        'age'=>$request->get('age'),
         
-      ]);
-       $details->filename=json_encode($data);
-      // $form= new playerinformation();
-      //    $form->filename=json_encode($data);
-      //    $form->save();
-     $details->save();
-      return redirect('/dashboard')->with('success', 'successfully details udm_check_stored(agent, link, doc_id)');
+            
+            if (playerinformation::where('users_id', '=', $request->get('users_id'))->exists())
+             {
+                  echo " records already exists for this users";
+              }
+            else
+            {
+                 $details = new playerinformation([
+                'played_match' => $request->get('match'),
+                'total_runs'=> $request->get('runs'),
+                'total_wickets'=> $request->get('wickets'),  
+                'speciality'=> $request->get('type'),
+                'batsman_type'=> $request->get('batsman'),
+                'bowler_type'=> $request->get('bowler'),
+                'age'=>$request->get('age'),
+                'users_id'=>$request->get('users_id'),
 
+              ]);
+               $details->filename=$data;
+              // $form= new playerinformation();
+              //    $form->filename=json_encode($data);
+              //    $form->save();
+             $details->save();
+              return redirect('/dashboard')->with('success', 'successfully details udm_check_stored(agent, link, doc_id)');
+
+            }
+            
+     
+     
        
     }
 

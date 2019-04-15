@@ -26,9 +26,11 @@
                                     <div class="media-left">
 
                          
-
-                                        <img style="border-radius: 7px;" class="media-object" src="img/frontend/profile-picture/pic3.png" height="80px" width="90px" alt="Profile picture">
-
+                                        @foreach($data as $user)
+                                         <img src="{{ URL::asset('img/frontend/pics/'.$user->filename) }}" height="80px" width="90px"alt="Any alt text"/>
+                                        
+                                        @endforeach
+                                        
                                     </div><!--media-left-->
 
                                     <div class="media-body" style="border:1px solid grey;padding: 2px;border-radius: 3px">

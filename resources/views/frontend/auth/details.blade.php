@@ -101,12 +101,15 @@
         </div>
 
 
-         @foreach($data as $value) 
+        <div class="form-group">
+                   
+
+                    @foreach($data as $value) 
+                    
                     <input type="hidden" class="col-md-6" name="users_id"  value= "<?php echo $value->id ?>"  /> </div>
                     
                    @endforeach
-
-
+                   </div><!--col-lg-10-->
 
         <div class="input-group control-group increment" >
           <input type="file" name="filename[]" class="form-control">
@@ -125,7 +128,7 @@
 
     <div class="col-md-6 col-md-offset-4">
        
-        <button type="submit" class="btn btn-primary">Submit</button>  
+        <button type="submit" class="btn btn-primary" name="submit" onsubmit="return validateForm(this);">Submit</button>  
     </div>
 
 </form>            

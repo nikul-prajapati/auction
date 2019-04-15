@@ -29,25 +29,23 @@
                     <label for="name" class="col-md-4 control-label">Player Name:</label>
                     <div class="col-lg-10">
                     @foreach($users as $value) 
-                    <input type="hidden" class="col-md-6" name="users_id"  value= "<?php echo $value->id ?>"  /> </div>
-                    <label for="name" class="col-md-4 control-label" name="id">{{$value->first_name}}</label>
+                    <input type="hidden" class="col-md-6" name="users_id"  value= "<?php echo $value->id ?>"  />
+                    <label for="name" class="col-md-4 control-label" name="id">{{$value->first_name}}</label> </div>
                    @endforeach
                    </div><!--col-lg-10-->
                 </div><!--form control-->
 
 
-
+                
                 <div class="form-group">
                 <div class="col-lg-10">
-                @foreach($pic as $xyz)
-                <img src="{{ URL::asset('img/frontend/profile-picture/'.$xyz->filename) }} "height="80px" width="90px"alt="Any alt text"/>
+                @foreach($users as $xyz)
+                <img src="{{ URL::asset('img/frontend/pics/'.$xyz->filename) }}" height="80px" width="90px"alt="Any alt text"/>
         
                 @endForeach
                  </div><!--col-lg-10-->
                 </div><!--form control-->
-
-
-
+                
                 {{-- Price --}}
                 <div class="form-group">
                     {{ Form::label('price', trans('price'), ['class' => 'col-lg-2 control-label required']) }}
@@ -70,7 +68,7 @@
        
 
 
-                  {{ $users->links('backend.bids.pagination') }}
+                  {{ $users->links() }}
 
                 <div class="form-group">
                     {{-- Including Form blade file --}}

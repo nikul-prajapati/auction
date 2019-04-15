@@ -20,6 +20,7 @@ class PlayerRecordController extends Controller
 
 
          $users_id = Auth::user()->id;
+         
             $data['data'] = DB::table('users')
                 ->join('player_information', 'users.id', '=', 'player_information.users_id')
                

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend\Bidding;
 
 use App\Models\Bidding\Bidding;
 use DB;
+use App\Models\Access\User\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Responses\RedirectResponse;
@@ -20,7 +21,7 @@ use App\Http\Requests\Backend\Bidding\DeleteBiddingRequest;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Input;
-
+use Illuminate\Pagination\LengthAwarePaginator;
 
 /**
  * BiddingsController
@@ -61,44 +62,33 @@ class BiddingsController extends Controller
     public function create(CreateBiddingRequest $request)
     {
         $data = DB::table('teams')->get();
-        $pic = DB::table('player_information')->paginate(1);
-        $users = DB::table('users')->paginate(1);
+        //$pic = DB::table('player_information')->paginate(1);
+        //$users = DB::table('users')->paginate(1);
        
-       // $users['users'] = DB::select('SELECT * FROM users where id not in (select users_id from biddings) '); 
+       
+        $biddingUsers = Bidding::select('users_id')->pluck('users_id')->toArray();
+        $users = User::select('users.*', 'player_information.*')
+            ->leftjoin('player_information', 'player_information.users_id', 'users.id')->whereNotIn('users.id', $biddingUsers)->get()->toArray();
+            
+        // $users = DB::select('SELECT * FROM users where id not in (select users_id from biddings) '); 
    
 
-       // $collection = new Collection($users);
+       
+        $users = $this->arrayPaginator($users, $request);
 
-       //  // Paginate
-       //  $perPage = 1; // Item per page
-       //  $currentPage = Input::get('page') - 1; // url.com/test?page=2
-       //  $pagedData = $collection->slice($currentPage * $perPage, $perPage)->all();
-       //  $collection= Paginator::make($pagedData, count($collection), $perPage);
+       
 
+     return view('backend.biddings.create',array('data'=>$data,'users'=>$users));
 
-
-
-       //   $results_per_page = 5;
-     //$pagination = Paginator::make($users,count($users),$results_per_page);
-     
-
-        // $users['users'] = DB::table('users')
-        //         ->join('biddings', 'users.id', '=', 'biddings.users_id')
-               
-        //         ->select('users.id where id not in (select users_id from biddings)')
-        //         ->paginate(1);
-
-
-     return view('backend.biddings.create',array('data'=>$data,'users'=>$users,'pic'=>$pic));
-
-        //return new CreateResponse('backend.biddings.create',$data);
+       
     }
 
 
     public function arrayPaginator($array, $request)
     {
-        $page = Input::get('page', 1);
-        $perPage = 10;
+        $page = $request->get('page', 1);
+        //$page = Input::get('page', 1);
+        $perPage = 1;
         $offset = ($page * $perPage) - $perPage;
 
         return new LengthAwarePaginator(array_slice($array, $offset, $perPage, true), count($array), $perPage, $page,

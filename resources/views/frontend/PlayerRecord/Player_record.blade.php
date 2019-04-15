@@ -6,12 +6,7 @@
 <table class="table table-striped table-hover">
 
 
-    <tr>
-        <th>{{ trans('Match Played') }}</th>
-        <th>{{ trans('Runs Made') }}</th>
-        <th>{{ trans('Wickets Taken') }}</th>
-      </tr> 
-
+    
       
 
 	<h4>Name: {{ Auth::user()->first_name }}</h4>

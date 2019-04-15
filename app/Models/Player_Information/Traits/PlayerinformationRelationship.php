@@ -19,4 +19,9 @@ trait PlayerinformationRelationship
         $this->belongsTo(User::class);
     }
      */
+
+    public function users()
+    {
+        return $this->hasOne(users::class, 'id', 'users_id');
+    }
 }
