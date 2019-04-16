@@ -1,4 +1,6 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse navbar-fixed-top" 
+    style="border-bottom: 1px solid grey;background-color: white;">
+
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#frontend-navbar-collapse">
@@ -8,12 +10,21 @@
                 <span class="icon-bar"></span>
             </button> 
 
-           {{--   @if(settings()->logo)
+           
+
+          <!--  {{--   @if(settings()->logo)
+           -->  
             <!-- <a href="{{ route('frontend.index') }}" class="logo">  -->
-                <img height="48" width="226" class="navbar-brand" src="img/frontend/logo.png"><!-- </a> -->
-            @else --}}
-             {{ link_to_route('frontend.index',"Cygnet Cricket League", [], ['class' => 'navbar-brand']) }}
-           {{--  @endif --}}
+              <!--   <img height="48" width="48" src="img/frontend/logo.png"> --><!-- </a> -->
+           <!--  @else --}} -->
+           
+
+           <!--   {{ link_to_route('frontend.index',"Cygnet Cricket League", [], ['class' => 'navbar-brand']) }} -->
+
+           <!-- {{--  @endif --}} -->
+            <img src="img/frontend/logo1.png" alt="img" 
+            style="width: 114%;height: 50px;" >
+
         </div><!--navbar-header-->
 
         <div class="collapse navbar-collapse" id="frontend-navbar-collapse">

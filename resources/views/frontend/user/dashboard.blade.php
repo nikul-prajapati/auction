@@ -129,11 +129,6 @@
       
                           
 
-<<<<<<< HEAD
-=======
-                                
-                            </div><!--row-->
->>>>>>> c9875c7e617d975787fdba417acf59bdba1bab18
 
 
                     </div><!--row-->
@@ -146,8 +141,8 @@
 
     </div><!-- row -->
 
-   <!-- <footer>
+   <footer>
             @include('frontend.footer')
-</footer> -->
+</footer>
    
 @endsection

@@ -40,7 +40,7 @@
             }
         ?>
     </head>
-    <body id="app-layout">
+    <body id="app-layout" style="margin-top: 6%;">
         <div id="app">
             @include('includes.partials.logged-in-as')
             @include('frontend.includes.nav')

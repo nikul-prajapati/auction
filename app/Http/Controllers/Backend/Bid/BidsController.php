@@ -53,9 +53,7 @@ class BidsController extends Controller
      */
     public function index(ManageBidRequest $request)
     {
-        $data['data']=DB::table('teams')->get();
-
-
+       
          //$id = Auth::user()->id;
        
         // $next = DB::table('users')->where('id', '>', $id)->limit(1);
@@ -66,9 +64,9 @@ class BidsController extends Controller
         // ->unionAll($next)
         // ->get();
 
-
-         $users['users'] = DB::table('users')->paginate(1);
-         
+         $data=DB::table('teams')->get();
+         $users = DB::table('users')->paginate(1)->onEachSide(2);
+         $bid = DB::table('bid')->paginate(1);     
    
         
         //return $this->art('id');
@@ -77,9 +75,9 @@ class BidsController extends Controller
          // $nextUser = users::findNext($id);
           
          // return $this->single('slug');
-         return view('backend.bids.index',$data,$users)->with('i', ($request->input('page', 1) - 1) * 5);
+         //return view('backend.bids.index',$data,$users)->with('i', ($request->input('page', 1) - 1) * 5);
    
-         //return view('backend.bids.index',$data,$users);
+         return view('backend.bids.index',array('data'=>$data,'users'=>$users,'bid'=>$bid));
 
     }
 
@@ -123,25 +121,13 @@ class BidsController extends Controller
     public function store(StoreBidRequest $request)
     {
         //Input received from the request
-        // $input = $request->except(['_token']);
-        // //Create the model using repository create method
-        // $this->repository->create($input);
-        // //return with successfull message
-        // return new RedirectResponse(route('admin.bids.index'), ['flash_success' => trans('alerts.backend.bids.created')]);
+        $input = $request->except(['_token']);
+        //Create the model using repository create method
+        $this->repository->create($input);
+        //return with successfull message
+        return new RedirectResponse(route('admin.bids.index'), ['flash_success' => trans('alerts.backend.bids.created')]);
 
-        // $request->validate(['pprice'=>'required|integer']);
-
-        // $Bids = new Bids([
-        //     'price'=>$request->get('pprice'),
-        //     'teams_id'=> $request->get('team_id'),
-        //     'id'=>$request->get('id')
-        //     // ''=>$request->get(''),
-        //     // ''=>$request->get('')
-        // ]);
-
-     
-        // $Bids->save();
-        // return redirect('');
+        
     }
 
     public function bids(Request $request)
@@ -152,8 +138,7 @@ class BidsController extends Controller
             'price'=>$request->get('pprice'),
             'teams_id'=> $request->get('team_id'),
             'id'=>$request->get('id')
-            // ''=>$request->get(''),
-            // ''=>$request->get('')
+           
         ]);
 
      

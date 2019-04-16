@@ -69,7 +69,7 @@ class SelectcaptainsController extends Controller
         //return view('backend.selectcaptains.create',array('user'=>$user,'team'=>$team));
           return view('backend.selectcaptains.create',$data);
 
-        
+            return view('backend.selectcaptains.create',$data,$name);
 //$data['name']= DB::table('users')->where('users.id',notin( 'select users.id from users'))
 //         ->join('selectcaptains', function ($join) {
 //             $join->where('selectcaptains.users_id', '!=','users.id' );

@@ -10,25 +10,33 @@
     <div class="box box-info">
         <div class="box-header with-border">
             <h3 class="box-title">{{ trans('Bidding') }}</h3>
-<!--  -->
+            
             <form method="POST"  class="form-horizontal"> 
                 <div class="form-group">
                 @csrf
 
                   @foreach($users as $value) 
                     <label for="name" class="col-md-4 control-label">Player Name:</label>
+                   
                     <label for="name" class="col-md-4 control-label" name="id">{{$value->first_name}}</label>
                    <!--  <input type="text" class="col-md-6" name="name"  /> --> </div>
                    @endforeach
 
 
                 <div class="form-group">
+                    
                     <label for="bprice" class="col-md-4 control-label">Base Price:</label>
-                    <input type="text" class="col-md-6" value="200 points" disabled="disabled"  /></div>
-
-                <div class="form-group">    
+                    <input type="text" class="col-md-6" value="200 points" disabled="disabled"  />
+                    
+                </div>
+                
+                <div class="form-group">
+                    @foreach($bid as $val)
                     <label for="Name" class="col-md-4 control-label">Purchase Price:</label>
-                    <input type="text" class="col-md-6" name="pprice"  /></div>
+                    <label for="name" class="col-md-4 control-label" name="id">{{$val->price}}</label>
+                    <!-- <input type="text" class="col-md-6" name="pprice"  />  -->    
+                </div>
+                @endforeach
 
                 <div class="form-group">
 
@@ -54,7 +62,7 @@
                   {{ $users->links('backend.bids.pagination') }}
                
 
-                 
+
 
 
 
