@@ -29,8 +29,9 @@
                     <label for="name" class="col-md-4 control-label">Player Name:</label>
                     <div class="col-lg-10">
                     @foreach($users as $value) 
-                    <input type="hidden" class="col-md-6" name="users_id"  value= "<?php echo $value->id ?>"  />
-                    <label for="name" class="col-md-4 control-label" name="id">{{$value->first_name}}</label> </div>
+                    
+                    <input type="hidden" class="col-md-6" name="users_id"  value= "<?php echo $value['id'] ?>"  />
+                    <label for="name" class="col-md-4 control-label" name="id">{{$value['first_name']}}</label> </div>
                    @endforeach
                    </div><!--col-lg-10-->
                 </div><!--form control-->
@@ -40,7 +41,7 @@
                 <div class="form-group">
                 <div class="col-lg-10">
                 @foreach($users as $xyz)
-                <img src="{{ URL::asset('img/frontend/pics/'.$xyz->filename) }}" height="80px" width="90px"alt="Any alt text"/>
+                <img src="{{ URL::asset('img/frontend/pics/'.$xyz['filename']) }}" height="80px" width="90px"alt="Any alt text"/>
         
                 @endForeach
                  </div><!--col-lg-10-->

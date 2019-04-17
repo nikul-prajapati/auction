@@ -31,10 +31,7 @@ class Selectcaptain extends Model
      * @var array
      */
     protected $fillable = [
-<<<<<<< HEAD
-        
-=======
->>>>>>> bb6b7a3caca2fa16be769a8c4a37b829daa7d0ad
+
     ];
 
     /**

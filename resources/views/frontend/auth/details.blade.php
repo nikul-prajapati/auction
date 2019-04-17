@@ -104,11 +104,11 @@
         <div class="form-group">
                    
 
-                    @foreach($data as $value) 
                     
-                    <input type="hidden" class="col-md-6" name="users_id"  value= "<?php echo $value->id ?>"  /> </div>
+                   
+                    <input type="hidden" class="col-md-6" name="users_id"  value={{$logged_in_user->id}}  /> 
                     
-                   @endforeach
+                 
                    </div><!--col-lg-10-->
 
         <div class="input-group control-group increment" >

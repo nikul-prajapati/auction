@@ -31,7 +31,7 @@ class Playerinformation extends Model
      * @var array
      */
     protected $fillable = [
-        'played_match','total_runs','total_wickets','speciality','batsman_type','bowler_type','age','Is_captain','created_at','updated_at'
+        'played_match','total_runs','total_wickets','speciality','batsman_type','bowler_type','age','Is_captain','users_id','created_at','updated_at'
     ];
 
     /**

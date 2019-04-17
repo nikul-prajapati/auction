@@ -67,15 +67,14 @@ class BiddingsController extends Controller
        
        
         $biddingUsers = Bidding::select('users_id')->pluck('users_id')->toArray();
-        $users = User::select('users.*', 'player_information.*')
+        $users = User::select('users.*', 'player_information.filename')
             ->leftjoin('player_information', 'player_information.users_id', 'users.id')->whereNotIn('users.id', $biddingUsers)->get()->toArray();
             
-        // $users = DB::select('SELECT * FROM users where id not in (select users_id from biddings) '); 
-   
+          //$users = DB::select('SELECT * FROM users where id not in (select users_id from biddings) '); 
 
        
         $users = $this->arrayPaginator($users, $request);
-
+        //dd($users);
        
 
      return view('backend.biddings.create',array('data'=>$data,'users'=>$users));
@@ -102,6 +101,33 @@ class BiddingsController extends Controller
      */
     public function store(StoreBiddingRequest $request)
     {
+
+
+        $a=$request->get('teams_id');
+         $b=$request->get('price');
+         $result=DB::select('select Available_points from teams where id=?',[$a]);
+         $c = $result ? $result[0]->Available_points : 0;
+         
+        // $d=Team::when('Available_points',$b);
+         if ($c <= $b) 
+         {
+             echo "please choose another team ";
+             exit;
+             
+            //echo "string";
+         }
+         else
+         {
+           DB::update('UPDATE teams set Available_points=Available_points-? where id=?',[$b,$a]);
+         }
+  
+
+        //  while($c >= $b) {
+        //     DB::update('UPDATE teams set Available_points=Available_points-? where id=?',[$b,$a]);
+        // }
+
+
+
         //Input received from the request
         $input = $request->except(['_token']);
         //Create the model using repository create method
