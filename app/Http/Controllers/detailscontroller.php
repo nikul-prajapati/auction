@@ -8,7 +8,6 @@ use App\Repositories\frontend\access\user\detailsRepository;
 use App\Models\Access\User\User;
 
 
-
 use App\Models\Player_Information\Playerinformation;
 use App\Http\Controllers\Controller;
 use App\Http\Responses\RedirectResponse;
@@ -92,7 +91,7 @@ class detailscontroller extends Controller
       $details->filename=$data;
        
       $details->save();
-      return redirect('/dashboard')->with('success', 'successfully details udm_check_stored(agent, link, doc_id)');
+      return redirect('/dashboard');
 
        
     }

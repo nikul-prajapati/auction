@@ -65,7 +65,7 @@ class SelectcaptainsController extends Controller
          $data ['data']= DB::select('SELECT * FROM teams where id not in (select teams_id from selectcaptains)');
           return view('backend.selectcaptains.create',$data);
 
-        
+            return view('backend.selectcaptains.create',$data,$name);
 //$data['name']= DB::table('users')->where('users.id',notin( 'select users.id from users'))
 //         ->join('selectcaptains', function ($join) {
 //             $join->where('selectcaptains.users_id', '!=','users.id' );

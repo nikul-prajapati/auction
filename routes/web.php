@@ -1,3 +1,5 @@
+
+
 <?php
 
 /**
@@ -11,13 +13,13 @@ Route::get('lang/{lang}', 'LanguageController@swap');
 /* ----------------------------------------------------------------------- */
 Route::get('/contactus',function()
 {
-	return view('frontend.contactus');
+  return view('frontend.contactus');
 });
 
 
 Route::get('/aboutus',function()
 {
-	return view('frontend.aboutus');
+  return view('frontend.aboutus');
 });
 
 /*

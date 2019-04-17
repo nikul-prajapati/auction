@@ -2,8 +2,6 @@
 
 @section('content')
 
-
-
     <div class="row">
     <div class="col-md-8 col-md-offset-2">       
             <div class="contact_us">
@@ -11,7 +9,7 @@
               <div class="contact_us_left">
           
               <div class="contact_us_big_text">
-                  <span class="contact_us_big_text">contact <span class="red_text">us</span></span>
+                  <span class="contact_us_big_text">contact<span class="red_text">us</span></span>
               </div>
               
               <div class="contact_us_small_text mail">  16-Swastik Society,Sardar Patel Stadium Rd, Navrangpura,Ahmedabad, Gujarat 380009</div>
@@ -31,9 +29,15 @@
       
     </div>
     </div>
-  </div>
- 
     </div>
     </div>
+    </div>
+
+
+@endsection
+
+@section('after-scripts')
+
+@include('frontend.footer')
 
 @endsection

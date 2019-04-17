@@ -26,13 +26,13 @@
                 <i class="fa fa-list-ul"></i> {{ trans( 'menus.backend.playerinformations.all' ) }}
             </a>
         </li>
-        <!-- @permission( 'create-playerinformation' )
+        @permission( 'create-playerinformation' )
             <li>
                 <a href="{{ route( 'admin.playerinformations.create' ) }}">
                     <i class="fa fa-plus"></i> {{ trans( 'menus.backend.playerinformations.create' ) }}
                 </a>
             </li>
-        @endauth -->
+        @endauth
     </ul>
 </div>
 <div class="clearfix"></div>

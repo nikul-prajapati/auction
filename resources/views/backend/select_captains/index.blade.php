@@ -15,10 +15,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+                @include('backend.selectcaptains.partials.selectcaptains-header-buttons')
+=======
+=======
+>>>>>>> 17f82779687ee3bfbaab57f8361b3568ccd52353
+>>>>>>> 2b2f9ad3c988260e939e75cdcdd48dfa7c1dff54
+<<<<<<< HEAD
                 @include('backend.select_captains.partials.selectcaptains-header-buttons')
 =======
                 @include('backend.selectcaptains.partials.selectcaptains-header-buttons')
 >>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
+<<<<<<< HEAD
 =======
                 @include('backend.select_captains.partials.selectcaptains-header-buttons')
 >>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
@@ -32,6 +40,15 @@
 >>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
 >>>>>>> c9875c7e617d975787fdba417acf59bdba1bab18
 >>>>>>> bb6b7a3caca2fa16be769a8c4a37b829daa7d0ad
+=======
+<<<<<<< HEAD
+>>>>>>> c9875c7e617d975787fdba417acf59bdba1bab18
+=======
+=======
+                @include('backend.select_captains.partials.selectcaptains-header-buttons')
+>>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
+>>>>>>> 17f82779687ee3bfbaab57f8361b3568ccd52353
+>>>>>>> 2b2f9ad3c988260e939e75cdcdd48dfa7c1dff54
             </div>
         </div><!--box-header with-border-->
 
@@ -68,8 +85,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> bb6b7a3caca2fa16be769a8c4a37b829daa7d0ad
+=======
+            var dataTable = $('#selectcaptains-table').dataTable({
+                processing: true,
+                serverSide: true,
+                ajax: {
+                    url: '{{ route("admin.selectcaptains.get") }}',
+=======
+=======
+>>>>>>> 17f82779687ee3bfbaab57f8361b3568ccd52353
+<<<<<<< HEAD
+>>>>>>> 2b2f9ad3c988260e939e75cdcdd48dfa7c1dff54
             var dataTable = $('#select_captains-table').dataTable({
                 processing: true,
                 serverSide: true,
@@ -77,21 +106,32 @@
                     url: '{{ route("admin.select_captains.get") }}',
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2b2f9ad3c988260e939e75cdcdd48dfa7c1dff54
             var dataTable = $('#selectcaptains-table').dataTable({
                 processing: true,
                 serverSide: true,
                 ajax: {
                     url: '{{ route("admin.selectcaptains.get") }}',
 >>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> bb6b7a3caca2fa16be769a8c4a37b829daa7d0ad
+=======
+<<<<<<< HEAD
+>>>>>>> c9875c7e617d975787fdba417acf59bdba1bab18
+=======
+=======
+>>>>>>> 2b2f9ad3c988260e939e75cdcdd48dfa7c1dff54
             var dataTable = $('#select_captains-table').dataTable({
                 processing: true,
                 serverSide: true,
                 ajax: {
                     url: '{{ route("admin.select_captains.get") }}',
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
 =======
@@ -104,6 +144,10 @@
 >>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
 >>>>>>> c9875c7e617d975787fdba417acf59bdba1bab18
 >>>>>>> bb6b7a3caca2fa16be769a8c4a37b829daa7d0ad
+=======
+>>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
+>>>>>>> 17f82779687ee3bfbaab57f8361b3568ccd52353
+>>>>>>> 2b2f9ad3c988260e939e75cdcdd48dfa7c1dff54
                     type: 'post'
                 },
                 columns: [
@@ -119,10 +163,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+                        { extend: 'copy', className: 'copyButton',  exportOptions: {columns: [ 0, 1 ]  }},
+=======
+=======
+>>>>>>> 17f82779687ee3bfbaab57f8361b3568ccd52353
+>>>>>>> 2b2f9ad3c988260e939e75cdcdd48dfa7c1dff54
+<<<<<<< HEAD
                         { extend: 'copy', className: 'copyButton',  exportOptions: {columnsF: [ 0, 1 ]  }},
 =======
                         { extend: 'copy', className: 'copyButton',  exportOptions: {columns: [ 0, 1 ]  }},
 >>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
+<<<<<<< HEAD
 =======
                         { extend: 'copy', className: 'copyButton',  exportOptions: {columnsF: [ 0, 1 ]  }},
 >>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
@@ -136,6 +188,15 @@
 >>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
 >>>>>>> c9875c7e617d975787fdba417acf59bdba1bab18
 >>>>>>> bb6b7a3caca2fa16be769a8c4a37b829daa7d0ad
+=======
+<<<<<<< HEAD
+>>>>>>> c9875c7e617d975787fdba417acf59bdba1bab18
+=======
+=======
+                        { extend: 'copy', className: 'copyButton',  exportOptions: {columnsF: [ 0, 1 ]  }},
+>>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
+>>>>>>> 17f82779687ee3bfbaab57f8361b3568ccd52353
+>>>>>>> 2b2f9ad3c988260e939e75cdcdd48dfa7c1dff54
                         { extend: 'csv', className: 'csvButton',  exportOptions: {columns: [ 0, 1 ]  }},
                         { extend: 'excel', className: 'excelButton',  exportOptions: {columns: [ 0, 1 ]  }},
                         { extend: 'pdf', className: 'pdfButton',  exportOptions: {columns: [ 0, 1 ]  }},

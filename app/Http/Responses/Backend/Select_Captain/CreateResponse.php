@@ -18,10 +18,18 @@ class CreateResponse implements Responsable
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+        return view('backend.selectcaptains.create');
+=======
+=======
+>>>>>>> 17f82779687ee3bfbaab57f8361b3568ccd52353
+>>>>>>> 2b2f9ad3c988260e939e75cdcdd48dfa7c1dff54
+<<<<<<< HEAD
         return view('backend.select_captains.create');
 =======
         return view('backend.selectcaptains.create');
 >>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
+<<<<<<< HEAD
 =======
         return view('backend.select_captains.create');
 >>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
@@ -35,5 +43,14 @@ class CreateResponse implements Responsable
 >>>>>>> ac05c5a21c931d217e05f9713175aa9a694eef49
 >>>>>>> c9875c7e617d975787fdba417acf59bdba1bab18
 >>>>>>> bb6b7a3caca2fa16be769a8c4a37b829daa7d0ad
+=======
+<<<<<<< HEAD
+>>>>>>> c9875c7e617d975787fdba417acf59bdba1bab18
+=======
+=======
+        return view('backend.select_captains.create');
+>>>>>>> 1b2bcb318986bf170d1d914d210e5ea5a5c07ebe
+>>>>>>> 17f82779687ee3bfbaab57f8361b3568ccd52353
+>>>>>>> 2b2f9ad3c988260e939e75cdcdd48dfa7c1dff54
     }
 }

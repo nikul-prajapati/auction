@@ -25,4 +25,6 @@ require __DIR__.'/Playerrecord.php';
 require __DIR__.'/Playerrecordsuser.php';
 require __DIR__.'/Playerinformation.php';
 
+require __DIR__.'/Selectcaptain.php';
+require __DIR__.'/Bid.php';
 require __DIR__.'/Bidding.php';

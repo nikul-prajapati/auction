@@ -54,6 +54,7 @@
 
                     </select>
                 </div>   
+<<<<<<< HEAD
 =======
                
                  <h4 class="col-md-2">Select Team Name</h4>
@@ -67,6 +68,8 @@
 
   
 >>>>>>> bb6b7a3caca2fa16be769a8c4a37b829daa7d0ad
+=======
+>>>>>>> 2b2f9ad3c988260e939e75cdcdd48dfa7c1dff54
                 
                 <div class="col-md-6 col-md-offset-4">
                     <!-- <a href="{{('/bids')}}" class ="btn btn-primary" role="button">Submit</a> -->
@@ -78,9 +81,12 @@
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
                  
 >>>>>>> bb6b7a3caca2fa16be769a8c4a37b829daa7d0ad
+=======
+>>>>>>> 2b2f9ad3c988260e939e75cdcdd48dfa7c1dff54
 
 
 

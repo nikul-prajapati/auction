@@ -137,6 +137,7 @@ class BiddingsController extends Controller
         $this->repository->create($input);
         //return with successfull message
          // return new RedirectResponse(route('admin.biddings.index'), ['flash_success' => trans('alerts.backend.biddings.created')]);
+        return new RedirectResponse(route('admin.biddings.create'), ['flash_success' => trans('alerts.backend.biddings.created')]);
     }
     /**
      * Show the form for editing the specified resource.

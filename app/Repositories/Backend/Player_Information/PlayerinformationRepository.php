@@ -41,8 +41,7 @@ class PlayerinformationRepository extends BaseRepository
                 config('module.playerinformations.table').'.age',
                 config('module.playerinformations.table').'.Is_captain',
                 config('module.playerinformations.table').'.updated_at',
-                 config('module.users.table').'.first_name',
-                //DB::raw('GROUP_CONCAT(users.first_name) as names'),
+                DB::raw('GROUP_CONCAT(users.first_name) as names'),
             ]);
     }
 

@@ -23,17 +23,16 @@
                         <tr>
                             <th>{{ trans('labels.backend.playerinformations.table.id') }}</th>
                             <th>{{ trans('First name') }}</th>
-                            <th>{{ trans('Played match') }}</th>
-                            <th>{{ trans('Total runs') }}</th>
-                            <th>{{ trans('Total wickets') }}</th>
-                            <th>{{ trans('Speciality') }}</th>
-                            <th>{{ trans('Batsman type') }}</th>
-
-                            <th>{{ trans('Bowler type') }}</th>
-                            <th>{{ trans('Age') }}</th>
+                            <th>{{ trans('played match') }}</th>
+                            <th>{{ trans('total_runs') }}</th>
+                            <th>{{ trans('total_wickets') }}</th>
+                            <th>{{ trans('speciality') }}</th>
+                            <th>{{ trans('batsman_type') }}</th>
+                            <th>{{ trans('bowler_type') }}</th>
+                            <th>{{ trans('age') }}</th>
                             <th>{{ trans('Is_captain') }}</th>
-                            <th>{{ trans('labels.backend.playerinformations.table.createdat') }}</th>
-                            <th>{{ trans('labels.general.actions') }}</th>
+                            <th>{{ trans('createdate') }}</th>
+                            <th>{{ trans('actions') }}</th>
                         </tr>
                     </thead>
                     <thead class="transparent-bg">
@@ -65,7 +64,7 @@
                 },
                 columns: [
                     {data: 'id', name: '{{config('module.playerinformations.table')}}.id'},
-                    {data: 'first_name', name: '{{config('module.users.table')}}.first_name'},
+                    {data: 'names', name: '{{config('module.users.table')}}.first_name'},
                     {data: 'played_match', name: '{{config('module.playerinformations.table')}}.played_match'},
                     {data: 'total_runs', name: '{{config('module.playerinformations.table')}}.total_runs'},
                     {data: 'total_wickets', name: '{{config('module.playerinformations.table')}}.total_wickets'},
