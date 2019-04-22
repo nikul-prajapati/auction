@@ -42,7 +42,6 @@
                 <div class="col-lg-10">
                 @foreach($users as $xyz)
                 <img src="{{ URL::asset('img/frontend/pics/'.$xyz['filename']) }}" height="80px" width="90px"alt="Any alt text"/>
-        
                 @endForeach
                  </div><!--col-lg-10-->
                 </div><!--form control-->
@@ -52,7 +51,7 @@
                     {{ Form::label('price', trans('price'), ['class' => 'col-lg-2 control-label required']) }}
 
                     <div class="col-lg-10">
-                        {{ Form::text('price', null, ['class' => 'form-control box-size', 'placeholder' => trans('price'), 'required' => 'required']) }}
+                        {{ Form::text('price', null, ['class' => 'form-control box-size', 'placeholder' => trans('price'), 'required' => 'required' , 'price' => 'min:200']) }}
                     </div><!--col-lg-10-->
                 </div><!--form control-->
 
@@ -69,7 +68,7 @@
        
 
 
-                  {{ $users->links() }}
+                  {{ $users->links('backend.bids.pagination') }}
 
                 <div class="form-group">
                     {{-- Including Form blade file --}}
@@ -83,4 +82,25 @@
             </div><!--box-body-->
         </div><!--box box-success-->
     {{ Form::close() }}
+@endsection
+
+@section('after-scripts')
+
+$("#ajax").click(function(event) {
+    event.preventDefault();
+
+    $.ajax({
+        type: "post",
+        url: "{{ url('addFavorites') }}",
+        dataType: "json",
+        data: $('#ajax').serialize(),
+        success: function(data){
+              alert("Data Save: " + data);
+        },
+        error: function(data){
+             alert("Error")
+        }
+    });
+});
+
 @endsection

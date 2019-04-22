@@ -62,17 +62,13 @@ class BiddingsController extends Controller
     public function create(CreateBiddingRequest $request)
     {
         $data = DB::table('teams')->get();
-        //$pic = DB::table('player_information')->paginate(1);
-        //$users = DB::table('users')->paginate(1);
+        
        
        
         $biddingUsers = Bidding::select('users_id')->pluck('users_id')->toArray();
         $users = User::select('users.*', 'player_information.filename')
             ->leftjoin('player_information', 'player_information.users_id', 'users.id')->whereNotIn('users.id', $biddingUsers)->get()->toArray();
             
-          //$users = DB::select('SELECT * FROM users where id not in (select users_id from biddings) '); 
-
-       
         $users = $this->arrayPaginator($users, $request);
         //dd($users);
        
@@ -111,20 +107,18 @@ class BiddingsController extends Controller
         // $d=Team::when('Available_points',$b);
          if ($c <= $b) 
          {
-             echo "please choose another team ";
+
+             //echo "please choose another team ";
+              alert()->warning('Sweet Alert with warning.');
+              return view('frontend/notification');
              exit;
-             
-            //echo "string";
+            
+
          }
          else
          {
            DB::update('UPDATE teams set Available_points=Available_points-? where id=?',[$b,$a]);
          }
-  
-
-        //  while($c >= $b) {
-        //     DB::update('UPDATE teams set Available_points=Available_points-? where id=?',[$b,$a]);
-        // }
 
 
 
@@ -133,7 +127,7 @@ class BiddingsController extends Controller
         //Create the model using repository create method
         $this->repository->create($input);
         //return with successfull message
-        return new RedirectResponse(route('admin.biddings.index'), ['flash_success' => trans('alerts.backend.biddings.created')]);
+        return new RedirectResponse(route('admin.biddings.create'), ['flash_success' => trans('alerts.backend.biddings.created')]);
     }
     /**
      * Show the form for editing the specified resource.
