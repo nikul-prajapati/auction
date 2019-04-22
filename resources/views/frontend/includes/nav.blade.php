@@ -23,7 +23,7 @@
 
            <!-- {{--  @endif --}} -->
             <img src="img/frontend/logo1.png" alt="img" 
-            style="width: 114%;height: 50px;" >
+            style="height: 50px;" >
 
         </div><!--navbar-header-->
 

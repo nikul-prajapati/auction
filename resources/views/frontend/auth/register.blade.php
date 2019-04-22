@@ -87,8 +87,9 @@
                     <!-- <div class="col-md-8 inputGroupContainer"> -->
                       <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
-                      <input  name="password" placeholder="password" class="form-control"  type="password">
+                      <input  name="password" placeholder="password" id="myInput" class="form-control"  type="password">
                         </div>
+                        <p id="text">Capslock is ON.</p>
                       </div>
                     <!-- </div> -->
 
@@ -105,15 +106,16 @@
                   <!--   <div class="col-md-8 inputGroupContainer"> -->
                       <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
-                      <input  name="password_confirmation" placeholder="confirm password" class="form-control"  type="password">
+                      <input  name="password_confirmation" placeholder="confirm password" id="myInput" class="form-control"  type="password">
                         </div>
+                        <!-- <p id="text">Capslock is ON.</p> -->
                       </div>
                     <!-- </div> -->
 
 
                     <div class="form-group">
                             <!-- <div class="col-xs-7"> -->
-                               <label class="col-md-12 control-label">
+                                <label class="col-md-12 control-label">
                                  {!! Form::checkbox('is_term_accept',1,false) !!}
                                  I accept {!! link_to_route('frontend.pages.show', trans('validation.attributes.frontend.register-user.terms_and_conditions').'*', ['page_slug'=>'terms-and-conditions']) !!} </label>
 
@@ -159,10 +161,22 @@
 
     <script type="text/javascript">
 
-        $(document).ready(function() {
+        // $(document).ready(function(){
             // To Use Select2
-            Backend.Select2.init();
-        });
+        //     Backend.Select2.init();
+        // });
+
+        var input = document.getElementById("myInput");
+var text = document.getElementById("text");
+input.addEventListener("keyup", function(event) {
+
+if (event.getModifierState("CapsLock")) {
+    text.style.display = "block";
+  } else {
+    text.style.display = "none"
+  }
+});
+
     </script>
     @include('frontend.footer')
 @endsection

@@ -2,16 +2,15 @@
 
 @section('content')
 
-
     <div class="row">
 
         <div class="col-xs-16">
 
             <div class="panel panel-default">
-                <div class="panel-heading" style="font-size: 20px;">
-                    <marquee direction="left" behavior="slide">WELCOME TO CYGNET CRICKET LEAGUE</marquee></div>
+               <!--  <div class="panel-headingg" style="font-size: 20px;font-family:tekton pro;"> -->
+                    <!-- <marquee direction="left" behavior="slide"> --><!-- WELCOME TO CYGNET CRICKET LEAGUE --><!-- </marquee> -->  <!-- </div> -->
 
-                <div class="panel-body">
+                <div class="panel-body" style="background-image: url(/img/frontend/foraboutus.png);">
 
                     <div class="row">
 
@@ -19,20 +18,29 @@
 
                             <ul class="media-list">
                                 <li class="media">
-                                    <div class="media-left">
-                                        <img style="border-radius: 7px;" class="media-object" src="img/frontend/profile-picture/profilepic.jpg" height="80px" width="90px" alt="Profile picture">
-                                    </div><!--media-left-->
+                                    
+                                    <div class="col-md-6" style="background-color: white;border:1px solid grey;padding: 2px;border-radius: 3px;float: right;">
 
-                                    <div class="media-body" style="border:1px solid grey;padding: 2px;border-radius: 3px">
+                                            <div class="media-left">
+                                        <img style=" border: 1px solid black;border-radius: 40px;margin-left: 30%;" class="media-object" src="img/frontend/profile-picture/profilepic.jpg" height="80px" width="90px" alt="Profile picture";>
+
+
+                                    </div><!--media-left--><br>
+
+
                                         <h4 class="media-heading">
                                             {{ $logged_in_user->name }}<br/>
                                             <small>
-                                                {{ $logged_in_user->email }}<br/>
+                                               <!--  {{ $logged_in_user->email }}<br/> -->
                                                <!--  Joined {{ $logged_in_user->created_at->format('F jS, Y') }} -->
                                             </small>
                                         </h4>
 
-                                        {{ link_to_route('frontend.user.account', trans('navs.frontend.user.account'), [], ['class' => 'btn btn-info btn-xs']) }}
+                                        <!-- { link_to_route('frontend.user.account', trans('Profile'), [], ['class' => 'btn btn-primary']) }} -->
+
+                                        <a href="http://127.0.0.1:8000/account" style="width: 100%;height: 50%;" class="btn btn-primary">Profile</a>
+
+                                        <!-- <button  ></button> -->
 
                                         @permission('view-backend')
                                             {{ link_to_route('admin.dashboard', trans('navs.frontend.user.administration'), [], ['class' => 'btn btn-danger btn-xs']) }}

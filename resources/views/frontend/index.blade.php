@@ -3,53 +3,85 @@
 @section('content')
 
 <link rel="stylesheet" href="css/w3.css">
-<div class="jumbotron text-cente" style="box-shadow: 3px 3px 3px;margin-top: -25px;">
-  <h1>Welcome to cygnet cricket league</h1> 
-</div>
-<div class="body">
 
-<div class="w3-content w3-section" style="">
-  <img class="mySlides w3-animate-fading" src="img/frontend/ss1.jpg" style="width:100%;height:450px;">
-  <img class="mySlides w3-animate-fading" src="img/frontend/ss2.jpg" style="width:100%;height:450px;">
-  <img class="mySlides w3-animate-fading" src="img/frontend/ss3.jpg" style="width:100%;height:450px;">
-</div>
-</div>
-  
+<link rel="stylesheet" href="css/forheading.css">
 
-<!-- <link rel="stylesheet" href="css/ss.css">
-<div class="bg-image img1"><img src="img/frontend/ss1.jpg" style="width:100%;height:450px;"></div>
-<div class="bg-image img2"><img src="img/frontend/ss2.jpg" style="width:100%;height:450px;"></div>
-<div class="bg-image img3"><img src="img/frontend/ss3.jpg" style="width:100%;height:450px;"></div>
-<div class="bg-text">cygnet cricket league</div>
- -->
+<div class="image-container">
+
+  <div class="text">
+
+    Welcome to Josh
+
+  </div>
+
+</div>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="img/frontend/ss1.jpg" style="width:50%;height: 50%;">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="img/frontend/ss2.jpg" style="width:50%;height: 50%;">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="img/frontend/ss3.jpg" style="width:50%;height: 50%;">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
 
 
   @endsection
 
   @section('after-scripts')
 
-  <script>
-    
-var myIndex = 0;
-carousel();
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) 
-  {
-    x[i].style.display = "none";  
-  }
-  
-  myIndex++;
-  
-  if (myIndex > x.length) 
-  {
-      myIndex = 1
-  }    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 7000);    
+<script>
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
 
 </script>
 

@@ -57,15 +57,21 @@
         </div>
 
     </div> -->
+<!-- 
+    background-image: url(/img/frontend/forbg.jpg); -->
+       
 
-    <div class="col-md-5" style="border-radius: 5px; background-color:white;margin-left:30%; ">
+    <div class="col-md-5" style="border-radius: 5px; margin-left:30%; background-color: white; ">
     <!-- <div class="panel panel-default"> -->
    <!--  <div class="panel-heading">{{ trans('Login') }}</div> -->
     <!-- <div class="wrapper" style=""> -->    
 
+
 {{ Form::open(['route' => 'frontend.auth.login', 'class' => 'form-horizontal']) }}
 
 <h2 style="text-align: center;">Login Here</h2>
+
+
 
 
     <div class="form-group">
@@ -91,23 +97,46 @@
   <!-- <input name="last_name" placeholder="Last Name" class="form-control"  type="text"> -->
   {{ Form::input('password', 'password', null, ['class' => 'form-control', 'placeholder' => trans('validation.attributes.frontend.register-user.password')]) }}
 
+
     </div>
+
   </div>
 
 </div>
+<div class="form-group">
+                            <!-- <div class="col-xs-7"> -->
+                                <label class="col-md-12 control-label">
+ <a href="http://127.0.0.1:8000/password/reset" style="padding-left:44px; ">Forgot Your Password?</a> 
+
+</label>
+    </div>
 <!--   {{ link_to_route('frontend.auth.password.reset', trans('labels.frontend.passwords.forgot_password')) }} -->
 
 
-            <div class="form-group">
+            <!-- <div class="form-group"> -->
                         <!-- <div class="col-md-8"> -->
-                            {{ Form::submit(trans('labels.frontend.auth.login_button'), 
-                                ['class' => 'btn btn-primary', 'style' => 'margin-right:15px;width:100%;']) }}<br><br>
+                           <!--  {{ Form::submit(trans('labels.frontend.auth.login_button'), 
+                                ['class' => 'btn btn-primary', 'style' => 'margin-right:15px;width:100%;']) }}<br><br> -->
 
-                    <button style="width: 50%;padding: 4px; border-radius: 3px;" class="btn-primary">SIGN UP</button>
+                   <!--  <button style="width: 50%;padding: 4px; border-radius: 3px;" class="btn-primary">SIGN UP</button> -->
 <!-- 
                     <input type="button" class="btn-primary"> -->
-                            <a href="http://127.0.0.1:8000/password/reset" style="padding-left:44px; ">Forgot Your Password?</a>
+                            
+                        <!-- </div> -->
+
+
+                        <div class="form-group">
+                        <div class="col-md-5">
+
+                            <!-- {{ Form::submit(trans('labels.frontend.auth.register_button'), ['class' => 'btn btn-primary'] ) }} -->
+                            <button type="submit" class="" style="width:100%;padding: 8px; background-color: #4CAF50;color:white;border:none;">Login</button>
                         </div>
+                        <div class="col-md-5">
+                           <!--  {{ Form::submit(trans('labels.frontend.auth.register_button'), ['class' => 'btn btn-primary'] ) }} -->
+                            <button type="Reset" class="" style="width:100%;padding: 8px; background-color: #4CAF50;color:white;border:none;">Reset</button>
+                        </div>
+
+
                     </div>
 
    {{ Form::close() }}
