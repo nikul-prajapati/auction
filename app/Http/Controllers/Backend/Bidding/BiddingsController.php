@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend\Bidding;
 
 use App\Models\Bidding\Bidding;
 use DB;
+use App\Models\Access\User\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Responses\RedirectResponse;
@@ -17,6 +18,10 @@ use App\Http\Requests\Backend\Bidding\StoreBiddingRequest;
 use App\Http\Requests\Backend\Bidding\EditBiddingRequest;
 use App\Http\Requests\Backend\Bidding\UpdateBiddingRequest;
 use App\Http\Requests\Backend\Bidding\DeleteBiddingRequest;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 /**
  * BiddingsController
@@ -56,10 +61,33 @@ class BiddingsController extends Controller
      */
     public function create(CreateBiddingRequest $request)
     {
-        $data['data'] = DB::table('teams')->get();
-        $users['users'] = DB::table('users')->paginate(1)->onEachSide(2);
-        return view('backend.biddings.create',$data,$users);
-        //return new CreateResponse('backend.biddings.create',$data);
+        $data = DB::table('teams')->get();
+        
+       
+       
+        $biddingUsers = Bidding::select('users_id')->pluck('users_id')->toArray();
+        $users = User::select('users.*', 'player_information.filename')
+            ->leftjoin('player_information', 'player_information.users_id', 'users.id')->whereNotIn('users.id', $biddingUsers)->get()->toArray();
+            
+        $users = $this->arrayPaginator($users, $request);
+        //dd($users);
+       
+
+     return view('backend.biddings.create',array('data'=>$data,'users'=>$users));
+
+       
+    }
+
+
+    public function arrayPaginator($array, $request)
+    {
+        $page = $request->get('page', 1);
+        //$page = Input::get('page', 1);
+        $perPage = 1;
+        $offset = ($page * $perPage) - $perPage;
+
+        return new LengthAwarePaginator(array_slice($array, $offset, $perPage, true), count($array), $perPage, $page,
+            ['path' => $request->url(), 'query' => $request->query()]);
     }
     /**
      * Store a newly created resource in storage.
@@ -69,6 +97,29 @@ class BiddingsController extends Controller
      */
     public function store(StoreBiddingRequest $request)
     {
+
+
+        $a=$request->get('teams_id');
+         $b=$request->get('price');
+         $result=DB::select('select Available_points from teams where id=?',[$a]);
+         $c = $result ? $result[0]->Available_points : 0;
+         
+        // $d=Team::when('Available_points',$b);
+         if ($c <= $b) 
+         {
+
+             echo "please choose another team ";
+              exit;
+            
+
+         }
+         else
+         {
+           DB::update('UPDATE teams set Available_points=Available_points-? where id=?',[$b,$a]);
+         }
+
+
+
         //Input received from the request
         $input = $request->except(['_token']);
         //Create the model using repository create method

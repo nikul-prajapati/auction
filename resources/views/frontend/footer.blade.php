@@ -15,7 +15,7 @@
   font: bold 16px sans-serif;
 
   padding: 25px 50px;
-  margin-top: 80px;
+  margin-top:   0px;
 }
 
 .footer-distributed .footer-left,

@@ -10,7 +10,13 @@
                <!--  <div class="panel-headingg" style="font-size: 20px;font-family:tekton pro;"> -->
                     <!-- <marquee direction="left" behavior="slide"> --><!-- WELCOME TO CYGNET CRICKET LEAGUE --><!-- </marquee> -->  <!-- </div> -->
 
-                <div class="panel-body" style="background-image: url(/img/frontend/foraboutus.png);">
+                <div class="panel-body" style="background-image: url(/img/frontend/ss3.jpg);background-position: center; background-size: 100% 100%" >
+                    
+
+                    <!-- <video autoplay muted loop id="myVideo">
+                          <source src="video/cri.mp4" type="video/mp4">
+                          Your browser does not support HTML5 video.
+                    </video> -->
 
                     <div class="row">
 
@@ -22,9 +28,13 @@
                                     <div class="col-md-6" style="background-color: white;border:1px solid grey;padding: 2px;border-radius: 3px;float: right;">
 
                                             <div class="media-left">
-                                        <img style=" border: 1px solid black;border-radius: 40px;margin-left: 30%;" class="media-object" src="img/frontend/profile-picture/profilepic.jpg" height="80px" width="90px" alt="Profile picture";>
+                                        <!-- <img style=" border: 1px solid black;border-radius: 40px;margin-left: 30%;" class="media-object" src="img/frontend/pics/profilepic.jpg" height="80px" width="90px" alt="Profile picture";> -->
 
 
+                                        @foreach($data as $user)
+                                         <img src="{{ URL::asset('img/frontend/pics/'.$user->filename) }}" style=" border: 1px solid black;border-radius: 40px;margin-left: 30%;" height="80px" width="90px" class="media-object"       alt="Any alt text"/>
+                                        @endforeach
+                                         
                                     </div><!--media-left--><br>
 
 
@@ -126,7 +136,7 @@
                                            
                                             <p>Register yourself in cricket tournament and one of below team will select you at time of auction </p>
 
-                                            <a href="{{trans('/teams')}}" class ="btn btn-primary" role="button">Check all teams</a>
+                                            <a href="{{trans('/teams')}}" class ="btn btn-primary" role="button" style="opacity: 1">Check all teams</a>
                                            <!--  </div> --> <!--col-md-6-->
                                         </div><!--panel-body-->
                                     </div><!--panel-->

@@ -22,8 +22,7 @@
            <!--   {{ link_to_route('frontend.index',"Cygnet Cricket League", [], ['class' => 'navbar-brand']) }} -->
 
            <!-- {{--  @endif --}} -->
-            <img src="img/frontend/logo1.png" alt="img" 
-            style="height: 50px;" >
+           <a href="/"> <img src="img/frontend/logo1.png" alt="img"    style="height: 50px;" ></a>
 
         </div><!--navbar-header-->
 

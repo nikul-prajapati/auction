@@ -13,7 +13,7 @@
 
        <!--          <div class="col-md-10"> -->
 
-        <div class="col-md-6" style="border-radius: 5px; background-color:white;margin-left:30%; ">
+        <div class="col-md-6" style="border-radius: 5px; background-image: url(/img/frontend/b.jpg);background-color: white;margin-left:30%; ">
                     
                     <h2 style="text-align: center;">Registration</h2>
 
@@ -87,9 +87,8 @@
                     <!-- <div class="col-md-8 inputGroupContainer"> -->
                       <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
-                      <input  name="password" placeholder="password" id="myInput" class="form-control"  type="password">
+                      <input  name="password" placeholder="password" class="form-control"  type="password">
                         </div>
-                        <p id="text">Capslock is ON.</p>
                       </div>
                     <!-- </div> -->
 

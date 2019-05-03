@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\details;
 use App\Repositories\frontend\access\user\detailsRepository;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -32,7 +33,14 @@ class detailscontroller extends Controller
      */
     public function index()
     {
-        return view('frontend.auth.details');
+         $users_id = Auth::user()->id;
+        $data['data'] = DB::table('users')
+                ->join('player_information', 'users.id', '=', 'player_information.users_id')
+               
+                ->select('users.id','users.first_name')
+                ->where('users.id',$users_id) // else it will get all rows
+                ->get();
+        return view('frontend.auth.details', $data);
     }
 
     /**
@@ -59,21 +67,50 @@ class detailscontroller extends Controller
         'match'=> 'required|integer',
         'runs' => 'required|integer',
         'wickets' => 'required|integer',
-        'age' => 'required|integer'
+        'age' => 'required|integer',
+        
+        
       ]);
 
-      $details = new playerinformation([
-        'played_match' => $request->get('match'),
-        'total_runs'=> $request->get('runs'),
-        'total_wickets'=> $request->get('wickets'),  
-        'speciality'=> $request->get('type'),
-        'batsman_type'=> $request->get('batsman'),
-        'bowler_type'=> $request->get('bowler'),
-        'age'=>$request->get('age')
-      ]);
-      $details->save();
-      return redirect('/dashboard');
+          if($request->hasfile('filename'))
+         {
 
+            foreach($request->file('filename') as $image)
+            {
+                $name=$image->getClientOriginalName();
+                $image->move(public_path().'/img/frontend/pics/', $name);  
+                $data = $name;  
+            }
+         }
+
+        
+            
+            if (playerinformation::where('users_id', '=', $request->get('users_id'))->exists())
+             {
+                  echo " records already exists for this users";
+              }
+            else
+            {
+                 $details = new playerinformation([
+                'played_match' => $request->get('match'),
+                'total_runs'=> $request->get('runs'),
+                'total_wickets'=> $request->get('wickets'),  
+                'speciality'=> $request->get('type'),
+                'batsman_type'=> $request->get('batsman'),
+                'bowler_type'=> $request->get('bowler'),
+                'age'=>$request->get('age'),
+                'users_id'=>$request->get('users_id'),
+
+              ]);
+               $details->filename=$data;
+              
+             $details->save();
+              return redirect('/dashboard')->with('success', 'successfully details udm_check_stored(agent, link, doc_id)');
+
+            }
+            
+     
+     
        
     }
 

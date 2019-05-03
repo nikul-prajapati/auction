@@ -61,7 +61,7 @@
     background-image: url(/img/frontend/forbg.jpg); -->
        
 
-    <div class="col-md-5" style="border-radius: 5px; margin-left:30%; background-color: white; ">
+<div class="col-md-5" style="border-radius: 5px; margin-left:30%; background-color: white;margin-bottom: 6%; ">
     <!-- <div class="panel panel-default"> -->
    <!--  <div class="panel-heading">{{ trans('Login') }}</div> -->
     <!-- <div class="wrapper" style=""> -->    
@@ -106,7 +106,7 @@
 <div class="form-group">
                             <!-- <div class="col-xs-7"> -->
                                 <label class="col-md-12 control-label">
- <a href="http://127.0.0.1:8000/password/reset" style="padding-left:44px; ">Forgot Your Password?</a> 
+ <a href="http://127.0.0.1:8000/password/reset" style="">Forgot Your Password?</a> 
 
 </label>
     </div>
@@ -145,6 +145,8 @@
 </div>
 </div>
 </div>
+
+
 
 @endsection
 

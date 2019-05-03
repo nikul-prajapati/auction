@@ -1,6 +1,8 @@
 @extends('frontend.layouts.app')
 
 @section('content')
+
+<div class="panel-body">
     <!-- <div class="row"> -->
 
        <!--  <div class="col-md-8 col-md-offset-2"> -->
@@ -11,23 +13,25 @@
  -->
                <!--  <div class="panel-body"> -->
 
-                    @if ($errors->any())
+                   <!--  @if ($errors->any()) -->
                   <!--   <div class="alert alert-danger"> -->
-                        <ul>
+                        <!-- <ul>
 
                             @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
                             @endforeach
 
                         </ul>
-
+ -->
                  <!--    </div> -->
-                    @endif
-<div class="col-md-6" style="border-radius: 5px;margin-left:30%;background-color: white;">
+                    <!-- @endif -->
+
+                
+<div class="col-md-6" style="border-radius: 5px;margin-left:30%; ">
 
 
-<form method="POST" action="{{route('details.store')}}"  class="form-horizontal"> 
-
+<form method="POST" action="{{route('details.store')}}"  class="form-horizontal" enctype="multipart/form-data"> 
+{{csrf_field()}}
 <h2 style="text-align: center;">Records</h2>
         <!-- <div class="form-group">
              @csrf
@@ -36,10 +40,11 @@
         </div> -->
 
         <div class="form-group">
+          @csrf
 <!--           <label class="col-md-4 control-label">First Name</label> <br> -->
                <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input  name="match" placeholder="match" class="form-control"  type="input">
+                        <input  name="match" placeholder="match" class="form-control"  type="input" required>
                </div>
         </div>
         
@@ -53,7 +58,7 @@
         <div class="form-group">
                <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input  name="runs" placeholder="runs" class="form-control"  type="input">
+                        <input  name="runs" placeholder="runs" class="form-control"  type="input" required>
                </div>
         </div>
 
@@ -68,7 +73,7 @@
         <div class="form-group">
                <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input  name="wicket" placeholder="wicket" class="form-control"  type="input">
+                        <input  name="wickets" placeholder="wicket" class="form-control"  type="input" required>
                </div>
         </div>
 
@@ -126,10 +131,25 @@
 
         <div class="form-group">
                <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input  name="age" placeholder="age" class="form-control"  type="input">
+                        <span class="input-group-addon"><i class="fa fa-list-ol"></i></span>
+                        <input  name="age" placeholder="age" class="form-control"  type="input" required>
                </div>
         </div>
+
+        <div class="form-group" >
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-image"></i></span>
+          <input type="file" name="filename[]" class="form-control" required>
+          <!-- <div class="input-group-btn"> 
+            <button class="btn btn-success" type="button"><i class="glyphicon glyphicon-plus"></i>Add</button>
+          </div> -->
+        </div></div>
+
+        
+
+       <input type="hidden" class="col-md-6" name="users_id"  value={{$logged_in_user->id}} />
+             
+
 
     <!-- <div class="col-md-6 col-md-offset-4">
        
@@ -150,18 +170,19 @@
 
                     </div>
 
+                  
+              
+
 </form>            
  
       </div>
+
       <!-- </div>
       </div> -->
 
 
-
-         
-         
-
-                <!-- </div> --><!-- panel body -->
+</div>
+               <!-- </div> --><!-- panel body -->
 
             <!-- </div> --><!-- panel -->
 
@@ -176,11 +197,16 @@
     @endif
 
     <script type="text/javascript">
-
-        $(document).ready(function() {
+    $(document).ready(function() {
+      $(".btn-success").click(function(){ 
+          var html = $(".clone").html();
+          $(".increment").after(html);
+      });
+      $("body").on("click",".btn-danger",function(){ 
+          $(this).parents(".control-group").remove();
+      });
             // To Use Select2
             Backend.Select2.init();
         });
     </script>
-    @include('frontend.footer')
 @endsection
