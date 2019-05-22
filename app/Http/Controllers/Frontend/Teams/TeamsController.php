@@ -16,7 +16,7 @@ class TeamsController extends Controller
      */
     public function index()
     {
-
+    	// We are selecting the team name from the team table
     	$teams = DB::table('teams')->select('Team_name')->get();
         return view('frontend.teams.teams_name')->with('teams',$teams);
     }

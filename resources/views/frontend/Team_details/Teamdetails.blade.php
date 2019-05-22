@@ -3,7 +3,7 @@
 @section('content')
 
 
-<table class="table table-striped table-hover">
+<table class="table table-striped table-hover" style="background-color: #99e6ff;color: black;border-radius: 10px;">
 
 		<tr>
         <th>{{ trans('Team name') }}</th>

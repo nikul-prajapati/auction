@@ -31,6 +31,8 @@ class TeamRepository extends BaseRepository
             ->select([
                 config('module.teams.table').'.id',
                 config('module.teams.table').'.Team_name',
+                config('module.teams.table').'.Base_points',
+                config('module.teams.table').'.Available_points',
                 config('module.teams.table').'.created_at',
                 config('module.teams.table').'.updated_at',
             ]);

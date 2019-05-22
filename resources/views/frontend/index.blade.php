@@ -4,24 +4,35 @@
 
 <link rel="stylesheet" href="css/w3.css">
 
+<link rel="stylesheet" href="css/forheading.css">
 
-<div class="jumbotron text-cente" style="box-shadow: 3px 3px 3px;margin-top: -25px;">
-  <h1>Welcome to cygnet cricket league</h1> 
+<div class="image-container"><!-- img/frontend/ss1.jpg -->
+
+  <div class="text">
+
+    Welcome to Josh
+
+  </div>
+
 </div>
-<div class="body">
+
 
 <div class="w3-content w3-section" style="">
-  <img class="mySlides w3-animate-fading" src="img/frontend/ss1.jpg" style="width:100%;height:450px;">
-  <img class="mySlides w3-animate-fading" src="img/frontend/ss2.jpg" style="width:100%;height:450px;">
-  <img class="mySlides w3-animate-fading" src="img/frontend/ss3.jpg" style="width:100%;height:450px;">
+  <img class="mySlides w3-animate-fading" src="img/frontend/ss1.jpg" style="width:100%;height:500px;">
+  <img class="mySlides w3-animate-fading" src="img/frontend/ss2.jpg" style="width:100%;height:500px;">
+  <img class="mySlides w3-animate-fading" src="img/frontend/ss3.jpg" style="width:100%;height:500px;">
+  <!-- <img class="mySlides" src="imgss3.jpg" style="width:100%"> -->
+
+  
 </div>
-</div>
-    
+
+
+
   @endsection
 
   @section('after-scripts')
 
-  <script>
+<script>
 var myIndex = 0;
 carousel();
 
@@ -34,10 +45,12 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 7000);    
+  setTimeout(carousel, 6000);    
 }
 </script>
 
-  @endsection
 
+  @include('frontend.footer')
+
+  @endsection
 

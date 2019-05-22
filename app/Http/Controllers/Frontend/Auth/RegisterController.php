@@ -63,7 +63,7 @@ class RegisterController extends Controller
         }*/
 
 
-if (config('access.users.confirm_email') || config('access.users.requires_approval')) {
+        if (config('access.users.confirm_email') || config('access.users.requires_approval')) {
             $user = $this->user->create($request->only('first_name', 'last_name', 'email', 'password', 'filename', 'is_term_accept'));
             event(new UserRegistered($user));
                     // trans('exceptions.frontend.auth.confirmation.created_pending') :
@@ -79,30 +79,5 @@ if (config('access.users.confirm_email') || config('access.users.requires_approv
             return redirect($this->redirectPath());
         }
 
-
-//         if (config('access.users.confirm_email') || config('access.users.requires_approval')) 
-//         {
-//             $user = $this->user->create($request->only('first_name', 'last_name', 'email', 'password', 'is_term_accept'));
-//             event(new UserRegistered($user));
-// <<<< HEAD
-//             return view('frontend.auth.details')->withFlashSuccess(
-//              trans('hii')
-// =======
-
-//             return redirect($this->redirectPath())->withFlashSuccess(
-//                 config('access.users.requires_approval') ?
-//                 trans('hello') :
-//                 trans('hw are u?')
-//                     // trans('exceptions.frontend.auth.confirmation.created_pending') :
-//                     // trans('exceptions.frontend.auth.confirmation.created_confirm')
-// >>>>>>> 6d01715ff39687b70bda12a603c97c4f81c75644
-//             );
-//         } 
-//         else {
-//             access()->login($this->user->create($request->only('first_name', 'last_name', 'email', 'password', 'is_term_accept')));
-//             event(new UserRegistered(access()->user()));
-
-//            // return redirect($this->redirectPath());
-//         }
     }
 }

@@ -8,8 +8,6 @@ use App\Repositories\frontend\access\user\detailsRepository;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
-
-
 use App\Models\Player_Information\Playerinformation;
 use App\Http\Controllers\Controller;
 use App\Http\Responses\RedirectResponse;
@@ -33,14 +31,7 @@ class detailscontroller extends Controller
      */
     public function index()
     {
-         $users_id = Auth::user()->id;
-        $data['data'] = DB::table('users')
-                ->join('player_information', 'users.id', '=', 'player_information.users_id')
-               
-                ->select('users.id','users.first_name')
-                ->where('users.id',$users_id) // else it will get all rows
-                ->get();
-        return view('frontend.auth.details', $data);
+        return view('frontend.auth.details');
     }
 
     /**
@@ -67,30 +58,30 @@ class detailscontroller extends Controller
         'match'=> 'required|integer',
         'runs' => 'required|integer',
         'wickets' => 'required|integer',
-        'age' => 'required|integer',
-        
-        
-      ]);
+        'age' => 'required|integer', 
+        ]);
 
-          if($request->hasfile('filename'))
-         {
-
+        if($request->hasfile('filename'))
+        {
             foreach($request->file('filename') as $image)
-            {
+            {   
+                //get the original name of the image
                 $name=$image->getClientOriginalName();
+                //path where image has to be stored
                 $image->move(public_path().'/img/frontend/pics/', $name);  
                 $data = $name;  
             }
          }
 
         
-            
-            if (playerinformation::where('users_id', '=', $request->get('users_id'))->exists())
-             {
-                  echo " records already exists for this users";
-              }
-            else
-            {
+        //condition to check that records for users are stored or not   
+        if (playerinformation::where('users_id', '=', $request->get('users_id'))->exists())
+        {
+             return redirect('/dashboard')->with(['flash_success' => trans('Record already exists')]);
+   
+        }
+        else
+        {
                  $details = new playerinformation([
                 'played_match' => $request->get('match'),
                 'total_runs'=> $request->get('runs'),
@@ -100,20 +91,14 @@ class detailscontroller extends Controller
                 'bowler_type'=> $request->get('bowler'),
                 'age'=>$request->get('age'),
                 'users_id'=>$request->get('users_id'),
+                 ]);
+                $details->filename=$data;
+              
+                $details->save();
+                return redirect('/dashboard')->with('success', 'successfully details udm_check_stored(agent, link, doc_id)');
 
-              ]);
-               $details->filename=$data;
-              // $form= new playerinformation();
-              //    $form->filename=json_encode($data);
-              //    $form->save();
-             $details->save();
-              return redirect('/dashboard')->with('success', 'successfully details udm_check_stored(agent, link, doc_id)');
-
-            }
-            
-     
-     
-       
+        }
+  
     }
 
    

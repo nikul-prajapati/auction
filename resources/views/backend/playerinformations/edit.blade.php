@@ -94,14 +94,7 @@
 
                
 
-                {{-- Is Captain --}}
-                <div class="form-group">
-                    {{ Form::label('Is_captain', trans('Is captain'), ['class' => 'col-lg-2 control-label required']) }}
-
-                    <div class="col-lg-10">
-                        {{ Form::text('Is_captain', null, ['class' => 'form-control box-size', 'placeholder' => trans('Is captain'), 'required' => 'required']) }}
-                    </div><!--col-lg-10-->
-                </div><!--form control-->
+                
 
 
                 <div class="form-group">

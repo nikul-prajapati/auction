@@ -23,28 +23,28 @@
 
             <div class="box-body">
 
-
-                
                     <div class="form-group">
-                    <label for="name" class="col-md-4 control-label">Player Name:</label>
+                    {{ Form::label('name', trans('name'), ['class' => 'col-lg-2 control-label required']) }}
+                   
                     <div class="col-lg-10">
-                    @foreach($users as $value) 
-                    
-                    <input type="hidden" class="col-md-6" name="users_id"  value= "<?php echo $value['id'] ?>"  />
-                    <label for="name" class="col-md-4 control-label" name="id">{{$value['first_name']}}</label> </div>
-                   @endforeach
+                        @foreach($users as $value) 
+                        <label for="name" class="col-md-4 control-label" name="id">{{$value['first_name']}}</label> 
+                        <input type="hidden" class="col-md-6" name="users_id"  value= "<?php echo $value['id'] ?>"  />
+                        
+                       @endforeach
                    </div><!--col-lg-10-->
                 </div><!--form control-->
-
-
                 
+
                 <div class="form-group">
+                {{ Form::label('Image', trans('Image'), ['class' => 'col-lg-2 control-label required']) }}
                 <div class="col-lg-10">
                 @foreach($users as $xyz)
-                <img src="{{ URL::asset('img/frontend/pics/'.$xyz['filename']) }}" height="80px" width="90px"alt="Any alt text"/>
+                <img src="{{ URL::asset('img/frontend/pics/'.$xyz['filename']) }}" height="80px" width="90px" align="center" alt="Any alt text"/>
                 @endForeach
                  </div><!--col-lg-10-->
                 </div><!--form control-->
+
                 
                 {{-- Price --}}
                 <div class="form-group">
@@ -57,7 +57,11 @@
 
                 
 
-                <h4 class="col-md-2">Select Team Name</h4>
+                {{-- Select Team Name --}}
+                <div class="form-group">
+                    {{ Form::label('Select Team Name', trans('Select Team Name'), ['class' => 'col-lg-2 control-label required']) }}
+                <div class="col-lg-10">
+               <!--  <h4 class="col-md-2">Select Team Name</h4> -->
                 <select class="btn btn-primary dropdown-toggle" data-toggle="dropdown" name="teams_id">
                   <option>select</option>
                    @foreach($data as $role)
@@ -65,7 +69,10 @@
                    {{$role->Team_name}}</option>
                   @endForeach
                 </select><br><br>
+                </div><!--col-lg-10-->
+                </div><!--form control-->
        
+
 
 
                   {{ $users->links('backend.bids.pagination') }}
@@ -75,7 +82,7 @@
                     @include("backend.biddings.form")
                     <div class="edit-form-btn">
                         {{ link_to_route('admin.biddings.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
-                        {{ Form::submit(trans('buttons.general.crud.create'), ['class' => 'btn btn-primary btn-md']) }}
+                        {{ Form::submit(trans('buttons.general.crud.create'), ['class' => 'btn btn-primary btn-md']), ['onClick'=>'event()'] }}
                         <div class="clearfix"></div>
                     </div><!--edit-form-btn-->
                 </div><!-- form-group -->
@@ -86,21 +93,22 @@
 
 @section('after-scripts')
 
-$("#ajax").click(function(event) {
-    event.preventDefault();
+<!-- <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+               integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+               crossorigin="anonymous">
+      </script>
 
+<script type="text/javascript">
+    $('form').submit(function event()  {
+    event.preventDefault();
     $.ajax({
-        type: "post",
-        url: "{{ url('addFavorites') }}",
-        dataType: "json",
-        data: $('#ajax').serialize(),
-        success: function(data){
-              alert("Data Save: " + data);
-        },
-        error: function(data){
-             alert("Error")
-        }
+        url: '/Backend/Bidding/Biddings/store',
+        type: 'post',
+        data: $('form').serialize(), // Remember that you need to have your csrf token included
+        dataType: 'json',
+        
     });
 });
+</script> -->
 
 @endsection

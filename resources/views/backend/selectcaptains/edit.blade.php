@@ -21,7 +21,7 @@
                 </div><!--box-tools pull-right-->
             </div><!--box-header with-border-->
              <h4 class="col-md-2">Select Team Name</h4>
-        <select class="btn btn-primary dropdown-toggle" data-toggle="dropdown" name="teams_id" required='required'>
+        <select class="btn btn-primary dropdown-toggle" data-toggle="dropdown" name="teams_id" required="required">
           <option  label="select"></option>
            @foreach($team as $role)
            <option  value="<?php echo $role->id ?>">
@@ -31,7 +31,7 @@
        
 
        <h4 class="col-md-2">Select Captain Name</h4>
-        <select class="btn btn-primary"  data-toggle="dropdown" name="users_id" required=> 'required'>
+        <select class="btn btn-primary"  data-toggle="dropdown" name="users_id" required="required">
         <option value="$selectcaptains"></option>
         @foreach($user as $rol)
            <option value="<?php echo $rol->id ?>">

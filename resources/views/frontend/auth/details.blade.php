@@ -1,153 +1,115 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-    <div class="row">
+    @if ($errors->any())            
+     <ul>
+         @foreach ($errors->all() as $error)
+         <li>{{ $error }}</li>
+             @endforeach
+      </ul>
+     @endif
 
-        <div class="col-md-8 col-md-offset-2">
-
-            <div class="panel panel-default">
-                <div class="panel-heading">{{ trans('labels.frontend.auth.register_box_title') }}
-                </div>
-
-                <div class="panel-body">
-
-                 
-
-        @if(session('success'))
-        <div class="alert alert-success">
-          {{ session('success') }}
-        </div> 
-        @endif
-
-                    @if ($errors->any())
-                  <!--   <div class="alert alert-danger"> -->
-                        <ul>
-
-                            @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                            @endforeach
-
-                        </ul>
-
-                 <!--    </div> -->
-                    @endif
+<div class="col-md-6" style="border-radius: 5px;margin-left:30%;background-color: white;">
 
 <form method="POST" action="{{route('details.store')}}"  class="form-horizontal" enctype="multipart/form-data"> 
-        {{csrf_field()}}
+      {{csrf_field()}}
+<h2 style="text-align: center;">Records</h2>
+        
 
         <div class="form-group">
-             @csrf
-              <label for="match" class="col-md-4 control-label">Match:</label>
-              <input type="text" class="col-md-6" name="match"  />
-        </div>
-        
-        <div class="form-group">
-        
-              <label for="run" class="col-md-4 control-label">Run:</label>
-              <input type="text" class="col-md-6" name="runs"/>
-
-        </div>
-        
-        <div class="form-group">
-        
-              <label for="wicket" class="col-md-4 control-label">Wickets:</label>
-              <input type="text" class="col-md-6" name="wickets"/>
-        
+                  @csrf
+               <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input  name="match" placeholder="match" class="form-control"  type="input">
+               </div>
         </div>
 
         <div class="form-group">
+               <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input  name="runs" placeholder="runs" class="form-control"  type="input">
+               </div>
+        </div>
 
-            <label for="type" class="col-md-4 control-label">Type:</label>
-            <select name="type" class="col-md-6" style="padding: 5px;"> 
-                    
+        <div class="form-group">
+               <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input  name="wickets" placeholder="wicket" class="form-control"  type="input">
+               </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group">
+            <!-- <label for="type" class="input-group"></label> -->
+            <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
+            <select name="type" class="form-control" style="padding: 5px;"> 
+ 
                     <option value="Batsman">Batsman</option>
                     <option value="Bowler">Bowler</option>
                     <option value="All Rounder">All Rounder</option>
 
             </select>
-
+            </div>
         </div>
 
         <div class="form-group">
-        
-             <label for="Batsman" class="col-md-4 control-label">Batsman:</label>
-             <select name="batsman" class="col-md-6" style="padding: 5px;">
+          <div class="input-group">
+            <!--  <label for="Batsman" class="col-md-4 control-label">Batsman:</label> -->
+            <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
+             <select name="batsman" class="form-control" style="padding: 5px;">
 
                     <option value="LeftHanded">Left Handed</option>
                     <option value="RightHanded">Right Handed</option>
 
              </select>
-
-
+          </div>
         </div>
 
         <div class="form-group">
-
-            <label for="bowler" class="col-md-4 control-label">Bowler: </label>
-            <select name="bowler" class="col-md-6" style="padding: 5px;"> 
-
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
+            <!-- <label for="bowler" class="col-md-4 control-label">Bowler: </label> -->
+            <select name="bowler" class="form-control" style="padding: 5px;"> 
+ 
                     <option value="pace bowler">Pace bowler</option>
                     <option value="spin bowler">Spin bowler</option>
 
              </select>
-                        
+           </div>
 
         </div>
 
-        <div class="form-group">
-        
-              <label for="run" class="col-md-4 control-label">Age:</label>
-              <input type="text" class="col-md-6" name="age"/>
-        </div>
-
-
-        <div class="form-group">
-                   
-
-                    
-                   
-                    <input type="hidden" class="col-md-6" name="users_id"  value={{$logged_in_user->id}}  /> 
-                    
-                 
-                   </div><!--col-lg-10-->
-
-        <div class="input-group control-group increment" >
-          <input type="file" name="filename[]" class="form-control">
-          <div class="input-group-btn"> 
-            <button class="btn btn-success" type="button"><i class="glyphicon glyphicon-plus"></i>Add</button>
-          </div>
-        </div>
-        <div class="clone hide">
-          <div class="control-group input-group" style="margin-top:10px">
-            <input type="file" name="filename[]" class="form-control">
-            <div class="input-group-btn"> 
-              <button class="btn btn-danger" type="button"><i class="glyphicon glyphicon-remove"></i> Remove</button>
-            </div>
-          </div>
-        </div>
-
-    <div class="col-md-6 col-md-offset-4">
+         <input type="hidden" class="col-md-6" name="users_id"  value={{$logged_in_user->id}}  /> 
        
-        <button type="submit" class="btn btn-primary" name="submit" onsubmit="return validateForm(this);">Submit</button>  
+
+        <div class="form-group">
+               <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input  name="age" placeholder="age" class="form-control"  type="input">
+               </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-list-ol"></i></span>
+          <input type="file" name="filename[]" class="form-control" required>
+          
+        </div>
+
+        
+
+    <div class="form-group">
+        <br>
+                            
+             <button type="submit" class="" style="width:47%;padding: 6px; background-color: #4CAF50;color:white;border:none;margin-left: 2%;border-radius: 3px">Register</button>
+              <button type="Reset" class="" style="width:47%;padding: 6px; background-color: #4CAF50;color:white;border:none;border-radius: 3px;">Reset</button>
+        
     </div>
 
 </form>            
  
-      </div>
-      </div>
-      </div>
-
-
-         
-         
-
-                </div><!-- panel body -->
-
-            </div><!-- panel -->
-
-        </div><!-- col-md-8 -->
-
-    </div><!-- row -->
+</div>
+      
 @endsection
 
 @section('after-scripts')

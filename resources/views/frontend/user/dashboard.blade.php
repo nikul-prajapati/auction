@@ -2,20 +2,15 @@
 
 @section('content')
 
-
     <div class="row">
 
         <div class="col-xs-16">
 
             <div class="panel panel-default">
-                <div class="panel-heading" style="font-size: 20px;">
+               <!--  <div class="panel-headingg" style="font-size: 20px;font-family:tekton pro;"> -->
+                    <!-- <marquee direction="left" behavior="slide"> --><!-- WELCOME TO CYGNET CRICKET LEAGUE --><!-- </marquee> -->  <!-- </div> -->
 
-                    <marquee direction="left" behavior="slide">WELCOME TO CYGNET CRICKET LEAGUE</marquee></div>
-
-                    
-
-
-                <div class="panel-body">
+                <div class="panel-body" style="background-image: url(/img/frontend/ss3.jpg);background-position: center;background-size: 100% 100%;">
 
                     <div class="row">
 
@@ -23,26 +18,30 @@
 
                             <ul class="media-list">
                                 <li class="media">
-                                    <div class="media-left">
+                                    
+                                    <div class="col-md-6" style="background-color: white;border:1px solid grey;padding: 2px;border-radius: 3px;float: right; ">
 
-                         
+                                        <div class="media-left">
+
                                         @foreach($data as $user)
-                                         <img src="{{ URL::asset('img/frontend/pics/'.$user->filename) }}" height="80px" width="90px"alt="Any alt text"/>
-                                        
+                                         <img src="{{ URL::asset('img/frontend/pics/'.$user->filename) }}" style=" border: 1px solid black;border-radius: 40px;margin-left: 40px;" height="80px" width="90px" class="media-object"       alt="Any alt text"/>
                                         @endforeach
-                                        
-                                    </div><!--media-left-->
 
-                                    <div class="media-body" style="border:1px solid grey;padding: 2px;border-radius: 3px">
+                                        </div><br>                                        
+
                                         <h4 class="media-heading">
                                             {{ $logged_in_user->name }}<br/>
                                             <small>
-                                                {{ $logged_in_user->email }}<br/>
+                                               <!--  {{ $logged_in_user->email }}<br/> -->
                                                <!--  Joined {{ $logged_in_user->created_at->format('F jS, Y') }} -->
                                             </small>
                                         </h4>
 
-                                        {{ link_to_route('frontend.user.account', trans('navs.frontend.user.account'), [], ['class' => 'btn btn-info btn-xs']) }}
+                                        <!-- { link_to_route('frontend.user.account', trans('Profile'), [], ['class' => 'btn btn-primary']) }} -->
+
+                                        <a href="http://127.0.0.1:8000/account" style="width: 100%;height: 50%;" class="btn btn-primary">Profile</a>
+
+                                        <!-- <button  ></button> -->
 
                                         @permission('view-backend')
                                             {{ link_to_route('admin.dashboard', trans('navs.frontend.user.administration'), [], ['class' => 'btn btn-danger btn-xs']) }}
@@ -121,14 +120,14 @@
                                 <div class="row">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
-                                            <h4>List of teams </h4>
+                                            <h4>List of teams</h4>
                                         </div><!--panel-heading-->
 
                                         <div class="panel-body">
                                            
                                             <p>Register yourself in cricket tournament and one of below team will select you at time of auction </p>
 
-                                            <a href="{{trans('/teams')}}" class ="btn btn-primary" role="button">Check all teams</a>
+                                            <a href="{{trans('/teams')}}" class ="btn btn-primary" role="button" style="opacity: 1">Check all teams</a>
                                            <!--  </div> --> <!--col-md-6-->
                                         </div><!--panel-body-->
                                     </div><!--panel-->
@@ -151,5 +150,8 @@
 
     </div><!-- row -->
 
-
+   <footer>
+            @include('frontend.footer')
+</footer>
+   
 @endsection

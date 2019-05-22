@@ -24,6 +24,8 @@ class StoreSelectcaptainRequest extends FormRequest
     public function rules()
     {
         return [
+            'teams_id' => 'required',
+            'users_id' => 'required'
             //Put your rules for the request in here
             //For Example : 'title' => 'required'
             //Further, see the documentation : https://laravel.com/docs/5.4/validation#creating-form-requests

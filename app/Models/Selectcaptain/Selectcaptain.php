@@ -31,7 +31,7 @@ class Selectcaptain extends Model
      * @var array
      */
     protected $fillable = [
-
+        'teams_id','users_id'
     ];
 
     /**

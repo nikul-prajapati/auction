@@ -75,8 +75,47 @@
 
         <!-- JavaScripts -->
         @yield('before-scripts')
+        <script src="/jquery/jquery-3.3.1.min.js"></script>
         {{ Html::script(mix('js/backend.js')) }}
         {{ Html::script(mix('js/backend-custom.js')) }}
         @yield('after-scripts')
+        <!-- <script type="text/javascript"> -->
+
+
+          <!--  // jQuery, bind an event handler or use some other way to trigger ajax call.
+        $('#create-bidding').submit(function( event ) {
+            
+            // var $data = $('#parentdiv').val();
+            // alert("Data: " +$data);
+          
+            //console.log('test');
+            event.preventDefault();
+            //console.log('in');
+            $.ajax({
+                url: "{{route('admin.biddings.store')}}",
+                type: 'post',
+                data: $('#create-bidding').serialize(), // Remember that you need to have your csrf token included
+                dataType: 'json',
+                success: function(_response){
+                                 console.log(response.success);
+                                 if(response.success)
+                                {
+                                   
+                                    $('#page').val(response.page++);
+                                    
+                                    $('#parentdiv').html(response.html);
+                                }
+                              //$('.alert').show();
+                             // $('.alert').html(result.success);
+                             //document.getElementById("myForm").reset();
+                             //window.location.href=result.url;
+                          },
+                error: function( _response ){
+                    // Handle error
+                }
+            });
+        });
+  -->
+</script>
     </body>
 </html>

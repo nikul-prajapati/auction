@@ -23,7 +23,7 @@
             
 
             <h4 class="col-md-2">Select Team Name</h4>
-        <select class="btn btn-primary dropdown-toggle" data-toggle="dropdown" name="teams_id">
+        <select class="btn btn-primary dropdown-toggle" data-toggle="dropdown" name="teams_id" name="required">
           <option>select</option>
            @foreach($data as $role)
            <option  value="<?php echo $role->id ?>">
@@ -33,7 +33,7 @@
        
 
        <h4 class="col-md-2">Select Captain Name</h4>
-        <select class="btn btn-primary"  data-toggle="dropdown" name="users_id">
+        <select class="btn btn-primary"  data-toggle="dropdown" name="users_id" required="required">
         <option>select</option>
         @foreach($name as $rol)
            <option value="<?php echo $rol->id ?>">

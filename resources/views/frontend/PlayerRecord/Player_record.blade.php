@@ -3,7 +3,8 @@
 @section('content')
 
 
-<table class="table table-striped table-hover">
+<table class="table table-hover" style="background-color: #99e6ff;color: black;
+ border-radius: 10px;">
 
 
     
@@ -25,7 +26,7 @@
             <td>{{$value->speciality}}</td></tr>
            <tr><th><td>{{ trans('Batsman Type') }}</td></th>
             <td>{{$value->batsman_type}}</td></tr>
-            <tr><th><td>{{ trans('Bowler Type') }}</td></th>
+            <tr><th><td>{{ trans('Bowler Type') }}</td></th> 
             <td>{{$value->bowler_type}}</td></tr>
             <tr><th><td>{{ trans('Age') }}</td></th>
             <td>{{$value->age}}</td>

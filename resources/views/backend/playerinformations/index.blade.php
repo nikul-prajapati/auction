@@ -31,7 +31,7 @@
 
                             <th>{{ trans('Bowler type') }}</th>
                             <th>{{ trans('Age') }}</th>
-                            <th>{{ trans('Is_captain') }}</th>
+                        
                             <th>{{ trans('labels.backend.playerinformations.table.createdat') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
@@ -73,7 +73,7 @@
                     {data: 'batsman_type', name: '{{config('module.playerinformations.table')}}.batsman_type'},
                     {data: 'bowler_type', name: '{{config('module.playerinformations.table')}}.bowler_type'},
                     {data: 'age', name: '{{config('module.playerinformations.table')}}.age'},
-                    {data: 'Is_captain', name: '{{config('module.playerinformations.table')}}.Is_captain'},
+                   
                     {data: 'created_at', name: '{{config('module.playerinformations.table')}}.created_at'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
                 ],

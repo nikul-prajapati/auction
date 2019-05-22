@@ -4,9 +4,13 @@
 
 
 
-<table class="table table-striped table-hover">
+
+<table class="table table-hover" style="
+    background-color: #99e6ff;
+    color: black;
+    border-radius: 10px;">
     
-    <tr>
+    <tr style="background-color: white;">
         <th>{{ trans('Team name') }}</th>
       </tr> 
 

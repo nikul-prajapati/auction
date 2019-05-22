@@ -17,19 +17,13 @@ class Team_detailsController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index()
-    {
-    	
-
-        
+    {        
+        //bidding table is having left join with users table and with teams table too and from that we are selecting the data from them
             $data['data'] = DB::table('biddings')
                 ->leftjoin('users', 'users.id', '=', 'biddings.users_id')
                 ->leftjoin('teams', 'teams.id', '=', 'biddings.teams_id')
                 ->select('users.first_name','teams.Team_name','biddings.price')
-               
                 ->get();
-
-
-
 
 
             if(count ($data)>0){

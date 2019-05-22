@@ -23,13 +23,13 @@
     <ul class="dropdown-menu" role="menu">
         <li>
             <a href="{{ route( 'admin.biddings.index' ) }}">
-                <i class="fa fa-list-ul"></i> {{ trans( 'menus.backend.biddings.all' ) }}
+                <i class="fa fa-list-ul"></i> {{ trans( 'show all' ) }}
             </a>
         </li>
         @permission( 'create-bidding' )
             <li>
                 <a href="{{ route( 'admin.biddings.create' ) }}">
-                    <i class="fa fa-plus"></i> {{ trans( 'menus.backend.biddings.create' ) }}
+                    <i class="fa fa-plus"></i> {{ trans( 'Add' ) }}
                 </a>
             </li>
         @endauth
