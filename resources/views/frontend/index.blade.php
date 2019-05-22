@@ -6,7 +6,7 @@
 
 <link rel="stylesheet" href="css/forheading.css">
 
-<div class="image-container"><!-- img/frontend/ss1.jpg -->
+<div class="image-container" style="margin-top: 5%;"><!-- img/frontend/ss1.jpg -->
 
   <div class="text">
 
@@ -18,7 +18,7 @@
 
 
 <div class="w3-content w3-section" style="">
-  <img class="mySlides w3-animate-fading" src="img/frontend/ss1.jpg" style="width:100%;height:500px;">
+  <img class="mySlides w3-animate-fading" src="img/frontend/ss1.jpg" style="width:10p0%;height:500px;">
   <img class="mySlides w3-animate-fading" src="img/frontend/ss2.jpg" style="width:100%;height:500px;">
   <img class="mySlides w3-animate-fading" src="img/frontend/ss3.jpg" style="width:100%;height:500px;">
   <!-- <img class="mySlides" src="imgss3.jpg" style="width:100%"> -->

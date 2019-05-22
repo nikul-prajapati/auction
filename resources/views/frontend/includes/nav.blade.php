@@ -10,19 +10,7 @@
                 <span class="icon-bar"></span>
             </button> 
 
-           
-
-          <!--  {{--   @if(settings()->logo)
-           -->  
-            <!-- <a href="{{ route('frontend.index') }}" class="logo">  -->
-              <!--   <img height="48" width="48" src="img/frontend/logo.png"> --><!-- </a> -->
-           <!--  @else --}} -->
-           
-
-           <!--   {{ link_to_route('frontend.index',"Cygnet Cricket League", [], ['class' => 'navbar-brand']) }} -->
-
-           <!-- {{--  @endif --}} -->
-           <a href="/"> <img src="img/frontend/logo1.png" alt="img"    style="height: 50px;" ></a>
+           <a href="/"> <img src="img/frontend/logo1.png" alt="img" style="height: 50px;" ></a>
 
         </div><!--navbar-header-->
 
@@ -77,3 +65,9 @@
         </div><!--navbar-collapse-->
     </div><!--container-->
 </nav>
+
+<!-- @section('after-scripts')
+<script type="text/javascript">
+     
+</script>
+@endsection -->

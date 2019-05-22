@@ -61,7 +61,7 @@
     background-image: url(/img/frontend/forbg.jpg); -->
        
 
-<div class="col-md-5" style="border-radius: 5px; margin-left:30%; background-color: white;margin-bottom: 6%; ">
+<div class="col-md-5" style="border-radius: 5px; margin-left:30%; background-color: white;margin-bottom: 6%;margin-top: 28px; ">
     <!-- <div class="panel panel-default"> -->
    <!--  <div class="panel-heading">{{ trans('Login') }}</div> -->
     <!-- <div class="wrapper" style=""> -->    
@@ -69,7 +69,9 @@
 
 {{ Form::open(['route' => 'frontend.auth.login', 'class' => 'form-horizontal']) }}
 
-<h2 style="text-align: center;">Login Here</h2>
+<!-- <form class="form-horizontal" action="{{route('frontend.auth.login')}}" method="post"> -->
+
+<h2 style="text-align: center;">Login</h2>
 
 
 
@@ -80,6 +82,9 @@
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
   {{ Form::input('email', 'email', null, ['class' => 'form-control', 'placeholder' => trans('validation.attributes.frontend.register-user.email')]) }}
+
+<!-- <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+ -->
   <!-- <input  name="password_confirmation" placeholder="confirm password" class="form-control"  type="password"> -->
   <!-- <input  name="first_name" placeholder="First Name" class="form-control"  type="text"> -->
 
@@ -96,7 +101,8 @@
   <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
   <!-- <input name="last_name" placeholder="Last Name" class="form-control"  type="text"> -->
   {{ Form::input('password', 'password', null, ['class' => 'form-control', 'placeholder' => trans('validation.attributes.frontend.register-user.password')]) }}
-
+<!-- 
+<input type="password" name="password" placeholder="password" class="form-control" required> -->
 
     </div>
 
@@ -128,13 +134,17 @@
                         <div class="form-group">
                         <div class="col-md-5">
 
-                            <!-- {{ Form::submit(trans('labels.frontend.auth.register_button'), ['class' => 'btn btn-primary'] ) }} -->
-                            <button type="submit" class="" style="width:100%;padding: 8px; background-color: #4CAF50;color:white;border:none;">Login</button>
+                            <!-- <button type="submit" class="" style="width:100%;padding: 8px; background-color: #4CAF50;color:white;border:none;">Login</button> -->
+                           
+                            <button type="submit" class="btnn">Login</button>
                         </div>
+                       
                         <div class="col-md-5">
-                           <!--  {{ Form::submit(trans('labels.frontend.auth.register_button'), ['class' => 'btn btn-primary'] ) }} -->
-                            <button type="Reset" class="" style="width:100%;padding: 8px; background-color: #4CAF50;color:white;border:none;">Reset</button>
-                        </div>
+                        
+                            <button type="Reset" class="btnn">Reset</button>
+
+                       <!--  </div> -->
+                    </div>
 
 
                     </div>

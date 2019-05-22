@@ -13,7 +13,7 @@
 
        <!--          <div class="col-md-10"> -->
 
-        <div class="col-md-6" style="border-radius: 5px; background-image: url(/img/frontend/b.jpg);background-color: white;margin-left:30%; ">
+        <div class="col-md-6" style="border-radius: 5px; background-image: url(/img/frontend/b.jpg);background-color: white;margin-left:30%;margin-bottom: 3%; ">
                     
                     <h2 style="text-align: center;">Registration</h2>
 
@@ -31,7 +31,7 @@
                     <!-- <div class="col-md-8 inputGroupContainer"> -->
                       <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                      <input  name="first_name" placeholder="First Name" class="form-control"  type="input">
+                      <input  name="first_name" placeholder="First Name" class="form-control"  type="input" required>
                         </div>
                       </div>
                    <!--  </div> -->
@@ -133,11 +133,17 @@
                     <div class="form-group">
                         <div class="col-md-5">
                             <!-- {{ Form::submit(trans('labels.frontend.auth.register_button'), ['class' => 'btn btn-primary'] ) }} -->
-                            <button type="submit" class="" style="width:100%;padding: 8px; background-color: #4CAF50;color:white;border:none;">Register</button>
+                            <!-- <button type="submit" class="" style="width:100%;padding: 8px; background-color: #4CAF50;color:white;border:none;">Register</button> -->
+
+                             <button type="submit" class="btnn">Register</button>
+
                         </div>
                         <div class="col-md-5">
                            <!--  {{ Form::submit(trans('labels.frontend.auth.register_button'), ['class' => 'btn btn-primary'] ) }} -->
-                            <button type="Reset" class="" style="width:100%;padding: 8px; background-color: #4CAF50;color:white;border:none;">Reset</button>
+                          <!--   <button type="Reset" class="" style="width:100%;padding: 8px; background-color: #4CAF50;color:white;border:none;">Reset</button> -->
+
+                           <button type="Reset" class="btnn">Reset</button>
+
                         </div>
 
                     </div>

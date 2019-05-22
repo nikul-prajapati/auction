@@ -14,7 +14,7 @@
   text-align: left;
   font: bold 16px sans-serif;
 
-  padding: 25px 50px;
+  padding: 10px 50px;
   margin-top:   0px;
 }
 
@@ -292,7 +292,7 @@ table.footer_table
 
         <div>
           <i class="fa fa-envelope"></i>
-          <p><a href="mailto:support@company.com">support@company.com</a></p>
+          <p><a href="mailto:support@company.com">support@cygnet.com</a></p>
         </div>
 
       </div>

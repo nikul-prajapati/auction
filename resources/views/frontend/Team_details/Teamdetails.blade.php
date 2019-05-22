@@ -5,7 +5,13 @@
 
 <table class="table table-striped table-hover">
 
-	
+	<tr>
+
+		<th>Team name</th>
+		<th>Name</th>
+		<th>Price</th>
+
+	</tr>
         
       @foreach($data as $value)
         <tr>

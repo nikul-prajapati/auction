@@ -48,7 +48,7 @@
 
                                         <!-- { link_to_route('frontend.user.account', trans('Profile'), [], ['class' => 'btn btn-primary']) }} -->
 
-                                        <a href="http://127.0.0.1:8000/account" style="width: 100%;height: 50%;" class="btn btn-primary">Profile</a>
+                                        <a href="http://127.0.0.1:8000/account" style="width: 100%;height: 50%;" class="btnn">Profile</a>
 
                                         <!-- <button  ></button> -->
 
@@ -67,12 +67,12 @@
 
                                 <div class="panel-body">
                                     <div>
-                                    User can check here in which team player has been selected. Results will declare after auction.
+                                    User can check here in which team player has been selected. Results will declare after auction.<br><br>
                                     </div>
 
                                    <!--  <div class="form-group"> -->
                                    <!--  <div class="col-md-6 col-md-offset-4"> -->
-                                    <a href="{{trans('/Teamdetails')}}" class ="btn btn-primary" role="button">View Team</a>
+                                    <a href="{{trans('/Teamdetails')}}" class ="btnn" role="button">View Team</a>
                                     <!-- </div> --> <!--col-md-6-->
                                <!--  </div> --> <!--form-group-->
  
@@ -94,7 +94,7 @@
                                             <p>For Cygnetians another chance to play cricket and show their talent by this platform ! Fillup some details of previous played matches.
                                             </p>
 
-                                            <a class="btn btn-primary" href="{{trans('/details')}}">Enter record</a>
+                                            <a class="btnn" href="{{trans('/details')}}">Enter record</a>
 
                                             
 
@@ -117,7 +117,7 @@
                                             <p>It will display the detail information about the player records which is already entered by cygnetian.</p>
 
                                             <!-- <div class="col-md-6 col-md-offset-4"> -->
-                                            <a href="{{trans('/player_record')}}" class ="btn btn-primary" role="button">View information</a>
+                                            <a href="{{trans('/player_record')}}" class ="btnn" role="button">View information</a>
                                            <!--  </div> --> <!--col-md-6-->
                                         </div><!--panel-body-->
                                     </div><!--panel-->
@@ -136,7 +136,7 @@
                                            
                                             <p>Register yourself in cricket tournament and one of below team will select you at time of auction </p>
 
-                                            <a href="{{trans('/teams')}}" class ="btn btn-primary" role="button" style="opacity: 1">Check all teams</a>
+                                            <a href="{{trans('/teams')}}" class ="btnn" role="button" style="opacity: 1">Check all teams</a>
                                            <!--  </div> --> <!--col-md-6-->
                                         </div><!--panel-body-->
                                     </div><!--panel-->
@@ -159,8 +159,12 @@
 
     </div><!-- row -->
 
-   <footer>
-            @include('frontend.footer')
-</footer>
+   <!-- <footer> -->
+
+<!-- </footer> -->
    
 @endsection
+
+    @section('after-scripts')
+            @include('frontend.footer')
+            @endsection

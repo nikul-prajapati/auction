@@ -1,0 +1,2190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+      @charset "utf-8";
+/* CSS Document */
+
+/*------------------------------SAMPLE-1------------------------------*/
+
+.b1:hover, .b2:hover, .b3:hover, .b4:hover, .b5:hover, .b6:hover, .b7:hover, .b8:hover {
+    color:white;        
+}
+/*SAMPLE-1 : BUTTON-1*/ 
+.b1:before{
+    content: "";
+    width: 100%; 
+    height: 0; 
+    border-radius: 3px;
+    position: absolute; 
+    background-color: #2ecc71; 
+    left: 0; 
+    bottom: 0; 
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s; 
+    z-index: -1;
+}
+.b1:hover:before{
+    height: 100%; 
+    bottom: auto; 
+    top: 0;
+}
+/*SAMPLE-1 : BUTTON-2*/ 
+.b2:before{
+    content: ""; 
+    width: 100%; 
+    height: 0; 
+    border-radius: 3px;
+    position: absolute; 
+    background-color: #9b59b6; 
+    left: 0; 
+    top: 0; 
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s; 
+    z-index: -1;
+}
+.b2:hover:before{
+    height: 100%; 
+    top: auto; 
+    bottom: 0;
+}
+/*SAMPLE-1 : BUTTON-3*/ 
+.b3:before{
+    content: ""; 
+    width: 0; 
+    height: 100%; 
+    position: absolute; 
+    background-color: #ff5722; 
+    right: 0; 
+    top: 0; 
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s; 
+    z-index: -1;
+}
+.b3:hover:before{
+    width: 100%; 
+    right: auto; 
+    left: 0;
+}
+/*SAMPLE-1 : BUTTON-4*/ 
+.b4:before{
+    content: ""; 
+    width: 0; 
+    height: 100%; 
+    position: absolute; 
+    background-color: #1d8ef7; 
+    left: 0; 
+    top: 0; 
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s; 
+    z-index: -1;
+}
+.b4:hover:before{
+    width: 100%; 
+    left: auto; 
+    right: 0;
+}
+/*SAMPLE-1 : BUTTON-5*/
+.b5:before{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    background-color: #2ecc71; 
+    left: 0; 
+    bottom: 0; 
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    z-index: -1;
+}
+.b5:after{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    background-color: #2ecc71;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s; 
+    z-index: -1;
+}
+.b5:hover:before, .b5:hover:after{
+    width: 50%;
+    height: 100%;
+}
+/*SAMPLE-1 : BUTTON-6*/
+.b6:before{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    background-color: #9b59b6;
+    left: 0; 
+    top: 0; 
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    z-index: -1;
+}
+.b6:after{
+    content: "";
+    width: 0; height: 0;
+    position: absolute; 
+    background-color: #9b59b6; 
+    right: 0; 
+    bottom: 0; 
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s; 
+    z-index: -1;
+}
+.b6:hover:before, .b6:hover:after{
+    width: 50%; 
+    height: 100%;
+}
+/*SAMPLE-1 : BUTTON-7*/
+.b7:before{
+    content: "";
+    width: 0; 
+    height: 0; 
+    position: absolute;
+    background-color: #ff5722; 
+    left: 50%; 
+    bottom: 50%; 
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s; 
+    z-index: -1;
+}
+.b7:hover:before{
+    width: 100%;
+    height: 100%; 
+    left: 0; 
+    bottom: 0;
+}
+/*SAMPLE-1 : BUTTON-8*/
+.btn-layout.b8:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    background-color: #1d8ef7;
+}
+.btn-layout.b8:hover:after {
+    width: 0%;
+}
+
+
+/*------------------------------SAMPLE-2------------------------------*/
+/*SAMPLE-2 : BUTTON-1*/
+.bt1:before{
+    content: ""; 
+    width: 100%;
+    height: 0;
+    position: absolute; 
+    background-color: #2ecc71; 
+    top: 50%;
+    left: 0;
+    transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    -webkit-transition: 0.4s;
+    z-index: -1;
+}
+.bt1:after{
+    content: ""; 
+    width: 100%; 
+    height: 0; 
+    position: absolute; 
+    background-color: #2ecc71; 
+    left: 0; 
+    bottom: 50%;
+    transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    -webkit-transition: 0.4s; 
+    z-index: -1;
+}
+.bt1:hover:before, .bt1:hover:after{
+    height: 50%;
+}
+.bt1:hover {
+    color: #fff;
+}
+/*SAMPLE-2 : BUTTON-2*/
+.bt2:before{
+    content: ""; 
+    width: 100%;
+    height: 0;
+    position: absolute; 
+    background-color: #9b59b6; 
+    left: 0;
+    bottom: 0;
+    transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    -webkit-transition: 0.4s;
+    z-index: -1;
+}
+.bt2:after{
+    content: ""; 
+    width: 100%; 
+    height: 0; 
+    position: absolute; 
+    background-color: #9b59b6; 
+    right: 0; 
+    top: 0; 
+    transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    -webkit-transition: 0.4s; 
+    z-index: -1;
+}
+.bt2:hover:before, .bt2:hover:after{
+    height: 50%;
+}
+.bt2:hover {
+    color: #fff;
+}
+/*SAMPLE-2 : BUTTON-3*/
+.bt3:before{
+    content: ""; 
+    width: 0; 
+    height: 100%; 
+    position: absolute; 
+    background-color: #ff5722; 
+    left: 50%;
+    top: 0; 
+    transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    -webkit-transition: 0.4s; 
+    z-index: -1;
+    }
+.bt3:after{
+    content: ""; 
+    width: 0; 
+    height: 100%; 
+    position: absolute;
+    background-color: #ff5722;
+    right: 50%; 
+    top: 0; 
+    transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    -webkit-transition: 0.4s; 
+    z-index: -1;
+}
+.bt3:hover:before, .bt3:hover:after{
+    width: 50%;
+}
+.bt3:hover {
+    color: #fff;
+}
+/*SAMPLE-2 : BUTTON-4*/
+.bt4:before{
+    content: ""; 
+    width: 0; 
+    height: 100%; 
+    position: absolute; 
+    background-color: #1d8ef7; 
+    left: 0;
+    top: 0; 
+    transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    -webkit-transition: 0.4s; 
+    z-index: -1;
+}
+.bt4:after{
+    content: ""; 
+    width: 0; 
+    height: 100%; 
+    position: absolute;
+    background-color: #1d8ef7;
+    right: 0; 
+    top: 0; 
+    transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    -webkit-transition: 0.4s; 
+    z-index: -1;
+}
+.bt4:hover:before, .bt4:hover:after{
+    width: 50%;
+}
+.bt4:hover {
+    color: #fff;
+}
+/*SAMPLE-2 : BUTTON-5*/
+.bt5 {
+    overflow: hidden;
+}
+.bt5 span {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    left: -10px;
+    top: 70px;
+    background: #2ecc71;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transition: width 0.7s, height 0.7s;
+    -webkit-transition: width 0.7s, height 0.7s;
+    -moz-transition: width 0.7s, height 0.7s;
+    -ms-transition: width 0.7s, height 0.7s;
+    -o-transition: width 0.7s, height 0.7s;
+    z-index: -1;
+}
+.bt5:hover {
+    color: #ffffff;
+}
+.bt5:hover span {
+    width: 500px;
+    height: 500px;
+}
+.bt5:active {
+    background: #2ecc71;
+}
+/*SAMPLE-2 : BUTTON-6*/
+.bt6 {
+    overflow:hidden;
+}
+.bt6:before {
+    content: '';
+    width: 0;
+    z-index:-1;
+    height: 0;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    border-style: solid;
+    border-width: 0 0 0 0;
+    border-color: transparent transparent transparent #9b59b6;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.bt6:after {
+    content: '';
+    width: 0;
+    z-index:-1;
+    height: 0;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    border-style: solid;
+    border-width: 0 0 0 0;
+    border-color: transparent #9b59b6 transparent transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.bt6:hover {
+    color: white;
+}
+.bt6:hover:before {
+    border-width: 108px 0 0 108px;
+}
+.bt6:hover:after {
+    border-width: 0 108px 108px 0;
+}
+.bt6:active {
+    background: #b8ba35;
+}
+/*SAMPLE-2 : BUTTON-7*/
+.bt7 {
+    overflow:hidden;
+}
+.bt7:after {
+    content: '';
+    width: 0;
+    height: 0;
+    z-index: -1;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    border-style: solid;
+    border-width: 0 0 0 0;
+    border-color: transparent #ff5722 transparent transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.bt7:before {
+    content: '';
+    width: 0;
+    height: 0;
+    z-index: -1;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    border-style: solid;
+    border-width: 0 0 0 0;
+    border-color: transparent transparent transparent #ff5722;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.bt7:hover {
+    color: white;
+}
+.bt7:hover:before, .bt7:hover:after {
+    border-width: 80px 215px;
+}
+.bt7:active {
+    background: #ff5722;
+}
+/*SAMPLE-2 : BUTTON-8*/
+.btn-layout.bt8:after {
+    position: absolute;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: #1d8ef7;
+}
+.btn-layout.bt8:after {
+    height: 130%;
+    left: -10%;
+    transform: skewX(15deg);
+    -webkit-transform: skewX(15deg);
+    -moz-transform: skewX(15deg);
+    -ms-transform: skewX(15deg);
+    -o-transform: skewX(15deg);        
+    z-index: -1;
+}
+.btn-layout.bt8:hover {
+    color: white;
+}
+.btn-layout.bt8:hover:after {
+    left: -10%;
+    width: 120%;
+}
+
+
+/*------------------------------SAMPLE-3------------------------------*/
+/*FOR SAMPLE-3 : BUTTON-7,8*/
+.btn-border-o:before, .btn-border-o:after, .btn-border-rev-o:before, .btn-border-rev-o:after {
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+.bttn{
+     overflow:visible;
+}
+.bttn:after {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    border-radius: 3px;
+    height: 100%;
+    content: '';
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.bttn:before {
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+}
+/*SAMPLE-3 : BUTTON-1*/
+.bttn.e1 {
+    -webkit-transition: background 0.2s, color 0.2s;
+    -moz-transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s;
+    -ms-transition: background 0.2s, color 0.2s;
+    -o-transition: background 0.2s, color 0.2s;
+}
+.bttn.e1:hover, .bttn.e1:hover a {
+    color: #2ecc71;
+    border-color: #2ecc71;
+}
+.bttn.e1:after {
+    top: 5px;
+    left: 5px;
+    z-index: -1;
+    opacity: 0;
+}
+.bttn.e1.layer-1:after {
+    box-shadow: 1px 1px 2px 0px #2ecc71;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+    -moz-transition: opacity 0.2s, -moz-transform 0.2s;
+    transition: opacity 0.2s, transform 0.2s;
+    -ms-transition: opacity 0.2s, -ms-transform 0.2s;
+    -o-transition: opacity 0.2s, -o-transform 0.2s;
+}
+.bttn.e1.layer-1:hover:after {
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+.bttn.e1.layer-1:before {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.7;
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
+    -ms-transition: -ms-transform 0.2s, opacity 0.2s;
+    -o-transition: -o-transform 0.2s, opacity 0.2s;
+}
+.bttn.e1.layer-1:hover:before {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+/*SAMPLE-3 : BUTTON-2*/
+.bttn.e2 {
+    -webkit-transition: background 0.2s, color 0.2s;
+    -moz-transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s;
+    -ms-transition: background 0.2s, color 0.2s;
+    -o-transition: background 0.2s, color 0.2s;
+}
+.bttn.e2:hover, .bttn.e2:hover a {
+    color: #9b59b6;
+    border-color:#9b59b6;
+}
+.bttn.e2:after {
+    top: 5px;
+    left: 5px;
+    z-index: -1;
+    opacity: 0;
+}
+.bttn.e2.layer-2:after {
+    box-shadow: 0 0 0 white;
+    -webkit-transition: opacity 0.2s, box-shadow 0.2s;
+    -moz-transition: opacity 0.2s, box-shadow 0.2s;
+    transition: opacity 0.2s, box-shadow 0.2s;
+    -ms-transition: opacity 0.2s, box-shadow 0.2s;
+    -o-transition: opacity 0.2s, box-shadow 0.2s;
+}
+.bttn.e2.layer-2:hover:after {
+    opacity: 1;
+    box-shadow: 1px 1px 2px 0px #9b59b6;
+}
+.bttn.e2.layer-2:before {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.7;
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
+    -ms-transition: -ms-transform 0.2s, opacity 0.2s;
+    -o-transition: -o-transform 0.2s, opacity 0.2s;
+}
+.bttn.e2.layer-2:hover:before {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+/*SAMPLE-3 : BUTTON-3*/
+.bttn.e3 {
+    -webkit-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    -moz-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    -o-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    -ms-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.bttn.e3:after {
+    display: none;
+}
+.bttn.e3:hover {
+    background: white;
+    color: #ff5722;
+    box-shadow: 0 0 0 5px hsla(14, 100%, 57%, 0.3);
+    border-color: hsla(14, 100%, 57%, 0.3);
+}
+.bttn.e3:hover a {
+    color: #ff5722;
+}
+.bttn.e3.layer-3:hover:before {
+    -webkit-animation: toRightFromLeft 0.3s forwards;
+    -moz-animation: toRightFromLeft 0.3s forwards;
+    animation: toRightFromLeft 0.3s forwards;
+    -ms-animation: toRightFromLeft 0.3s forwards;
+    -o-animation: toRightFromLeft 0.3s forwards;
+}
+@-webkit-keyframes toRightFromLeft {        
+  49% {
+    -webkit-transform: translate(100%);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translate(-100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes toRightFromLeft {   
+  49% {
+    -moz-transform: translate(100%);
+  }
+  50% {
+    opacity: 0;
+    -moz-transform: translate(-100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+@-o-keyframes toRightFromLeft {     
+  49% {
+    -o-transform: translate(100%);
+  }
+  50% {
+    opacity: 0;
+    -o-transform: translate(-100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes toRightFromLeft {    
+  49% {
+    -ms-transform: translate(100%);
+  }
+  50% {
+    opacity: 0;
+    -ms-transform: translate(-100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+@keyframes toRightFromLeft {
+  49% {
+    transform: translate(100%);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(-100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+/*SAMPLE-3 : BUTTON-4*/
+.bttn.e4 {
+    -webkit-transition: box-shadow 0.2s;
+    -moz-transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s;
+    -ms-transition: box-shadow 0.2s;
+    -o-transition: box-shadow 0.2s;
+}
+.bttn.e4:after {
+    top: 0;
+    left: 0;
+    padding: 0;
+    box-shadow: 0 0 0 1px;
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
+    -o-transition: -o-transform 0.2s, opacity 0.2s;
+    -ms-transition: -ms-transform 0.2s, opacity 0.2s;
+}
+.bttn.e4.layer-4:hover:after {
+    -webkit-transform: scale(0.86);
+    -moz-transform: scale(0.86);
+    -ms-transform: scale(0.86);
+    -o-transform: scale(0.86);
+    transform: scale(0.86);
+}
+.bttn.e4.layer-4:hover {
+    box-shadow: 0 0 0 5px rgba(29, 142, 247, 0.3);
+    color: #1d8ef7;
+    border-color: rgba(29, 142, 247, 0.3);
+}
+.bttn.e4.layer-4:hover a {
+    color: #1d8ef7;
+}
+/*SAMPLE-3 : BUTTON-5*/
+.e5 {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    position: relative;
+    border: 1px solid #b3b3b3;
+}
+.e5 a{
+    color: rgba(51,51,51,1);
+    text-decoration: none;
+    display: block;
+}
+.e5:hover {
+    background-color: rgba(255,255,255,0.2);
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    border-color: #9b59b6;  
+    color:#9b59b6;
+}
+/*SAMPLE-3 : BUTTON-6*/
+.btn-border-o{
+    background-color: transparent;
+    border: 1px solid #b3b3b3;
+}
+.btn-border-o:before, .btn-border-o:after {
+    content: '';
+    border-style: solid;
+    position: absolute;
+    z-index: 5;
+    border-radius: 3px;
+    box-sizing: content-box;
+}
+.btn-border-o:before {
+    width: 0;
+    height: 100%;
+    border-width: 1px 0 1px 0;
+    top: -1px;
+    left: 0;
+    -webkit-transition-delay: 0.05s;
+    -moz-transition-delay: 0.05s;
+    -ms-transition-delay: 0.05s;
+    -o-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+}
+.btn-border-o:after {
+    width: 100%;
+    height: 0;
+    border-width: 0 1px 0 1px;
+    top: 0;
+    left: -1px;
+}
+.btn-border-o:hover:before {
+    width: 100%;
+}
+.btn-border-o:hover:after {
+    height: 100%;
+}
+.btn-border-o.btn-purple:before, .btn-border-o.btn-purple:after {
+    border-color: rgba(51,51,51,1);
+}
+.btn-border-o.btn-purple:hover {
+    color: rgba(51,51,51,1);
+}
+/*SAMPLE-3 : BUTTON-7*/
+.btn-border-rev-o {
+    background-color: transparent;
+    border: 1px solid #b3b3b3;
+}
+.btn-border-rev-o:before, .btn-border-rev-o:after {
+    content: '';
+    border-style: solid;
+    position: absolute;
+    z-index: 5;
+    border-radius: 3px;
+    box-sizing: content-box;
+}
+.btn-border-rev-o:before {
+    width: 0;
+    height: 100%;
+    border-width: 1px 0 1px 0;
+    top: -1px;
+    right: 0;
+    -webkit-transition-delay: 0.05s;
+    -moz-transition-delay: 0.05s;
+    -ms-transition-delay: 0.05s;
+    -o-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+}
+.btn-border-rev-o:after {
+    width: 100%;
+    height: 0;
+    border-width: 0 1px 0 1px;
+    bottom: 0;
+    left: -1px;
+}
+.btn-border-rev-o:hover:before {
+    width: 100%;
+}
+.btn-border-rev-o:hover:after {
+    height: 100%;
+}
+.btn-border-rev-o.btn-orange:before, .btn-border-rev-o.btn-orange:after {
+    border-color: rgba(51,51,51,1);
+}
+.btn-border-rev-o.btn-orange:hover {
+    color: rgba(51,51,51,1);
+}
+/*SAMPLE-3 : BUTTON-8*/
+.e8 {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    position: absolute;
+    border: 1px solid #b3b3b3;
+    overflow: hidden;
+    left: 1198px;
+}
+.e8:hover{
+    border: 0px solid #1d8ef7;
+    color: #1d8ef7;
+}
+.e8 a{
+    color: rgba(51,51,51,1);
+    text-decoration: none;
+    display: block;
+}
+.e8::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    z-index: 1;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: translate(-100%, -600%) rotate(30deg);
+    -moz-transform: translate(-100%, -600%)  rotate(30deg);
+    -ms-transform: translate(-100%, -600%)  rotate(30deg);
+    -o-transform: translate(-100%, -600%)  rotate(30deg);
+    transform: translate(-100%, -600%)  rotate(30deg);      
+    background-color: #1d8ef7;
+    -webkit-transition-timing-function: cubic-bezier(0.3, 0, 0.125, 0.1);
+    -moz-transition-timing-function: cubic-bezier(0.3, 0, 0.125, 0.1);
+    -ms-transition-timing-function: cubic-bezier(0.3, 0, 0.125, 0.1);
+    -o-transition-timing-function: cubic-bezier(0.3, 0, 0.125, 0.1);
+    transition-timing-function: cubic-bezier(0.3, 0, 0.125, 0.1);
+}
+.e8:hover::before{
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);  
+}
+
+
+/*------------------------------SAMPLE-4------------------------------*/
+/*SAMPLE-4 : BUTTON-1*/
+.eff-1::before,
+.eff-1::after {
+    content: attr(data-text);
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    background: #2ecc71;
+    color: #fff;
+    overflow: hidden;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    -ms-transition: -ms-transform 0.3s;
+    -o-transition: -o-transform 0.3s;
+    transition: transform 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    -moz-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    -ms-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    -o-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.eff-1::before {
+    top: -2px;
+    padding-top: 21.5px;
+}
+.eff-1::after {
+    bottom: 0;
+    line-height: 0;
+}
+.eff-1:hover::before {
+    -webkit-transform: translate3d(0, -100%, 0);
+    -moz-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    -o-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    border-color:#2ecc71;
+}
+.eff-1:hover::after {
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+}
+.eff-1:hover{
+    color:#2ecc71;
+    border-color:#2ecc71;
+}
+/*SAMPLE-4 : BUTTON-2*/
+.eff-2 {
+    background: #9b59b6;
+    color: #fff;
+    overflow: hidden;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+.eff-2 > span {
+    display: block;
+    position:relative;
+    left: -69px;
+    opacity: 0;
+    color: #fff;
+    -webkit-transform: translate3d(0, -10px, 0);
+    -moz-transform: translate3d(0, -10px, 0);
+    -ms-transform: translate3d(0, -10px, 0);
+    -o-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -ms-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -o-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+.eff-2::before {
+    content: attr(data-text);
+    top: 0;
+    left: 0;
+    height: 100%;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    -ms-transition: -ms-transform 0.3s, opacity 0.3s;
+    -o-transition: -o-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    -moz-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    -ms-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    -o-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+.eff-2:hover {
+    background-color: rgba(155, 89, 182, 0.58);
+}
+.eff-2:hover::before {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+}
+.eff-2:hover > span {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.eff-2:hover > span:nth-child(1) {  
+    -webkit-transition-delay: 0.045s;
+    transition-delay: 0.045s;
+}
+.eff-2:hover > span:nth-child(2) {      
+    -webkit-transition-delay: 0.09s;
+    transition-delay: 0.09s;
+}
+.eff-2:hover > span:nth-child(3) {      
+    -webkit-transition-delay: 0.135s;
+    transition-delay: 0.135s;
+}
+.eff-2:hover > span:nth-child(4) {      
+    -webkit-transition-delay: 0.18s;
+    transition-delay: 0.18s;
+}
+.eff-2:hover > span:nth-child(5) {      
+    -webkit-transition-delay: 0.225s;
+    transition-delay: 0.225s;
+}
+.eff-2:hover > span:nth-child(6) {      
+    -webkit-transition-delay: 0.27s;
+    transition-delay: 0.27s;
+}
+.eff-2:hover > span:nth-child(7) {      
+    -webkit-transition-delay: 0.315s;
+    transition-delay: 0.315s;
+}
+/*SAMPLE-4 : BUTTON-3*/
+.eff-3{
+    background-color: #ff5722;
+    color:white;
+}
+.btn-layout.eff-3 {
+    overflow: hidden;
+    color: #fff;
+    background: #ff5722;
+    -webkit-transition: background-color 0.3s ease-in, color 0.3s ease-in;
+    -moz-transition: background-color 0.3s ease-in, color 0.3s ease-in;
+    -ms-transition: background-color 0.3s ease-in, color 0.3s ease-in;
+    -o-transition: background-color 0.3s ease-in, color 0.3s ease-in;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+.eff-3::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 20px;  
+    left: -3px;     
+    width: 100%;
+    height: 100%;
+    color: white;
+    -webkit-transform-origin: 30% 30%;
+    -moz-transform-origin: 30% 30%;
+    -ms-transform-origin: 30% 30%;
+    transform-origin: 30% 30%;  
+    -webkit-transform: rotate3d(1, 1, 0, 90deg);
+    -moz-transform: rotate3d(1, 1, 0, 90deg);
+    -ms-transform: rotate3d(1, 1, 0, 90deg);
+    -o-transform: rotate3d(1, 1, 0, 90deg);
+    transform: rotate3d(1, 1, 0, 90deg);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    -moz-transition: -moz-transform 0.5s ease-in;
+    -ms-transition: -ms-transform 0.5s ease-in;
+    -o-transition: -o-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+}
+.eff-3:hover::after,
+.eff-3:hover {
+    -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -ms-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.eff-3:hover {
+    background-color: rgba(255, 87, 34, 0.58);
+    color: rgba(255, 87, 34, 0.58);
+}
+.eff-3:hover::after {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    -moz-transform: rotate3d(0, 0, 1, 0deg);
+    -ms-transform: rotate3d(0, 0, 1, 0deg);
+    -o-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+}
+/*SAMPLE-4 : BUTTON-4*/
+.eff-4{
+    background: #1d8ef7;
+    color:#fff;
+}
+.btn-layout.eff-4:after {
+    content: "";
+    display:block;
+    border-top: 0 #fff solid;
+    border-bottom: 15px #b3b3b3 solid;
+    border-left: 15px #fff solid;
+    position:absolute;
+    top:0;
+    left:0;
+    width:0;
+    z-index:-1;
+    overflow:hidden;
+}
+.btn-layout.eff-4:hover:after {
+    z-index:-1;
+    border-left: 185px solid #fff;
+    border-bottom:185px solid transparent;
+    overflow:hidden;
+    background-color:#1d8ef7;
+}
+.btn-layout.eff-4:hover {
+    color:#1d8ef7;
+    border-color:#1d8ef7;
+    overflow:hidden;
+}
+.btn-layout.eff-4:hover, .btn-layout.eff-4:after, .btn1 {
+    -webkit-transition: 0.1s color ease;
+    -moz-transition: 0.1s color ease;
+    -o-transition: 0.1s color ease;
+    -ms-transition: 0.1s color ease;
+    transition: 0.1s color ease;
+}
+.btn-layout.eff-4:hover, .btn-layout.eff-4:after {
+    -webkit-transition: 0.5s border ease;
+    -moz-transition: 0.5s border ease;
+    -o-transition: 0.5s border ease;
+    -ms-transition: 0.5s border ease;
+    transition: 0.5s border ease;
+}
+.btn-layout.eff-4:after {
+    overflow:hidden;
+}
+.btn-layout.eff-4:before, .btn-layout.eff-4:hover:before, .btn-layout.eff-4:hover:after {
+    -webkit-transition: 0.75s all ease;
+    -moz-transition: 0.75s all ease;
+    -o-transition: 0.75s all ease;
+    -ms-transition: 0.75s all ease;
+    transition: 0.75s all ease;
+}
+/*SAMPLE-4 : BUTTON-5*/
+.eff-5 {
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    transition: all 0.1s;
+    position: relative;
+    border: 1px solid #b3b3b3;
+    overflow: hidden;
+}
+.eff-5 a{
+    color: rgba(51,51,51,1);
+    text-decoration: none;
+    display: block;
+}
+.eff-5 span {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.eff-5:hover{
+    color: white;
+    background-color: rgba(46, 204, 113, 0.35);
+    border-color: #2ecc71;
+}
+.eff-5:hover > span{
+    opacity: 1;
+    -webkit-transform: translate(0px,40px);
+    -moz-transform: translate(0px,40px);
+    -ms-transform: translate(0px,40px);
+    -o-transform: translate(0px,40px);
+    transform: translate(0px,40px);
+}
+.eff-5::after{
+    content: attr(data-text);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 20px;
+    left: 0;
+    opacity: 0;
+    -webkit-transform: translate(-30%, 0);
+    -moz-transform: translate(-30%, 0);
+    -ms-transform: translate(-30%, 0);
+    transform: translate(-30%, 0);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;   
+}
+.eff-5:hover::after{
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+.wrapper-inner-tab-backgrounds-first{
+    float: left;
+    height: 60px;
+    width: 155px;
+}
+/*SAMPLE-4 : BUTTON-6*/
+.eff-6 {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    position: relative;
+    overflow:hidden;
+}
+.eff-6 a{
+    color: rgba(51,51,51,1);
+    text-decoration: none;
+    display: block;
+}
+.eff-6::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border: 1px solid rgba(255,255,255,0.5);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.eff-6:hover::before{
+    opacity: 0;
+    -webkit-transform: scale(1.2,1.2);
+    -moz-transform: scale(1.2,1.2);
+    -ms-transform: scale(1.2,1.2);
+    -o-transform: scale(1.2,1.2);
+    transform: scale(1.2,1.2);
+}
+.eff-6:hover{
+    color: white;
+    border-color: #9b59b6;
+}
+.eff-6::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    background-color: rgba(155, 89, 182, 0.32);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scale(0.5,0.5);
+    -moz-transform: scale(0.5,0.5);
+    -ms-transform: scale(0.5,0.5);
+    -o-transform: scale(0.5,0.5);
+    transform: scale(0.5,0.5);
+}
+.eff-6:hover::after{
+    opacity: 1 ;
+    -webkit-transform: scale(1,1);
+    -moz-transform: scale(1,1);
+    -ms-transform: scale(1,1);
+    -o-transform: scale(1,1);
+    transform: scale(1,1);
+}
+/*SAMPLE-4 : BUTTON-7*/
+.eff-7 {
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+}
+.L1 {
+    overflow: hidden;
+}
+.L1 .insider {
+    background-color: #fff;
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    left: -280px;
+    transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
+    -moz-transform: rotateZ(45deg);
+    -o-transform: rotateZ(45deg);
+    -ms-transform: rotateZ(45deg);
+}
+.L1:hover {
+    background-color: rgba(255, 87, 34, 0.35);
+    color: #fff;
+    border-color: #ff5722;
+}
+.L1:hover .insider {
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    left: 135px;
+}
+/*SAMPLE-4 : BUTTON-8*/
+.eff-8:hover {
+    border-color: #1d8ef7;
+    color: #1d8ef7;
+    animation: vibrate 0.3s linear 1;
+    -webkit-animation: vibrate 0.3s linear 1;
+    -moz-animation: vibrate 0.3s linear 1;
+    -o-animation: vibrate 0.3s linear 1;
+    -ms-animation: vibrate 0.3s linear 1;
+}
+
+@keyframes vibrate {
+33% {
+    transform: rotateZ(10deg);
+    -webkit-transform: rotateZ(10deg);
+    -moz-transform: rotateZ(10deg);
+    -o-transform: rotateZ(10deg);
+    -ms-transform: rotateZ(10deg);
+}
+67% {
+    transform: rotateZ(-10deg);
+    -webkit-transform: rotateZ(-10deg);
+    -moz-transform: rotateZ(-10deg);
+    -o-transform: rotateZ(-10deg);
+    -ms-transform: rotateZ(-10deg);
+}
+100% {
+    transform: rotateZ(10deg);
+    -webkit-transform: rotateZ(10deg);
+    -moz-transform: rotateZ(10deg);
+    -o-transform: rotateZ(10deg);
+    -ms-transform: rotateZ(10deg);
+  }
+}
+
+
+/*------------------------------SAMPLE-5------------------------------*/
+/*common for all SAMPLE-5 buttons*/
+.btn-layout-1 span {
+    display: block;
+    margin: 0 5px 0 0;
+    height:60px;    
+    width:155px;    
+    position: absolute;
+    opacity: .999;
+    border-radius: 3px;
+    padding: 20px 37px;
+    text-align:center;
+    border:1px solid #b3b3b3;
+    -moz-box-sizing: border-box;
+    -webkit-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+/*SAMPLE-5 : BUTTON-1*/
+.type1 span:last-of-type {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    background: #1d8ef7;
+}
+.type1:hover span:last-of-type {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    background: #2ecc71;
+    color: #fafafa; 
+    border-color: #2ecc71;
+}
+/*SAMPLE-5 : BUTTON-2*/
+.type2 span {
+    left: 214px;
+}
+.type2 span:last-of-type {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+    -webkit-transform-origin: bottom;
+    background: #1d8ef7;
+}
+.type2:hover span:last-of-type {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    background: #2ecc71;
+    color: #fafafa; 
+    border-color: #2ecc71;
+}
+/*SAMPLE-5 : BUTTON-3*/
+.type3 span {
+    left:379px;
+}
+.type3 span:last-of-type {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    background: #1d8ef7;
+}
+.type3:hover span:last-of-type {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    background: #2ecc71;
+    color: #fafafa; 
+    border-color: #2ecc71;
+}
+/*SAMPLE-5 : BUTTON-4*/
+.type4 span {
+    left: 542px;
+}
+.type4 span:last-of-type {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    transform-origin: right;
+    -webkit-transform-origin: right;
+    -moz-transform-origin: right;
+    -ms-transform-origin: right;
+    -o-transform-origin: right;
+    background: #1d8ef7;
+}
+.type4:hover span:last-of-type {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    background: #2ecc71;
+    color: #fafafa; 
+    border-color: #2ecc71;
+}
+/*SAMPLE-5 : BUTTON-5*/
+.type5 span {
+    left: 706px;
+}
+.type5 span:last-of-type {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+    -moz-transform-origin: center;
+    -ms-transform-origin: center;
+    -o-transform-origin: center;
+    background: #1d8ef7;
+}
+.type5:hover span:last-of-type {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    background: #2ecc71;
+    color: #fafafa;
+    border-color: #2ecc71;  
+}
+/*SAMPLE-5 : BUTTON-6*/
+.type6 span {
+    left: 870px;
+}
+.type6 span:last-of-type {
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+    -moz-transform-origin: center;
+    -ms-transform-origin: center;
+    -o-transform-origin: center;
+    background: #1d8ef7;
+}
+.type6:hover span:last-of-type {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    background: #2ecc71;
+    color: #fafafa; 
+    border-color: #2ecc71;
+}
+/*SAMPLE-5 : BUTTON-7*/
+.type7 span {
+    left:1033px;
+}
+.type7 span:last-of-type {
+    -webkit-transform: rotateX(270deg);
+    transform: rotateX(270deg);
+    -moz-transform: rotateX(270deg);
+    -o-transform: rotateX(270deg);
+    -ms-transform: rotateX(270deg);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    background: #1d8ef7;
+}
+.type7:hover span:last-of-type {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    background: #2ecc71;
+    color: #fafafa; 
+    border-color: #2ecc71;
+}
+/*SAMPLE-5 : BUTTON-8*/
+.type8 span {
+    left: 1196px;
+}
+.type8 span:last-of-type {
+    opacity: 0;
+    transition: opacity .5s ease;
+    -moz-transition: opacity .5s ease;
+    -webkit-transition: opacity .5s ease;
+    -ms-transition: opacity .5s ease;
+    -o-transition: opacity .5s ease;
+    background: #1d8ef7;
+}
+.type8:hover span:last-of-type {
+    opacity: 1;
+    transition: opacity .5s ease;
+    -moz-transition: opacity .5s ease;
+    -webkit-transition: opacity .5s ease;
+    -ms-transition: opacity .5s ease;
+    -o-transition: opacity .5s ease;
+    color: #fafafa;
+    border-color: #1d8ef7;
+}
+
+
+/*------------------------------SAMPLE-6------------------------------*/
+/*Common for SAMPLE-6 : BUTTON-1,2,3*/
+.btn-layout.effect-1:after, .btn-layout.effect-2:after, .btn-layout.effect-3:after {
+    position: absolute;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    content: '';
+    width: 0;
+    bottom: 0;
+    height: 3px;
+}
+/*SAMPLE-6 : BUTTON-1*/
+.btn-layout.effect-1:after {
+    left:50%;
+}
+.btn-layout.effect-1:hover:after {
+    width: 100%;
+    left: 0;
+    background: #2ecc71;
+}
+.btn-layout.effect-1:hover {
+    border-color: #2ecc71;
+    color: #2ecc71;
+}
+/*SAMPLE-6 : BUTTON-2*/
+.btn-layout.effect-2:after {
+    left: 0;
+}
+.btn-layout.effect-2:hover:after {
+    width: 100%;
+    left: 0;
+    background: #9b59b6;
+}
+.btn-layout.effect-2:hover {
+    border-color: #9b59b6;
+    color: #9b59b6;
+}
+/*SAMPLE-6 : BUTTON-3*/
+.btn-layout.effect-3:after {
+    right: 0;
+    left: 100%;
+}
+.btn-layout.effect-3:hover:after {
+    width: 100%;
+    left: 0;
+    background: #ff5722;
+}
+.btn-layout.effect-3:hover {
+    border-color: #ff5722;
+    color: #ff5722;
+}
+/*SAMPLE-6 : BUTTON-4*/
+.effect-4 {
+  -ms-transform: perspective(1px) translateZ(0);
+  -o-transform: perspective(1px) translateZ(0);
+  -moz-transform: perspective(1px) translateZ(0);
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  overflow: hidden;
+}
+.effect-4:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1d8ef7;
+  height: 4px;
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.effect-4:hover:before, .effect-4:focus:before, .effect-4:active:before {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.btn-layout.effect-4:hover {
+    border-color: #1d8ef7;
+    color: #1d8ef7;
+}
+/*SAMPLE-6 : BUTTON-5*/
+.effect-5::before {
+  border-bottom: 1px solid #2ecc71;
+  border-left: 1px solid #2ecc71;
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+.effect-5::after {
+  border-top: 1px solid #2ecc71;
+  border-right: 1px solid #2ecc71;
+  -webkit-transform-origin: 100% 0%;
+  -moz-transform-origin: 100% 0%;
+  -ms-transform-origin: 100% 0%;
+  -o-transform-origin: 100% 0%;
+  transform-origin: 100% 0%;
+}
+.btn-layout.effect-5::before, .btn-layout.effect-5::after {
+  width: 100%;
+  height:100%;
+  z-index: 3;
+  content:'';
+  position: absolute;
+  top:0;
+  left:0;
+  box-sizing: border-box;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.btn-layout.effect-5:hover {
+  border: 1px solid #2ecc71;
+  color: #2ecc71;
+}
+.btn-layout.effect-5:hover::after, .btn-layout.effect-5:hover::before {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+/*SAMPLE-6 : BUTTON-6*/
+.effect-6 a {
+    text-shadow: none;
+    -ms-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+}
+.effect-6 a::before,
+.effect-6 a::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #9b59b6;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+    -ms-transition: opacity 0.3s, -ms-transform 0.3s;
+    -o-transition: opacity 0.3s, -o-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+.effect-6 a::before {
+    top: 0;
+    position:absolute;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+.effect-6 a::after {
+    bottom: 0;
+    position:absolute;
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    transform: translateY(10px);
+}
+.effect-6 a:hover,
+.effect-6 a:focus {
+    color: #9b59b6;     
+    border-color: #9b59b6;
+}
+.effect-6 a:hover::before,
+.effect-6 a:focus::before,
+.effect-6 a:hover::after,
+.effect-6 a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+}
+.effect-6:hover{
+    border-style:none;
+}
+/*SAMPLE-6 : BUTTON-7*/
+.btn-layout.effect-7:after, .btn-layout.effect-7:before{
+    content: '';
+    position:absolute;
+    left:0;
+    box-sizing: border-box;
+    border-radius: 3px;
+    height: 100%;   
+    width: 100%;    
+    margin-top: -14%;
+    display:inline-block;
+    opacity:0;
+    transition:opacity 0.35s, transform 0.35s;
+    -moz-transition:opacity 0.35s, -moz-transform 0.35s;
+    -ms-transition:opacity 0.35s, -ms-transform 0.35s;
+    -o-transition:opacity 0.35s, -o-transform 0.35s;
+    -webkit-transition:opacity 0.35, -webkit-transform 0.35s;
+}
+.btn-layout.effect-7:before{
+    position:absolute;
+    bottom: 0px;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    transform:scale(1,0);
+    -moz-transform:scale(1,0);
+    -ms-transform:scale(1,0);
+    -o-transform:scale(1,0);
+    -webkit-transform:scale(1,0);
+    border-color: #ff5722;      
+}
+.btn-layout.effect-7:after{
+    position:absolute;
+    bottom: 0px;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    transform:scale(0,1);
+    -moz-transform:scale(0,1);
+    -ms-transform:scale(0,1);
+    -o-transform:scale(0,1);
+    -webkit-transform:scale(0,1);
+    border-color: #ff5722;      
+}
+.btn-layout.effect-7:hover:after, .btn-layout.effect-7:hover:before{
+    opacity:1;
+    transform:scale(1);     
+    -moz-transform:scale(1);
+    -ms-transform:scale(1);
+    -o-transform:scale(1);
+    -webkit-transform:scale(1);
+}
+
+.effect-7:hover {        
+  border: 1px solid #ff5722;
+  color: #ff5722;   
+}
+/*SAMPLE-6 : BUTTON-8*/
+.btn-layout.effect-8::before, .btn-layout.effect-8::after {
+  width: 100%;
+  height:100%;
+  z-index: 3;
+  content:'';
+  position: absolute;
+  top:0;
+  left:0;
+  box-sizing: border-box;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.btn-layout.effect-8:hover {        
+  border: 1px solid #1d8ef7;        
+  color: #1d8ef7;       
+}
+.btn-layout.effect-8:hover::after, .btn-layout.effect-8:hover::before {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.effect-8::before {
+  border-bottom: 1px solid #1d8ef7;     
+  border-left: 1px solid #1d8ef7;       
+  transform-origin: 100% 0%;        
+  -moz-transform-origin: 100% 0%;
+  -ms-transform-origin: 100% 0%;
+  -o-transform-origin: 100% 0%;
+  -webkit-transform-origin: 100% 0%;
+}
+.effect-8::after {
+  border-top: 1px solid #1d8ef7;        
+  border-right: 1px solid #1d8ef7;  
+  transform-origin: 0% 100%;        
+  -moz-transform-origin: 0% 100%;
+  -ms-transform-origin: 0% 100%;
+  -o-transform-origin: 0% 100%;
+  -webkit-transform-origin: 0% 100%;
+}
+
+
+/*==css 2====*/
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    font-family: 'Raleway', sans-serif;  
+    margin:0px;
+    font-size: 15px;            
+    color: #b3b3b3;             
+    width:100%;
+}
+* { 
+    box-sizing:border-box;
+}
+a:-webkit-any-link {
+    text-decoration:none;
+}
+.hdr{
+    padding:5px; 
+    background-color:white;
+}
+h1 { 
+    color: turquoise; 
+    font-family: 'Raleway', sans-serif; 
+    font-size: 40px; 
+    text-shadow: 1px 2px 2px rgba(149, 150, 150, 1);
+    font-weight: bold; 
+    letter-spacing: -1px; 
+    line-height: 1; 
+    text-align: center; 
+}
+h2 {
+    color: tomato; 
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 20px; 
+    font-weight: 300;  
+    text-align: center; 
+}
+p { 
+    color: tomato; 
+    text-align:center;
+    font-family: 'Raleway', sans-serif; 
+    font-size: 14px;  
+    margin: 0 0 24px;  
+}
+.content-1{
+    height: auto;
+    width: 1430px;
+}
+.white {
+    height: 200px;
+    padding:70px 50px;
+    background:white;
+    box-shadow:0px 0.5px 6px 0 #8a8a8a;
+}
+.grey {
+    height: 200px;
+    padding:70px 50px;
+    background:#efefef;
+    box-shadow:0px 0.5px 8px 0 #8a8a8a;
+}
+section{
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: -o-max-content;
+    width: -ms-max-content;
+}
+div{
+    max-width: auto;
+}
+table{
+    border-collapse: collapse;
+    height: 600px;
+    width: 1430px;
+}
+td{
+    height: auto;
+    border-style: dotted;
+    text-align: center;
+    padding: 50px;
+    width: 1430px;
+}
+.btn-layout, .bttn {        
+    display: inline-flex;
+    margin: 0 5px 0 0;
+    height:60px;    
+    width:155px;        
+    position: relative;
+    opacity: 0.999;
+    padding: 20px 37px;     
+    text-align:center;
+    border-radius:3px;      
+    border: 1px solid #b3b3b3;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    overflow:hidden;
+}
+.btn-layout, .bttn {
+    display: inline-flex;
+    margin: 0 5px 0 0;
+    height: 60px;
+    width: 155px;
+    position: relative;
+    opacity: 0.999;
+    padding: 20px 37px;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #b3b3b3;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    overflow: hidden;
+  </style>
+</head>
+<body>
+
+<section class="content-1">
+  
+    <div class="hdr"> 
+            <h1> CSS3 Hover Button Effects</h1>
+            <h2>NO USE OF JAVA & JQUERY. PURE CSS3 AND HTML5.</h2>
+            <p>Easily Customizable | No Images | Pure Coding</p>
+    </div>                       
+    
+    <div class="grey">                         
+            <a class="btn-layout b1">SAMPLE 1</a>
+            <a class="btn-layout b2">SAMPLE 1</a>
+            <a class="btn-layout b3">SAMPLE 1</a>
+            <a class="btn-layout b4">SAMPLE 1</a>
+            <a class="btn-layout b5">SAMPLE 1</a>
+            <a class="btn-layout b6">SAMPLE 1</a>
+            <a class="btn-layout b7">SAMPLE 1</a>
+            <a class="btn-layout b8">SAMPLE 1</a>
+    </div>                                              
+    
+    <div class="white">      
+            <a class="btn-layout bt1">SAMPLE 2</a>
+            <a class="btn-layout bt2">SAMPLE 2</a>
+            <a class="btn-layout bt3">SAMPLE 2</a>
+            <a class="btn-layout bt4">SAMPLE 2</a>
+            <a class="btn-layout bt5">SAMPLE 2<span></span></a>
+            <a class="btn-layout bt6">SAMPLE 2</a>
+            <a class="btn-layout bt7">SAMPLE 2</a>
+            <a class="btn-layout bt8">SAMPLE 2</a>
+    </div>                  
+    
+    <div class="grey">       
+            <a class="bttn e1 layer-1">SAMPLE 3</a>
+            <a class="bttn e2 layer-2">SAMPLE 3</a>
+            <a class="bttn e3 layer-3">SAMPLE 3</a>
+            <a class="bttn e4 layer-4">SAMPLE 3</a>
+            <a class="bttn e5">SAMPLE 3</a>
+            <a class="bttn btn-purple btn-border-o">SAMPLE 3</a>  
+            <a class="bttn btn-orange btn-border-rev-o">SAMPLE 3</a>  
+            <a class="bttn e8">SAMPLE 3</a>
+    </div>                     
+    
+    <div class="white">          
+            <a class="btn-layout eff-1" data-text="SAMPLE 4">SAMPLE 4</a>
+            <a class="btn-layout eff-2" data-text="SAMPLE4"><span>S</span><span>A</span><span>M</span><span>P</span><span>L</span><span>E</span><span>4</span></a>
+            <a class="btn-layout eff-3" data-text="SAMPLE 4">SAMPLE 4</a>
+            <a class="btn-layout eff-4">SAMPLE 4</a>
+            <a class="btn-layout eff-5" data-text="HELLO!"><span>SAMPLE 4</span></a>
+            <a class="btn-layout eff-6">SAMPLE 4</a>
+            <a class="btn-layout eff-7 L1"><div class="insider"></div>SAMPLE 4</a>
+            <a class="btn-layout eff-8">SAMPLE 4</a>
+    </div>                        
+    
+    <div class="grey">             
+            <a class="btn-layout-1 type1">
+                <span>SAMPLE 5</span>
+                <span>HELLO!</span>
+            </a>
+            <a class="btn-layout-1 type2">
+                <span>SAMPLE 5</span>
+                <span>HELLO!</span>
+            </a>
+            <a class="btn-layout-1 type3">
+                <span>SAMPLE 5</span>
+                <span>HELLO!</span>
+            </a>
+            <a class="btn-layout-1 type4">
+                <span>SAMPLE 5</span>
+                <span>HELLO!</span>
+            </a>
+            <a class="btn-layout-1 type5">
+                <span>SAMPLE 5</span>
+                <span>HELLO!</span>
+            </a>
+            <a class="btn-layout-1 type6">
+                <span>SAMPLE 5</span>
+                <span>HELLO!</span>
+            </a>
+            <a class="btn-layout-1 type7">
+                <span>SAMPLE 5</span>
+                <span>HELLO!</span>
+            </a>
+            <a class="btn-layout-1 type8">
+                <span>SAMPLE 5</span>
+                <span>HELLO!</span>
+            </a>
+    </div>                      
+
+    <div class="white">     
+            <a class="btn-layout effect-1">SAMPLE 6</a>
+            <a class="btn-layout effect-2">SAMPLE 6</a>
+            <a class="btn-layout effect-3">SAMPLE 6</a>
+            <a class="btn-layout effect-4">SAMPLE 6</a>
+            <a class="btn-layout effect-5">SAMPLE 6</a>
+            <div class="effect-6" style="display:inline-flex;">
+                    <a class="btn-layout">SAMPLE 6</a>
+            </div>
+            <a class="btn-layout effect-7">SAMPLE 6</a>
+            <a class="btn-layout effect-8">SAMPLE 6</a>
+    </div>                       
+    
+   
+
+  </section>
+
+
+</body>
+</html>
