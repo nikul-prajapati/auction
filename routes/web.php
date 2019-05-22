@@ -9,6 +9,16 @@
 Route::get('lang/{lang}', 'LanguageController@swap');
 
 /* ----------------------------------------------------------------------- */
+Route::get('/contactus',function()
+{
+	return view('frontend.contactus');
+});
+
+
+Route::get('/aboutus',function()
+{
+	return view('frontend.aboutus');
+});
 
 /*
  * Frontend Routes
@@ -37,7 +47,10 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'admin.', '
 //Route::get('register/sub', function () { return view('register'); })->name('sub');
    Route::get('register/details', 'frontend\auth\loginController@showLoginForm');
 
+   Route::resource('details', 'detailsController');
+
 /*
 * Routes From Module Generator
 */
 includeRouteFiles(__DIR__.'/Generator/');
+

@@ -6,8 +6,9 @@ use App\Models\ModelTrait;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Team\Traits\TeamAttribute;
 use App\Models\Team\Traits\TeamRelationship;
+use App\Models\BaseModel;
 
-class Team extends Model
+class Team extends BaseModel
 {
     use ModelTrait,
         TeamAttribute,
@@ -31,7 +32,7 @@ class Team extends Model
      * @var array
      */
     protected $fillable = [
-
+            'Team_name', 'created_by', 'updated_by'
     ];
 
     /**

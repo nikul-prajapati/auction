@@ -17,7 +17,7 @@ class RegisterController extends Controller
 
     /**
      * @var UserRepository
-     */
+    */
     protected $user;
 
     /**
@@ -62,19 +62,22 @@ class RegisterController extends Controller
             return redirect($this->redirectPath());
         }*/
 
-        if (config('access.users.confirm_email') || config('access.users.requires_approval')) 
-        {
-            $user = $this->user->create($request->only('first_name', 'last_name', 'email', 'password', 'is_term_accept'));
+
+        if (config('access.users.confirm_email') || config('access.users.requires_approval')) {
+            $user = $this->user->create($request->only('first_name', 'last_name', 'email', 'password', 'filename', 'is_term_accept'));
             event(new UserRegistered($user));
-            return view('frontend.auth.details')->withFlashSuccess(
+                    // trans('exceptions.frontend.auth.confirmation.created_pending') :
+                    // trans('exceptions.frontend.auth.confirmation.created_confirm')
+
+            return view('frontend.auth.login')->withFlashSuccess(
              trans('hii')
             );
-        } 
-        else {
+        } else {
             access()->login($this->user->create($request->only('first_name', 'last_name', 'email', 'password', 'is_term_accept')));
             event(new UserRegistered(access()->user()));
 
-           // return redirect($this->redirectPath());
+            return redirect($this->redirectPath());
         }
+
     }
 }

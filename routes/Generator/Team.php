@@ -1,6 +1,6 @@
 <?php
 /**
- * Team
+ * Teams
  *
  */
 Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'admin'], function () {

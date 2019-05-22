@@ -1,4 +1,6 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse navbar-fixed-top" 
+    style="border-bottom: 1px solid grey;background-color: white;">
+
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#frontend-navbar-collapse">
@@ -6,13 +8,22 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-            </button>
+            </button> 
 
-           {{--   @if(settings()->logo)
-            <a href="{{ route('frontend.index') }}" class="logo"><img height="48" width="226" class="navbar-brand" src="{{route('frontend.index')}}/img/site_logo/{{settings()->logo}}"></a>
-            @else --}}
-             {{ link_to_route('frontend.index',app_name(), [], ['class' => 'navbar-brand']) }}
-           {{--  @endif --}}
+           
+
+          <!--  {{--   @if(settings()->logo)
+           -->  
+            <!-- <a href="{{ route('frontend.index') }}" class="logo">  -->
+              <!--   <img height="48" width="48" src="img/frontend/logo.png"> --><!-- </a> -->
+           <!--  @else --}} -->
+           
+
+           <!--   {{ link_to_route('frontend.index',"Cygnet Cricket League", [], ['class' => 'navbar-brand']) }} -->
+
+           <!-- {{--  @endif --}} -->
+         <a href="\">   <img src="img/frontend/logo1.png" alt="img"   style="height: 50px;" ></a>
+
         </div><!--navbar-header-->
 
         <div class="collapse navbar-collapse" id="frontend-navbar-collapse">
@@ -20,7 +31,12 @@
                 <li></li>
             </ul> --}}
             <ul class="nav navbar-nav navbar-right">
-                @if (config('locale.status') && count(config('locale.languages')) > 1)
+
+                <li><a href="{{trans('contactus')}}" role="button" class="btn">Contact us</a></li>
+                <li><a href="{{trans('aboutus')}}" role="button" class="btn">About us</a></li>
+
+
+                <!-- @if (config('locale.status') && count(config('locale.languages')) > 1)
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             {{ trans('menus.language-picker.language') }}
@@ -29,7 +45,7 @@
 
                         @include('includes.partials.lang')
                     </li>
-                @endif
+                @endif -->
 
                 @if ($logged_in_user)
                     <li>{{ link_to_route('frontend.user.dashboard', trans('navs.frontend.dashboard')) }}</li>

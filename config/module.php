@@ -29,4 +29,25 @@ return [
 	"details" => [
 	"table" => "details",
 	],
+	"players" => [
+	"table" => "players",
+	],
+	"playerrecords" => [
+	"table" => "player_records",
+	],
+	"auctions" => [
+	"table" => "auctions",
+	],
+	"playerinformations" => [
+	"table" => "player_information",
+	],
+	"selectcaptains" => [
+	"table" => "selectcaptains",
+	],
+	"bids" => [
+	"table" => "bids",
+	],
+	"biddings" => [
+	"table" => "biddings",
+	],
 ];

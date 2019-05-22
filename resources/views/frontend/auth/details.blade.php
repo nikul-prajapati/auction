@@ -1,117 +1,115 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-    <div class="row">
+    @if ($errors->any())            
+     <ul>
+         @foreach ($errors->all() as $error)
+         <li>{{ $error }}</li>
+             @endforeach
+      </ul>
+     @endif
 
-        <div class="col-md-8 col-md-offset-2">
+<div class="col-md-6" style="border-radius: 5px;margin-left:30%;background-color: white;">
 
-            <div class="panel panel-default">
-                <div class="panel-heading">{{ trans('labels.frontend.auth.register_box_title') }}</div>
+<form method="POST" action="{{route('details.store')}}"  class="form-horizontal" enctype="multipart/form-data"> 
+      {{csrf_field()}}
+<h2 style="text-align: center;">Records</h2>
+        
 
-                <div class="panel-body">
+        <div class="form-group">
+                  @csrf
+               <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input  name="match" placeholder="match" class="form-control"  type="input">
+               </div>
+        </div>
 
-                   
-                    <div class="form-group">
-                        {{ Form::label('match', trans('Match').'*', ['class' => 'col-md-4 control-label']) }}
-                        <div class="col-md-6">
-                            {{ Form::input('match', 'match', null, ['class' => 'form-control', 'placeholder' => trans('Match')]) }}
-                        </div><!--col-md-6-->
-                    </div><!--form-group--><br><br>
+        <div class="form-group">
+               <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input  name="runs" placeholder="runs" class="form-control"  type="input">
+               </div>
+        </div>
 
-                    <div class="form-group">
-                        {{ Form::label('runs', trans('Runs').'*', ['class' => 'col-md-4 control-label']) }}
-                        <div class="col-md-6">
-                            {{ Form::input('runs', 'runs', null, ['class' => 'form-control', 'placeholder' => trans('Runs')]) }}
-                        </div><!--col-md-6-->
-                    </div><!--form-group--><br><br>
+        <div class="form-group">
+               <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input  name="wickets" placeholder="wicket" class="form-control"  type="input">
+               </div>
+        </div>
 
-                     <div class="form-group">
-                        {{ Form::label('runs', trans('Wickets').'*', ['class' => 'col-md-4 control-label']) }}
-                        <div class="col-md-6">
-                            {{ Form::input('wickets', 'wickets', null, ['class' => 'form-control', 'placeholder' => trans('wickets')]) }}
-                        </div><!--col-md-6-->
-                    </div><!--form-group--><br><br>
-                
-                   <div class="form-group">
-                        {{ Form::label('type', trans('Type').'*', ['class' => 'col-md-4 control-label']) }}
-                       
-                        <div class="col-md-4">
-                          
-                          <select name=""> 
-                            <option value="Batsman">Batsman</option>
-                            <option value="Bowler">Bowler</option>
-                            <option value="All Rounder">All Rounder</option>
-                          </select>                 
-                        </div><!--col-md-6-->
-                    </div><!--form-group--><br><br>
-                
+        <div class="form-group">
+            <div class="input-group">
+            <!-- <label for="type" class="input-group"></label> -->
+            <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
+            <select name="type" class="form-control" style="padding: 5px;"> 
+ 
+                    <option value="Batsman">Batsman</option>
+                    <option value="Bowler">Bowler</option>
+                    <option value="All Rounder">All Rounder</option>
 
-               <div class="form-group">
-                        {{ Form::label('batsman', trans('Batsman').'*', ['class' => 'col-md-4 control-label']) }}
-                       
-                        <div class="col-md-4">
-                          
-                          <select name=""> 
-                <option value="LeftHanded">Left Handed</option>
-                <option value="RightHanded">Right Handed</option>
-                </select>
-                     
-                        
-                        </div><!--col-md-6-->
-                    </div><!--form-group--><br><br>
+            </select>
+            </div>
+        </div>
 
-                      <div class="form-group">
-                        {{ Form::label('batsman', trans('Bowler').'*', ['class' => 'col-md-4 control-label']) }}
-                       
-                        <div class="col-md-4">
-                          
-                          <select type="text" value="" name=""> 
-                <option value="pace bowler">Pace bowler</option>
-                <option value="spin bowler">Spin bowler</option>
-               
+        <div class="form-group">
+          <div class="input-group">
+            <!--  <label for="Batsman" class="col-md-4 control-label">Batsman:</label> -->
+            <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
+             <select name="batsman" class="form-control" style="padding: 5px;">
 
-                </select>
-                        
-                        </div><!--col-md-6-->
-                    </div><!--form-group--><br><br>
+                    <option value="LeftHanded">Left Handed</option>
+                    <option value="RightHanded">Right Handed</option>
 
+             </select>
+          </div>
+        </div>
 
-                
+        <div class="form-group">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
+            <!-- <label for="bowler" class="col-md-4 control-label">Bowler: </label> -->
+            <select name="bowler" class="form-control" style="padding: 5px;"> 
+ 
+                    <option value="pace bowler">Pace bowler</option>
+                    <option value="spin bowler">Spin bowler</option>
 
-                    <div class="form-group">
-                            <div class="col-xs-7">
-                               <label class="col-md-12 control-label">
-                                 {!! Form::checkbox('is_term_accept',1,false) !!}
-                                 I accept {!! link_to_route('frontend.pages.show', trans('validation.attributes.frontend.register-user.terms_and_conditions').'*', ['page_slug'=>'terms-and-conditions']) !!} </label>
+             </select>
+           </div>
 
-                         </div><!--form-group-->
-                    </div><!--col-md-6-->
+        </div>
 
-                    @if (config('access.captcha.registration'))
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                {!! Form::captcha() !!}
-                                {{ Form::hidden('captcha_status', 'true') }}
-                            </div><!--col-md-6-->
-                        </div><!--form-group-->
-                    @endif
+         <input type="hidden" class="col-md-6" name="users_id"  value={{$logged_in_user->id}}  /> 
+       
 
-                     <div class="form-group">
-                        <div class="col-md-6 col-md-offset-4">
-                         <a href="{{trans('/register/details')}}" class ="btn btn-primary" role="button">Submit</a>
-                        </div> <!--col-md-6-->
-                     </div> <!--form-group-->
+        <div class="form-group">
+               <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input  name="age" placeholder="age" class="form-control"  type="input">
+               </div>
+        </div>
 
+        <div class="form-group">
+          <div class="input-group">
+            <span class="input-group-addon"> <i class="fa fa-list-ol"></i></span>
+          <input type="file" name="filename[]" class="form-control" required>
+          
+        </div>
 
-                    {{ Form::close() }}
+        
 
-                </div><!-- panel body -->
+    <div class="form-group">
+        <br>
+                            
+             <button type="submit" class="" style="width:47%;padding: 6px; background-color: #4CAF50;color:white;border:none;margin-left: 2%;border-radius: 3px">Register</button>
+              <button type="Reset" class="" style="width:47%;padding: 6px; background-color: #4CAF50;color:white;border:none;border-radius: 3px;">Reset</button>
+        
+    </div>
 
-            </div><!-- panel -->
-
-        </div><!-- col-md-8 -->
-
-    </div><!-- row -->
+</form>            
+ 
+</div>
+      
 @endsection
 
 @section('after-scripts')
@@ -121,7 +119,16 @@
 
     <script type="text/javascript">
 
-        $(document).ready(function() {
+    $(document).ready(function() {
+
+      $(".btn-success").click(function(){ 
+          var html = $(".clone").html();
+          $(".increment").after(html);
+      });
+
+      $("body").on("click",".btn-danger",function(){ 
+          $(this).parents(".control-group").remove();
+      });
             // To Use Select2
             Backend.Select2.init();
         });

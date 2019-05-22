@@ -34,6 +34,7 @@ class RegisterRequest extends Request
             'password'             => 'required|min:8|confirmed|regex:"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"',
             'is_term_accept'       => 'required',
             'g-recaptcha-response' => 'required_if:captcha_status,true|captcha',
+            
         ];
     }
 

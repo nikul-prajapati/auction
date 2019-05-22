@@ -22,6 +22,9 @@
                     <thead>
                         <tr>
                             <th>{{ trans('labels.backend.teams.table.id') }}</th>
+                            <th>{{ trans('labels.backend.teams.table.Team_name') }}</th>
+                            <th>{{ trans('Base Points') }}</th>
+                            <th>{{ trans('Available points') }}</th>
                             <th>{{ trans('labels.backend.teams.table.createdat') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
@@ -55,6 +58,9 @@
                 },
                 columns: [
                     {data: 'id', name: '{{config('module.teams.table')}}.id'},
+                    {data: 'Team_name', name: '{{config('module.teams.table')}}.Team_name'},
+                    {data: 'Base_points', name: '{{config('module.teams.table')}}.Base_points'},
+                    {data: 'Available_points', name: '{{config('module.teams.table')}}.Available_points'},
                     {data: 'created_at', name: '{{config('module.teams.table')}}.created_at'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
                 ],
